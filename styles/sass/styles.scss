@@ -1,1 +1,10 @@
-@import "partials/setup"
+// colors
+$pimary: #FFFFFF;
+$secondary: #f0f0f0;
+$text: #000;
+
+@import "partials/setup";
+@import "partials/header"; 
+@import "partials/standards";
+@import "partials/sectionAngle";
+@import "partials/aboutMe";
