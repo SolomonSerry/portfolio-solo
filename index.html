@@ -6,9 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/fc3fda0b63.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Yellowtail&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
+    
     <title>Solomon Portfolio</title>
 </head>
 <body>
@@ -38,9 +40,18 @@
 
     <main>
         <section class="aboutMeSection">
-            <div class="aboutMe">
+            <div class="aboutMeContainer wrapper">
                 <h2>About Me</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta cupiditate pariatur reiciendis optio tempore unde rerum esse, minus, praesentium, nobis numquam impedit dolorem possimus beatae quaerat quasi quod repudiandae! Eum incidunt dolorum repellendus commodi nemo velit fuga, deleniti dignissimos animi ullam omnis dicta quibusdam vero quasi non ratione, veritatis odio!</p>
+                <div class="aboutMeContent">
+                    <p>Hello! My Name is Solomon Serry, I am a Front-End Web Developer based out of Toronto.  I love building and creating so wheater its hitting pads on my MPC or writing code endlessly, I enjoy every second of it.</p>
+
+                    <p>Hello! My Name is Solomon Serry, I am a Front-End Web Developer based out of Toronto. I love building and creating so
+                    wheater its hitting pads on my MPC or writing code endlessly, I enjoy every second of it.</p>
+                    
+                    <p>Hello! My Name is Solomon Serry, I am a Front-End Web Developer based out of Toronto. I love building and creating so
+                    wheater its hitting pads on my MPC or writing code endlessly, I enjoy every second of it.</p>
+                </div>
+                <a href="#contact">Contacts</a>
             </div>
             <div class="angle2">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -51,7 +62,58 @@
 
         <section class="projectSection">
             <h2>Projects</h2>
-            <div>
+            <div class="projectContent wrapper">
+                <div class="slides">
+                    <img src="./assets/Textile.png" alt="Snapshot of Textile materials, sewing kit and scissors ">
+                    <h4>Textilee</h4>
+                    <p>Multi paged website design using HTML and SASS. In this project I translated a static design images into a functional websites and provided a good experience for the site's users across multiple devices and screen sizes.</p>
+                    <div class="icons">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-sass"></i>
+                    </div>
+                </div>
+
+                <div class="slides">
+                    <img src="./assets/Pokemon Generator.png" alt="Snapshot of web page withe Pokemon and info about Pokemon ">
+                    <h4>Pokedex Random Generator</h4>
+                    <p>Worked with third-party APIs, JavaScript, DOM manipulation to create a Pokemon pokedex random generator. Created error handling, UI design and demonstrated competence
+                    in pair programming and communication</p>
+                    <div class="icons">
+                        <i class="fab fa-html5"></i>
+                        <i class="fab fa-sass"></i>
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                </div>
+
+                <div class="slides">
+                    <img src="./assets/MovieApp.png" alt="Snapshot of web pages with several movies on the front">
+                    <h4>The Movie App</h4>
+                    <p>Used React concepts (ie. state, props, components) to create an application that displays movies in order of current popularity and as well give user overview once movie is choosen.  Also worked with third-party data source, error handle and UI design.</p>
+                    <div class="icons">
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                </div>
+
+                <div class="slides">
+                    <img src="./assets/NutriNav.png" alt="Snapshot of landing page with several fruits main page">
+                    <h4>Nutrition Navigator</h4>
+                    <p>Used React concepts to create an application that takes user input and display data about user choice.  This App also give user the choice to compare different choices and save item (via Firebase intigration).  Aslo communicated with group of developers, delivering a fully functional product on a timeline, and collaborating on GitHub.</p>
+                    <div class="icons">
+                        <i class="fab fa-react"></i>
+                        <i class="fab fa-css3-alt"></i>
+                        <img class="fBIcon" src="./assets/firebase-512.webp" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="btnContainer">
+                <button class="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+
+                <button class="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
              <div class="angle1">
         <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -64,6 +126,11 @@
             <h2>Skills</h2>
             <div>
 
+            </div>
+            <div class="angle2">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
+                </svg>
             </div>
         </section>
 
@@ -87,6 +154,6 @@
         <h2>Contacts</h2>
     </footer>
     
-    <script src="scripts.js"></script>
+    <script src="./scripts/scripts.js"></script>
 </body>
 </html>

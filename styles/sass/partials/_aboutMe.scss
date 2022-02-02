@@ -1,8 +1,44 @@
 .aboutMeSection {
-    height: 900px;
+    height: 800px;
 }
 
-.projectSection {
-    background-color: $secondary;
-    height: 900px;
+.aboutMeContainer {
+    
+     h2 {
+        width: 350px;
+        position: relative;
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 150px;
+        &::before {
+            content: ' ';
+            width: 25%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-bottom: 2px solid $text;
+           
+        }
+    }
+    .aboutMeContent {
+        display: flex;
+        padding: 50px 0;
+        p {
+            margin: 0 20px;
+            &:first-child {
+                font-weight: 700;
+                text-align: right;
+            }
+           
+        }
+    }
+    a {
+        margin: 0 auto;
+        border: 2px solid $text;
+        padding: 20px 60px;
+        display: flex;
+        width: 250px;
+        justify-content: center;
+    }
 }
+
