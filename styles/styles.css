@@ -358,6 +358,13 @@ span {
   margin: 0 auto;
 }
 
+.fBIcon {
+  width: 55px;
+  height: 52px;
+  margin: 0;
+  border: none;
+}
+
 .angle1 {
   position: absolute;
   bottom: 0;
@@ -515,4 +522,28 @@ span {
 
 .skillSection {
   height: 800px;
+}
+
+.skillsSection {
+  height: 800px;
+}
+
+.skillsContainer h2 {
+  text-align: center;
+  position: relative;
+  width: 225px;
+  margin: 0 auto;
+}
+.skillsContainer h2::before {
+  content: " ";
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid #000;
+}
+
+.contactSection {
+  background-color: #f0f0f0;
+  height: 600px;
 }

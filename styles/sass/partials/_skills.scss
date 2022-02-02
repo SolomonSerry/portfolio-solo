@@ -1,0 +1,29 @@
+
+.skillsSection {
+    height: 800px;
+}
+
+.skillsContainer {
+    h2{
+        text-align: center;
+        position: relative;
+        width: 225px;
+        margin: 0 auto;
+        &::before {
+            content: ' ';
+            width: 35%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-bottom: 2px solid $text;
+           
+        }
+    } 
+}
+
+// pass this to contact section
+
+.contactSection {
+    background-color: $secondary;
+    height: 600px;
+}
