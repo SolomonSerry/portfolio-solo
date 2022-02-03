@@ -1,5 +1,5 @@
 header {
-    background: #f0f0f0;
+    background: $secondary;
     position: relative;
     background-size: cover;
     width: 100%;
@@ -13,6 +13,7 @@ header {
         padding: 100px 0;
             h3 {
                 font-family: 'Yellowtail', cursive;
+                color: $accentColor;
             }
             .hamburgerMenu {
                 display: block;
@@ -33,7 +34,7 @@ header {
                 min-height: 100vh;
                 display: block;
                 z-index: 10;
-                background: #fff;
+                background: $primary;
                 padding-top: 220px;
                 transition: right 0.3s ease-in-out;
                     a {
@@ -99,7 +100,5 @@ header {
     }
 }
 
-section {
-    position: relative;
-}    
+
 

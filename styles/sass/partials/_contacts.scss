@@ -34,6 +34,7 @@
                 padding: 15px 15px;
                 margin-bottom: 25px;
                 width: 75%;
+                background: $primary;
             }
             textarea {
                 resize: none;
@@ -41,13 +42,14 @@
                 border-radius: 10px;
                 padding: 20px 15px;
                 width: 85%;
+                background: $primary;
             }
             button {
                 margin: 30px auto;
                 padding: 20px 60px;
                 border-radius: 10px;
                 border: none;
-                background: #fff;
+                background: $primary;
             }
         }
         .contactInfo {

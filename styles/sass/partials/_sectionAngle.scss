@@ -1,4 +1,12 @@
 // svg to angle all sections 
+
+
+// position for the angles on every section
+
+section {
+    position: relative;
+}    
+
 .angle1 {
     position: absolute;
     bottom: 0;
@@ -16,7 +24,7 @@
 }
 
 .angle1 .shape-fill {
-    fill: #FFFFFF;
+    fill: $primary;
 }
 
 .angle2 {
