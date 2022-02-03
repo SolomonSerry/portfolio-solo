@@ -1,0 +1,65 @@
+
+.contactSection {
+    background-color: $secondary;
+    height: 800px;
+    .contactContainer {
+        padding-top: 50px;
+        h2 {
+            text-align: center;
+            position: relative;
+            width: 350px;
+            margin: 0 auto;
+            padding-bottom: 60px;
+            &::before {
+                content: ' ';
+                width: 25%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-bottom: 2px solid $text;
+            }
+        
+        }
+    }
+
+    .formContainer {
+        display: flex;
+        form {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            input[type="text"], input[type="email"] {
+                border: none;
+                border-radius: 10px;
+                padding: 15px 15px;
+                margin-bottom: 25px;
+                width: 75%;
+            }
+            textarea {
+                resize: none;
+                border: none;
+                border-radius: 10px;
+                padding: 20px 15px;
+                width: 85%;
+            }
+            button {
+                margin: 30px auto;
+                padding: 20px 60px;
+                border-radius: 10px;
+                border: none;
+                background: #fff;
+            }
+        }
+        .contactInfo {
+            width: 50%;
+            padding-top: 20px;
+            p  {
+                padding-bottom: 40px;
+                
+            }
+        }
+    }
+}
+
+
+

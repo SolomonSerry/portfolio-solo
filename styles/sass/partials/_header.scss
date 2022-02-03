@@ -6,6 +6,7 @@ header {
     height: 900px;
     color: $text;
     background-position: right;
+    overflow-x: hidden;
     nav {
         display: flex;
         justify-content: space-between;
@@ -13,17 +14,69 @@ header {
             h3 {
                 font-family: 'Yellowtail', cursive;
             }
+            .hamburgerMenu {
+                display: block;
+                width: 45px;
+                cursor: pointer;
+                appearance: none;
+                background: none;
+                outline: none;
+                border: none;
+                position: relative;
+                z-index: 20;
+            }
             ul {
-                display: flex;
-                justify-content: space-between;
-                width: 40%;
+                position: fixed;
+                right: 100%;
+                top: 0;
+                width: 25%;
+                min-height: 100vh;
+                display: block;
+                z-index: 10;
+                background: #fff;
+                padding-top: 220px;
+                transition: right 0.3s ease-in-out;
                     a {
                         color: $text;
+                        display: block;
+                        max-width: 200px;
+                        width: 100%;
+                        margin: 0 auto 16px;
+                        text-align: center;
+                        padding: 12px 16px;
+                        background-color: $secondary;
                     }
             } 
    
     }
 
+}
+
+// making my own hamburger 
+.hamburgerMenu .bar, .hamburgerMenu::before, .hamburgerMenu::after {
+    content: '';
+    display: block;
+    height: 5px;
+    width: 100%;
+    background: $text;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.hamburgerMenu.isActive::before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburgerMenu.isActive::after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburgerMenu.isActive .bar {
+    opacity: 0;
+}
+
+.slideMenu.isActive {
+    right: 0;
 }
 
 .nameTag {
@@ -48,6 +101,5 @@ header {
 
 section {
     position: relative;
-
 }    
 

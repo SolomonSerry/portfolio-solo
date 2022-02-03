@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://kit.fontawesome.com/fc3fda0b63.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Yellowtail&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="styles/styles.css">
@@ -18,17 +19,22 @@
         <div class="wrapper">
             <nav>
                 <h3>Solomon</h3>
-                <ul>
+                <ul class="slideMenu">
                     <li><a href="#about">About</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contats">Contacts</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
                 </ul>
+                <button class="hamburgerMenu">
+                    <div class="bar">
+
+                    </div>
+                </button>
             </nav>
 
             <div class="nameTag">
                 <h1><span>Solomon</span> Serry</h1>
-                <h4><a href="#">About Me</a></h4>
+                <h4><a href="#about">About Me</a></h4>
             </div>
         </div>
     <div class="angle1">
@@ -39,7 +45,7 @@
     </header>
 
     <main>
-        <section class="aboutMeSection">
+        <section id="about" class="aboutMeSection">
             <div class="aboutMeContainer wrapper">
                 <h2>About Me</h2>
                 <div class="aboutMeContent">
@@ -51,7 +57,7 @@
                     <p>Hello! My Name is Solomon Serry, I am a Front-End Web Developer based out of Toronto. I love building and creating so
                     wheater its hitting pads on my MPC or writing code endlessly, I enjoy every second of it.</p>
                 </div>
-                <a href="#contact">Contacts</a>
+                <a href="#contacts">Contacts</a>
             </div>
             <div class="angle2">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -60,7 +66,7 @@
             </div>
         </section>
 
-        <section class="projectSection">
+        <section id="projects" class="projectSection">
             <h2>Projects</h2>
             <div class="projectContent wrapper">
                 <div class="slides">
@@ -102,7 +108,8 @@
                     <div class="icons">
                         <i class="fab fa-react"></i>
                         <i class="fab fa-css3-alt"></i>
-                        <img class="fBIcon" src="./assets/firebase-512.webp" alt="">
+                        <!-- <img class="fBIcon" src="./assets/firebase-512.webp" alt=""> -->
+                        <i class="devicon-firebase-plain"></i>
                     </div>
                 </div>
             </div>
@@ -120,23 +127,73 @@
             <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
         </svg>
     </div>    
-        </section>
+</section>
 
-        <section class="skillsSection">
-            <div class="skillsContainer">
-                <h2>Skills</h2>
-                <div>
+<section id="skills" class="skillsSection">
+    <div class="skillsContainer wrapper">
+        <h2>Skills</h2>
+        <div class="skillsContent">
+
+            <div class="skillsBtnContainer">
+                <button class="skillsBtn react">
                     <i class="fab fa-react"></i>
+                    <p>React</p>
+                </button>
+                
+                <button class="skillsBtn css3">
                     <i class="fab fa-css3-alt"></i>
-                    <img class="fBIcon" src="./assets/firebase-512.webp" alt="">
+                    <p>CSS3</p>
+                </button>
+                
+                <button class="skillsBtn firebase">
+                    <i class="devicon-firebase-plain"></i>
+                    <p>Firebase</p>
+                </button>
+    
+                <button class="skillsBtn html5">
                     <i class="fab fa-html5"></i>
+                    <p>HTML5</p>
+                </button>
+    
+                <button class="skillsBtn sass">
                     <i class="fab fa-sass"></i>
+                    <p>SASS</p>
+                </button>
+    
+                <button class="skillsBtn js">
                     <i class="fab fa-js-square"></i>
+                    <p>JavaScript</p>
+                </button>
+    
+                <button class="skillsBtn git">
                     <i class="fab fa-git-alt"></i>
+                    <p>Git</p>
+                </button>
+    
+                <button class="skillsBtn github">
                     <i class="fab fa-github"></i>
+                    <p>GitHub</p>
+                </button>
+    
+                <button class="skillsBtn accessibility">
                     <i class="fas fa-universal-access"></i>
-                </div>
+                    <p>Accessibility</p>
+                </button>
+    
+                <button class="skillsBtn jquery">
+                    <i class="devicon-jquery-plain"></i>
+                    <p>Jquery</p>
+                </button>
             </div>
+            <div class="skillsInfo">
+                <h4 class="skillsTitle"></h4>
+                <article>
+
+                </article>
+            </div>
+
+        </div>
+    </div>
             <div class="angle2">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M1200 0L0 0 598.97 114.72 1200 0z" class="shape-fill"></path>
@@ -144,27 +201,59 @@
             </div>
         </section>
 
-        <section class="contactSection">
-            <div class="contactContainer">
+        <section id="contacts" class="contactSection">
+            <div class="contactContainer wrapper">
                 <h2>Contacts</h2>
-                <div>
-                    <form action="">
-                        <label for=""></label>
-                        <input type="text">
-        
-                        <label for=""></label>
-                        <input type="email">
-        
-                        <textarea name="" id="" cols="30" rows="10"></textarea>
-                    </form>
+                <div class="formContainer">
+                        <form action="">
+                            <label class="sr-only" for="usersName">Users Name</label>
+                            <input type="text" id="usersName" placeholder="Enter Name">
+            
+                            <label class="sr-only" for="usersEmail">Users Email</label>
+                            <input type="email" id="usersEmail" placeholder="Enter Email">
+                            
+                            <label class="sr-only" for="usersMessage">Users Message</label>
+                            <textarea name="usersMessage" id="usersMessage" cols="30" rows="10" placeholder="Send Me A Message!!"></textarea>
+
+                            <button>Get In Touch</button>
+                        </form>
+                   
+                    <div class="contactInfo">
+                        <p>If you would like to talk about anyone of my projects or would just like to chat about anything in they relm of music (making or listen), basketball or anime please feel free to send me a message. </p>
+
+                        <p>I'm available to chat whenever!  Just Drop a comment, question or if you like... maybe some basketball analitics, fav anime(AOT anyone!!!) or anything to do with music.</p>
+
+                        <p>Thanks for dropping in!</p>
+                    </div>
                 </div>
+
             </div>
+                <div class="angle1">
+                    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                        <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
+                    </svg>
+                </div>
         </section>
     </main>
 
 
     <footer>
-        
+        <div class="wrapper footerIcons">
+            <a href="mailto:solo.serry@gmail.com">
+                <i class="fas fa-envelope"></i>
+            </a>
+
+            <a href="https://github.com/SolomonSerry">
+                <i class="fab fa-github"></i>
+            </a>
+
+            <a href="www.linkedin.com/in/solomon-serry-b931b3225">
+                <i class="fab fa-linkedin"></i>
+            </a>
+        </div>
+        <div class="footerTag">
+            <p>Created And Designed By Solomon Serry <i class="fas fa-copyright"></i> 2022</p>
+        </div>
     </footer>
     
     <script src="./scripts/scripts.js"></script>

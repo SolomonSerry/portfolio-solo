@@ -20,7 +20,7 @@
     }
     .projectContent {
         width: 700px;
-        height: 75vh;
+        height: 675px;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -40,16 +40,11 @@
             p {
                 padding: 20px 0;
             }
-            .fab {
+            .fab, .devicon-firebase-plain {
                 font-size: 2.8rem;
                 padding: 0 5px;
             }
-             .fBIcon {
-                width: 55px;
-                height: 52px;
-                margin: 0;
-                border:none;
-            }
+        
         }
     }
     .btnContainer {

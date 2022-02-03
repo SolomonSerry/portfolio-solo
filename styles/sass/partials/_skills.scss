@@ -1,6 +1,7 @@
 
 .skillsSection {
-    height: 800px;
+    height: 900px;
+    padding-top: 100px;
 }
 
 .skillsContainer {
@@ -18,12 +19,33 @@
             border-bottom: 2px solid $text;
            
         }
+    }
+    .skillsContent {
+        display: flex;
+        .skillsBtnContainer {
+            display: flex;
+            width: 50%;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            button {
+                border: none;
+                background: #fff;
+                margin: 20px 59px;
+                .fab, .fas, .devicon-firebase-plain, .devicon-jquery-plain {
+                    font-size: 3rem;
+                }
+            }
+        }
+        .skillsInfo {
+            width: 50%;
+            text-align: center; 
+            margin: auto;  
+            h4 {
+                font-size: 2.5rem;
+                text-transform: capitalize;
+                padding-bottom: 40px;
+            }
+        }
     } 
 }
 
-// pass this to contact section
-
-.contactSection {
-    background-color: $secondary;
-    height: 600px;
-}

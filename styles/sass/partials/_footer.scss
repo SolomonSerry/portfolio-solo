@@ -1,0 +1,20 @@
+
+
+footer {
+    .footerIcons {
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 0 40px 0;
+        .fab, .fas {
+            font-size: 4rem;
+        }
+    }
+    .footerTag {
+        background-color: $secondary;
+        p {
+            padding: 10px 0;
+            text-align: center;
+    
+        }
+    }
+}
