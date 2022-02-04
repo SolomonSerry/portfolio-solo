@@ -474,6 +474,7 @@ section {
 
 .aboutMeSection {
   height: 800px;
+  overflow: hidden;
 }
 
 .aboutMeContainer h2 {
@@ -529,7 +530,6 @@ section {
   background-color: #f0f0f0;
   height: 1100px;
   padding-top: 80px;
-  overflow: hidden;
 }
 .projectSection h2 {
   text-align: center;
@@ -558,7 +558,6 @@ section {
   height: 100%;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  overflow: hidden;
 }
 .projectSection .projectContent .slides img {
   width: 100%;
@@ -567,7 +566,6 @@ section {
   border-top: 10px solid #FFBF00;
   border-bottom: 10px solid #FFBF00;
   border-radius: 15px;
-  overflow: hidden;
 }
 .projectSection .projectContent .slides p {
   padding: 20px 0;
@@ -584,7 +582,6 @@ section {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  overflow: hidden;
 }
 .projectSection .btnContainer button {
   border: none;
