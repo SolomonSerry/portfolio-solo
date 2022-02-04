@@ -474,7 +474,7 @@ section {
 
 .aboutMeSection {
   height: 800px;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .aboutMeContainer h2 {
@@ -483,6 +483,7 @@ section {
   text-align: center;
   margin: 0 auto;
   margin-top: 150px;
+  overflow-x: hidden;
 }
 .aboutMeContainer h2::before {
   content: " ";

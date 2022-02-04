@@ -1,6 +1,6 @@
 .aboutMeSection {
     height: 800px;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .aboutMeContainer {
@@ -11,6 +11,7 @@
         text-align: center;
         margin: 0 auto;
         margin-top: 150px;
+        overflow-x: hidden;
         &::before {
             content: ' ';
             width: 25%;
