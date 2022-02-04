@@ -146,7 +146,7 @@ portfolio.userListen = () => {
                        if (playPause.classList.contains(track.title)) {
                            play = 1;
                            track.play();
-                           playPause.innerHTML = "Pause";
+                           playPause.innerHTML = "Pause &#9614&#9614";
                         }
                       
                     })
@@ -156,7 +156,7 @@ portfolio.userListen = () => {
                        if (playPause.classList.contains(track.title)) {
                            play = 0;
                            track.pause();
-                           playPause.innerHTML = "Play";
+                           playPause.innerHTML = "Play &#9658";
                        }
 
                    })
@@ -198,6 +198,7 @@ portfolio.userListen = () => {
 portfolio.init = () => {
     portfolio.userSkillsClick();
     portfolio.userListen();
+    AOS.init();
 };
 
 // Calling init 

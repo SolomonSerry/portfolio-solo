@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://kit.fontawesome.com/fc3fda0b63.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Yellowtail&display=swap"
@@ -47,7 +48,7 @@
 
     <main>
         <section id="about" class="aboutMeSection">
-            <div class="aboutMeContainer wrapper">
+            <div class="aboutMeContainer wrapper" data-aos="fade-up" data-aos-duration="3000">
                 <h2>About Me</h2>
                 <div class="aboutMeContent">
                     <p>Hello! My Name is Solomon Serry, I am a Front-End Web Developer based out of Toronto.  I love building and creating so wheater its hitting pads on my MPC or writing code endlessly, I enjoy every second of it.</p>
@@ -69,7 +70,7 @@
 
         <section id="projects" class="projectSection">
             <h2>Projects</h2>
-            <div class="projectContent wrapper">
+            <div class="projectContent wrapper" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
                 <div class="slides">
                     <img src="./assets/Textile.png" alt="Snapshot of Textile materials, sewing kit and scissors ">
                     <h4>Textilee</h4>
@@ -135,53 +136,53 @@
         <h2>Skills</h2>
         <div class="skillsContent">
 
-            <div class="skillsBtnContainer">
-                <button class="skillsBtn react">
+            <div class="skillsBtnContainer" >
+                <button class="skillsBtn react" data-aos="flip-left"data-aos-easing="ease-out-cubic"data-aos-duration="8000">
                     <i class="fab fa-react"></i>
                     <p>React</p>
                 </button>
                 
-                <button class="skillsBtn css3">
+                <button class="skillsBtn css3"data-aos="flip-right"data-aos-easing="ease-out-cubic"data-aos-duration="2200">
                     <i class="fab fa-css3-alt"></i>
                     <p>CSS3</p>
                 </button>
                 
-                <button class="skillsBtn firebase">
+                <button class="skillsBtn firebase"data-aos="flip-left"data-aos-easing="ease-out-cubic"data-aos-duration="2000">
                     <i class="devicon-firebase-plain"></i>
                     <p>Firebase</p>
                 </button>
     
-                <button class="skillsBtn html5">
+                <button class="skillsBtn html5"data-aos="flip-right"data-aos-easing="ease-out-cubic"data-aos-duration="2700">
                     <i class="fab fa-html5"></i>
                     <p>HTML5</p>
                 </button>
     
-                <button class="skillsBtn sass">
+                <button class="skillsBtn sass"data-aos="flip-left"data-aos-easing="ease-out-cubic"data-aos-duration="2600">
                     <i class="fab fa-sass"></i>
                     <p>SASS</p>
                 </button>
     
-                <button class="skillsBtn js">
+                <button class="skillsBtn js"data-aos="flip-right"data-aos-easing="ease-out-cubic"data-aos-duration="2300">
                     <i class="fab fa-js-square"></i>
                     <p>JavaScript</p>
                 </button>
     
-                <button class="skillsBtn git">
+                <button class="skillsBtn git"data-aos="flip-left"data-aos-easing="ease-out-cubic"data-aos-duration="2900">
                     <i class="fab fa-git-alt"></i>
                     <p>Git</p>
                 </button>
     
-                <button class="skillsBtn github">
+                <button class="skillsBtn github"data-aos="flip-right"data-aos-easing="ease-out-cubic"data-aos-duration="2100">
                     <i class="fab fa-github"></i>
                     <p>GitHub</p>
                 </button>
     
-                <button class="skillsBtn accessibility">
+                <button class="skillsBtn accessibility"data-aos="flip-left"data-aos-easing="ease-out-cubic"data-aos-duration="2500">
                     <i class="fas fa-universal-access"></i>
                     <p>Accessibility</p>
                 </button>
     
-                <button class="skillsBtn jquery">
+                <button class="skillsBtn jquery"data-aos="flip-right"data-aos-easing="ease-out-cubic"data-aos-duration="2200">
                     <i class="devicon-jquery-plain"></i>
                     <p>Jquery</p>
                 </button>
@@ -205,37 +206,37 @@
             <div class="musicContainer wrapper">
                 <h2>Music</h2>
                 <div class="musicContent">
-                    <div class="tracks musicTrack1">
+                    <div class="tracks musicTrack1" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <img src="./assets/if-i-cant-have-you.jpg" alt="picture of Yvonne Elliman Singing">
                         <h4>Nobody Baby</h4>
                         <audio title="track1" id="audio" src="./audio/nobodySamp.mp3"  type="audio/mp3"></audio>
                         <div class="musicBtn">
-                            <button class="play track1">Play</button>
-                            <button class="stop track1">Stop</button>
+                            <button class="play track1">Play &#9658</button>
+                            <button class="stop track1">Stop &#9609</button>
                         </div>
                         <div>
                            <p>Sample based beat made on Maschine.  Used several plugins for effects like delays, pitch changing on the vocals and reverb via Ruam.  The song that is sampled to make this beat is "If I can't have you" by: Yvonne Elliman.</p>
                         </div>
                     </div>
-                    <div class="tracks musicTrack2">
+                    <div class="tracks musicTrack2" data-aos="fade-left" data-aos-offset="350" data-aos-easing="ease-in-sine">
                         <img src="./assets/all-smoke.png" alt="picture of Yvonne Elliman Singing">
                         <h4>All The Smoke</h4>
                         <audio title="track2" id="audio" src="./audio/smokeSamp.mp3" type="audio/mp3"></audio>
                         <div class="musicBtn">
-                            <button class="play track2">Play</button>
-                            <button class="stop track2">Stop</button>
+                            <button class="play track2">Play &#9658</button>
+                            <button class="stop track2">Stop &#9609</button>
                         </div>
                         <div>
                            <p>This is a light and airy but yet hard hitting beat that was created using Maschine.  All melodies were played on midi keyboard, also used several plugings for effects.<p>
                         </div>
                     </div>
-                    <div class="tracks musicTrack3">
+                    <div class="tracks musicTrack3" data-aos="fade-right" data-aos-offset="400" data-aos-easing="ease-in-sine">
                         <img src="./assets/creative-clocks-6-1.jpg" alt="picture of Yvonne Elliman Singing">
                         <h4>Richard Millz</h4>
                         <audio title="track3" id="audio" src="./audio/richMillzSamp.mp3" type="audio/mp3"></audio>
                         <div class="musicBtn">
-                            <button class="play track3">Play</button>
-                            <button class="stop track3">Stop</button>
+                            <button class="play track3">Play &#9658</button>
+                            <button class="stop track3">Stop &#9609</button>
                         </div>
                         <div>
                            <p>Very dark trap style beat with clock ticking ambient feel.  Used hard hitting drums and 808's, melodies created on MPC drum pad. Used several different plugins for effects and change ups.</p>
@@ -255,7 +256,7 @@
             <div class="contactContainer wrapper">
                 <h2>Contacts</h2>
                 <div class="formContainer">
-                        <form action="https://formspree.io/f/xlezjwjd" method="POST">
+                        <form action="https://formspree.io/f/xlezjwjd" method="POST" data-aos="fade-up"data-aos-anchor-placement="bottom-bottom" data-aos-duration="1500">
                             <label class="sr-only" for="usersName">Users Name</label>
                             <input type="text" name="userName" id="usersName" placeholder="Enter Name">
             
@@ -268,7 +269,7 @@
                             <button>Get In Touch</button>
                         </form>
                    
-                    <div class="contactInfo">
+                    <div class="contactInfo" data-aos="fade-down" data-aos-anchor-placement="bottom-bottom" data-aos-duration="1500">
                         <p>If you would like to talk about anyone of my projects or would just like to chat about anything in they relm of music (making or listen), basketball or anime please feel free to send me a message. </p>
 
                         <p>I'm available to chat whenever!  Just Drop a comment, question or if you like... maybe some basketball analitics, fav anime(AOT anyone!!!) or anything to do with music.</p>
@@ -304,6 +305,7 @@
         </div>
     </footer>
     
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./scripts/scripts.js"></script>
 </body>
 </html>

@@ -50,6 +50,10 @@
                 border-radius: 10px;
                 border: none;
                 background: $secondary;
+                transition: all 0.2s ease-in-out;
+                 &:hover, :focus {
+                    box-shadow: inset 0 0 0 3em $accentColor2;
+                }
             }
         }
         .contactInfo {

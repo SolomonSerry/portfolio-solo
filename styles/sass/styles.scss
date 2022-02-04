@@ -2,7 +2,10 @@
 $primary: #FFFFFF;
 $secondary: #f0f0f0;
 $text: #000;
-$accentColor: #FFBF00;
+$accentColor2: #f39f86;
+$accentColor: #f9d976;
+$accentColor3: #FFBF00;
+
 
 @import "partials/setup";
 @import "partials/header"; 
@@ -15,3 +18,6 @@ $accentColor: #FFBF00;
 @import "partials/contacts";
 @import "partials/footer";
 @import "partials/mediaQuerys";
+
+// background-color: #f39f86;
+// background-image: linear-gradient(315deg, #f39f86 0%, #f9d976 74%);

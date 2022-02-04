@@ -31,6 +31,13 @@
                     button {
                         padding: 10px 20px;
                         margin-right: 10px;
+                        background: $primary;
+                        border: 1px solid #8f8f8f;
+                        border-radius: 5px;
+                        transition: all 0.25s ease-in-out;
+                        &:hover, :focus {
+                              box-shadow: inset -2em 0 1.5em 0 $accentColor, inset 3.5em 0 0 0 $accentColor3;  
+                        }
                     }
                 }
             }
@@ -49,9 +56,13 @@
 .tracks img {
     width: 300px;
     height: 168px;
-    border-top: 10px solid $accentColor;
-    border-bottom: 10px solid $accentColor;
+    border-top: 10px solid $accentColor3;
+    border-bottom: 10px solid $accentColor3;
     border-radius: 15px;
+    transition: all 0.2s ease-in-out;
+    &:hover {
+        filter: drop-shadow(0 10px 0.6rem black);
+    }
     
 }
 

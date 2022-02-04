@@ -256,7 +256,7 @@ header nav {
 }
 header nav h3 {
   font-family: "Yellowtail", cursive;
-  color: #FFBF00;
+  color: #f9d976;
 }
 header nav .hamburgerMenu {
   display: block;
@@ -293,6 +293,14 @@ header nav ul a {
   text-align: center;
   padding: 12px 16px;
   background-color: #f0f0f0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+header nav ul a:hover, header nav ul a :focus {
+  -webkit-box-shadow: inset 0 0 0 3em #f39f86;
+          box-shadow: inset 0 0 0 3em #f39f86;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .hamburgerMenu .bar, .hamburgerMenu::before, .hamburgerMenu::after {
@@ -341,6 +349,13 @@ header nav ul a {
   bottom: 10px;
   right: 0;
   border-bottom: 2px solid #000;
+}
+.nameTag h4 a {
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.nameTag h4 a:hover {
+  color: #f39f86;
 }
 
 html {
@@ -490,7 +505,7 @@ section {
 }
 .aboutMeContainer a {
   margin: 0 auto;
-  border: 2px solid #000;
+  border: none;
   padding: 20px 60px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -499,6 +514,14 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-shadow: 0.3em 0.3em 0 0 #f9d976, inset 0.3em 0.3em 0 0 #f9d976;
+          box-shadow: 0.3em 0.3em 0 0 #f9d976, inset 0.3em 0.3em 0 0 #f9d976;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.aboutMeContainer a:hover, .aboutMeContainer a:focus {
+  -webkit-box-shadow: 0 0 0 0 #f39f86, inset 6em 3.5em 0 0 #f39f86;
+          box-shadow: 0 0 0 0 #f39f86, inset 6em 3.5em 0 0 #f39f86;
 }
 
 .projectSection {
@@ -558,7 +581,19 @@ section {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
 }
-.projectSection .btnContainer .fas {
+.projectSection .btnContainer button {
+  border: none;
+  background: #FFFFFF;
+  border-radius: 5px;
+  padding: 10px;
+  -webkit-transition: all 0.35s ease-in-out;
+  transition: all 0.35s ease-in-out;
+}
+.projectSection .btnContainer button:hover, .projectSection .btnContainer button :focus {
+  -webkit-box-shadow: inset 0 0 0 3em #f39f86;
+          box-shadow: inset 0 0 0 3em #f39f86;
+}
+.projectSection .btnContainer button .fas {
   font-size: 4rem;
   margin: 0 30px;
 }
@@ -602,9 +637,22 @@ section {
   border: none;
   background: #FFFFFF;
   margin: 20px 59px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.skillsContainer .skillsContent .skillsBtnContainer button:hover, .skillsContainer .skillsContent .skillsBtnContainer button :focus {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
+          box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
 }
 .skillsContainer .skillsContent .skillsBtnContainer button .fab, .skillsContainer .skillsContent .skillsBtnContainer button .fas, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-firebase-plain, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-jquery-plain {
   font-size: 3rem;
+  -webkit-transition: all 0.15s ease-in-out;
+  transition: all 0.15s ease-in-out;
+}
+.skillsContainer .skillsContent .skillsBtnContainer button .fab:hover, .skillsContainer .skillsContent .skillsBtnContainer button .fab :focus, .skillsContainer .skillsContent .skillsBtnContainer button .fas:hover, .skillsContainer .skillsContent .skillsBtnContainer button .fas :focus, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-firebase-plain:hover, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-firebase-plain :focus, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-jquery-plain:hover, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-jquery-plain :focus {
+  color: #FFBF00;
 }
 .skillsContainer .skillsContent .skillsInfo {
   width: 50%;
@@ -656,6 +704,15 @@ section {
 .musicSection .musicContainer .musicContent .tracks .musicBtn button {
   padding: 10px 20px;
   margin-right: 10px;
+  background: #FFFFFF;
+  border: 1px solid #8f8f8f;
+  border-radius: 5px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.musicSection .musicContainer .musicContent .tracks .musicBtn button:hover, .musicSection .musicContainer .musicContent .tracks .musicBtn button :focus {
+  -webkit-box-shadow: inset -2em 0 1.5em 0 #f9d976, inset 3.5em 0 0 0 #FFBF00;
+          box-shadow: inset -2em 0 1.5em 0 #f9d976, inset 3.5em 0 0 0 #FFBF00;
 }
 
 .tracks img {
@@ -664,6 +721,12 @@ section {
   border-top: 10px solid #FFBF00;
   border-bottom: 10px solid #FFBF00;
   border-radius: 15px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.tracks img:hover {
+  -webkit-filter: drop-shadow(0 10px 0.6rem black);
+          filter: drop-shadow(0 10px 0.6rem black);
 }
 
 .musicTrack2 {
@@ -740,6 +803,12 @@ section {
   border-radius: 10px;
   border: none;
   background: #f0f0f0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.contactSection .formContainer form button:hover, .contactSection .formContainer form button :focus {
+  -webkit-box-shadow: inset 0 0 0 3em #f39f86;
+          box-shadow: inset 0 0 0 3em #f39f86;
 }
 .contactSection .formContainer .contactInfo {
   width: 50%;
@@ -762,6 +831,13 @@ footer .footerIcons {
 }
 footer .footerIcons .fab, footer .footerIcons .fas {
   font-size: 4rem;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+footer .footerIcons .fab:hover, footer .footerIcons .fab :focus, footer .footerIcons .fas:hover, footer .footerIcons .fas :focus {
+  -webkit-transform: translateY(-0.05em);
+          transform: translateY(-0.05em);
+  color: #f9d976;
 }
 footer .footerTag {
   background-color: #FFFFFF;
@@ -971,7 +1047,7 @@ footer .footerTag p {
   }
 
   .skillsSection {
-    height: 930px;
+    height: 1000px;
     padding: 0;
   }
   .skillsSection .skillsContent {

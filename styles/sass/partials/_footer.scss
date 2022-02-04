@@ -8,6 +8,11 @@ footer {
         padding: 10px 0 40px 0;
         .fab, .fas {
             font-size: 4rem;
+             transition: all 0.25s ease-in-out;
+                &:hover, :focus { 
+                    transform: translateY(-0.05em);
+                    color: $accentColor;
+                }
         }
     }
     .footerTag {
