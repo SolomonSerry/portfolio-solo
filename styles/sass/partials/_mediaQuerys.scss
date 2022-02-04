@@ -211,35 +211,43 @@
 
 @media(max-width:482px) {
     .projectSection {
-        height: 1400px;
+        height: 1000px;
+        padding: 0;
         .projectContent {
-            height: 975px;
+            height: 700px;
         }
     }
 
     .skillsSection {
-        height: 1250px;
+        height: 930px;
+        padding: 0;
+        .skillsContent {
+            padding-top: 0;
+        }
     }
     
     header nav ul {
         right: 120%;
     }
 
-    h2 {
-        font-size: 2.5rem;
-    }
-
     .aboutMeSection {
-        height: 1475px;
+        height: 780px;
         .aboutMeContainer {
             h2 {
-                margin-top: 50px;
+               margin: 0 auto;
             }
             .aboutMeContent {
                width: 100%;
                padding: 20px 0;
+               p {
+                   padding: 10px 0;
+               }
             }
         }
+    }
+
+    .musicSection {
+        height: 1600px;
     }
 
     .musicTrack1, .musicTrack2, .musicTrack3 {
@@ -248,7 +256,17 @@
     }
 
     .contactSection {
-        height: 1425px;
+        height: 1090px;
+        .contactContainer {
+            padding: 0;
+            h2 {
+                padding: 0;
+            }
+        }
+    }
+
+    p {
+        font-size: 0.7rem;
     }
 
 
