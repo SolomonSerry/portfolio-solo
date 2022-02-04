@@ -1,6 +1,6 @@
 
 .contactSection {
-    background-color: $secondary;
+    background-color: $primary;
     height: 800px;
     .contactContainer {
         padding-top: 50px;
@@ -34,7 +34,7 @@
                 padding: 15px 15px;
                 margin-bottom: 25px;
                 width: 75%;
-                background: $primary;
+                background: $secondary;
             }
             textarea {
                 resize: none;
@@ -42,14 +42,14 @@
                 border-radius: 10px;
                 padding: 20px 15px;
                 width: 85%;
-                background: $primary;
+                background: $secondary;
             }
             button {
                 margin: 30px auto;
                 padding: 20px 60px;
                 border-radius: 10px;
                 border: none;
-                background: $primary;
+                background: $secondary;
             }
         }
         .contactInfo {

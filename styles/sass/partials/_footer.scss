@@ -1,6 +1,7 @@
 
 
 footer {
+    background: $secondary;
     .footerIcons {
         display: flex;
         justify-content: space-around;
@@ -10,10 +11,11 @@ footer {
         }
     }
     .footerTag {
-        background-color: $secondary;
+        background-color: $primary;
         p {
             padding: 10px 0;
             text-align: center;
+            
     
         }
     }

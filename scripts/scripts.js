@@ -55,6 +55,13 @@ portfolio.skilldescription = document.querySelector('article')
 portfolio.menuBtn = document.querySelector('.hamburgerMenu')
 portfolio.slideMenu = document.querySelector('.slideMenu')
 
+portfolio.audio  = document.querySelectorAll('#audio')
+portfolio.playBtn = document.querySelectorAll('.play')
+portfolio.stopBtn = document.querySelectorAll('.stop')
+
+portfolio.navBtn = document.querySelectorAll('li')
+
+
 // setting position on images
 portfolio.slides.forEach( (slide, index) => {
     slide.style.left = `${index * 100}%`;
@@ -120,6 +127,58 @@ portfolio.menuBtn.addEventListener('click', ()=> {
     portfolio.slideMenu.classList.toggle('isActive')
 })
 
+portfolio.navBtn.forEach( function(btn) {
+    btn.addEventListener('click', function() {
+       portfolio.slideMenu.classList.remove('isActive') 
+    })
+})
+
+// playing my music 
+
+let play = 0;
+
+portfolio.userListen = () => {
+    
+        portfolio.playBtn.forEach( function(playPause) {
+           playPause.addEventListener('click', function() {
+               if (play === 0) {
+                   portfolio.audio.forEach( function(track) {
+                       if (playPause.classList.contains(track.title)) {
+                           play = 1;
+                           track.play();
+                           playPause.innerHTML = "Pause";
+                        }
+                      
+                    })
+
+                } else if (play === 1) {
+                   portfolio.audio.forEach(function (track) {
+                       if (playPause.classList.contains(track.title)) {
+                           play = 0;
+                           track.pause();
+                           playPause.innerHTML = "Play";
+                       }
+
+                   })
+                }
+           })
+        })
+    
+    portfolio.stopBtn.forEach(function (stop) {
+        stop.addEventListener('click', function () {
+            portfolio.audio.forEach(function (track) {
+                if (stop.classList.contains(track.title)) {
+                    track.pause();
+                    track.currentTime = 0;
+                }
+            })
+        })
+    })
+}   
+
+
+
+
 
 
 
@@ -138,6 +197,7 @@ portfolio.menuBtn.addEventListener('click', ()=> {
 // Init function
 portfolio.init = () => {
     portfolio.userSkillsClick();
+    portfolio.userListen();
 };
 
 // Calling init 

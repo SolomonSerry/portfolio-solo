@@ -1,0 +1,255 @@
+
+@media (max-width:1200px) {
+   .skillsContainer {
+        .skillsContent {
+            padding-top: 100px;
+            .skillsBtnContainer {
+                button {
+                    margin: 20px 30px;
+                }
+            }
+
+        }
+
+    }
+    .musicSection {
+        height: 2000px;
+    }
+
+    .musicTrack2 {
+        text-align: right;
+        margin-left: 450px;
+        margin-right: 100px;
+    }
+
+    .musicTrack1, .musicTrack3 {
+        margin-right: 450px;
+        margin-left: 100px;
+    }
+    
+
+}
+
+@media (max-width:950px) {
+    .skillsContainer {
+        .skillsContent {
+            .skillsBtnContainer {
+                button {
+                    margin: 20px 15px;
+                }
+            }
+
+        }
+
+    }
+
+
+    .musicTrack2 {
+        text-align: right;
+        margin-left: 400px;
+        margin-right: 50px;
+    }
+
+    .musicTrack1, .musicTrack3 {
+        margin-right: 400px;
+        margin-left: 50px;
+    }
+}
+
+@media (max-width:850px) {
+    .slideMenu.isActive {
+        width: 50%;
+    }
+
+    .aboutMeSection {
+        height: 1200px;
+        .aboutMeContent {
+            flex-direction: column;
+            width: 75%;
+            margin: 0 auto;
+            p {
+                padding: 30px 0;
+            }
+        }
+    }
+
+    .musicSection {
+        height: 1900px;
+    }
+     
+   .musicTrack2 {
+        text-align: right;
+        margin: 0 0 0 300px;
+        
+    }
+
+    .musicTrack1, .musicTrack3 {
+       margin: 0 300px 0 0;
+    }
+
+    .musicTrack1 {
+        padding-top: 25px;
+    }
+
+
+}
+
+@media (max-width:750px) {
+    .contactSection {
+        height: 1200px;
+        .formContainer {
+            display: flex;
+            flex-direction: column-reverse;
+            width: 100%;
+            form {
+                display: flex;
+                width: 100%;
+                flex-direction: column;
+            }
+            .contactInfo {
+                width: 100%
+            }
+        }
+    }
+
+    .skillsContainer {
+        .skillsContent {
+            padding-top: 70px;
+            flex-direction: column;
+            .skillsBtnContainer {
+                width: 100%;
+                button {
+                    margin: 20px 15px;
+                }
+            }
+            .skillsInfo {
+                width: 80%;
+                padding-top: 35px;
+            }
+        }
+
+    }
+
+    .projectSection {
+        .projectContent {
+            width: 90%;
+            height: 750px;
+        }
+    }
+
+    .musicTrack2 {
+        text-align: right;
+        margin: 0 0 0 200px;
+        padding-top: 15px;
+        
+    }
+
+    .musicTrack1, .musicTrack3 {
+       margin: 0 200px 0 0;
+    }
+}
+
+@media(max-width:600px) {
+    .aboutMeSection {
+        height: 1300px;
+        .aboutMeContent {
+            width: 95%;
+        }
+    }
+
+    .skillsSection {
+        height: 1100px;
+    }
+    
+    .musicSection {
+        height: 2000px;
+    }
+
+    .contactSection {
+        height: 1375px;
+        .formContainer {
+            form {
+                input[type="text"], input[type="email"] {
+                    width: 100%;
+                }
+                textarea {
+                    width: 100%;
+                }
+            }
+
+        }
+    }
+
+    .slideMenu.isActive {
+        width: 100%;
+    }
+
+    .musicTrack2 {
+        text-align: right;
+        margin: 0 0 0 50px;
+        padding-top: 30px;
+        
+    }
+    
+    .musicTrack1, .musicTrack3 {
+        margin: 0 50px 0 0;
+        padding-top: 30px;
+    }
+
+    .projectSection {
+        height: 1200px;
+        .projectContent {
+            width: 90%;
+            height: 800px;
+        }
+    }
+
+    footer .footerTag p {
+        padding: 10px;
+    }
+}
+
+@media(max-width:482px) {
+    .projectSection {
+        height: 1400px;
+        .projectContent {
+            height: 975px;
+        }
+    }
+
+    .skillsSection {
+        height: 1250px;
+    }
+    
+    header nav ul {
+        right: 120%;
+    }
+
+    h2 {
+        font-size: 2.5rem;
+    }
+
+    .aboutMeSection {
+        height: 1475px;
+        .aboutMeContainer {
+            h2 {
+                margin-top: 50px;
+            }
+            .aboutMeContent {
+               width: 100%;
+               padding: 20px 0;
+            }
+        }
+    }
+
+    .musicTrack1, .musicTrack2, .musicTrack3 {
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .contactSection {
+        height: 1425px;
+    }
+
+
+}

@@ -612,13 +612,77 @@ section {
   margin: auto;
 }
 .skillsContainer .skillsContent .skillsInfo h4 {
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   text-transform: capitalize;
   padding-bottom: 40px;
 }
 
-.contactSection {
+.musicSection {
   background-color: #f0f0f0;
+  height: 1800px;
+}
+.musicSection .musicContainer {
+  padding-top: 80px;
+}
+.musicSection .musicContainer h2 {
+  text-align: center;
+  position: relative;
+  width: 225px;
+  margin: 0 auto;
+}
+.musicSection .musicContainer h2::before {
+  content: " ";
+  width: 35%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid #000;
+}
+.musicSection .musicContainer .musicContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.musicSection .musicContainer .musicContent .tracks h4 {
+  padding: 20px 0;
+}
+.musicSection .musicContainer .musicContent .tracks .musicBtn {
+  padding: 15px 0;
+}
+.musicSection .musicContainer .musicContent .tracks .musicBtn button {
+  padding: 10px 20px;
+  margin-right: 10px;
+}
+
+.tracks img {
+  width: 300px;
+  height: 168px;
+  border-top: 10px solid #FFBF00;
+  border-bottom: 10px solid #FFBF00;
+  border-radius: 15px;
+}
+
+.musicTrack2 {
+  text-align: right;
+  margin-left: 500px;
+  margin-right: 125px;
+}
+
+.musicTrack1, .musicTrack3 {
+  margin-right: 500px;
+  margin-left: 125px;
+}
+
+.musicTrack1 {
+  margin-top: 40px;
+}
+
+.contactSection {
+  background-color: #FFFFFF;
   height: 800px;
 }
 .contactSection .contactContainer {
@@ -660,7 +724,7 @@ section {
   padding: 15px 15px;
   margin-bottom: 25px;
   width: 75%;
-  background: #FFFFFF;
+  background: #f0f0f0;
 }
 .contactSection .formContainer form textarea {
   resize: none;
@@ -668,14 +732,14 @@ section {
   border-radius: 10px;
   padding: 20px 15px;
   width: 85%;
-  background: #FFFFFF;
+  background: #f0f0f0;
 }
 .contactSection .formContainer form button {
   margin: 30px auto;
   padding: 20px 60px;
   border-radius: 10px;
   border: none;
-  background: #FFFFFF;
+  background: #f0f0f0;
 }
 .contactSection .formContainer .contactInfo {
   width: 50%;
@@ -685,6 +749,9 @@ section {
   padding-bottom: 40px;
 }
 
+footer {
+  background: #f0f0f0;
+}
 footer .footerIcons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -697,9 +764,240 @@ footer .footerIcons .fab, footer .footerIcons .fas {
   font-size: 4rem;
 }
 footer .footerTag {
-  background-color: #f0f0f0;
+  background-color: #FFFFFF;
 }
 footer .footerTag p {
   padding: 10px 0;
   text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .skillsContainer .skillsContent {
+    padding-top: 100px;
+  }
+  .skillsContainer .skillsContent .skillsBtnContainer button {
+    margin: 20px 30px;
+  }
+
+  .musicSection {
+    height: 2000px;
+  }
+
+  .musicTrack2 {
+    text-align: right;
+    margin-left: 450px;
+    margin-right: 100px;
+  }
+
+  .musicTrack1, .musicTrack3 {
+    margin-right: 450px;
+    margin-left: 100px;
+  }
+}
+@media (max-width: 950px) {
+  .skillsContainer .skillsContent .skillsBtnContainer button {
+    margin: 20px 15px;
+  }
+
+  .musicTrack2 {
+    text-align: right;
+    margin-left: 400px;
+    margin-right: 50px;
+  }
+
+  .musicTrack1, .musicTrack3 {
+    margin-right: 400px;
+    margin-left: 50px;
+  }
+}
+@media (max-width: 850px) {
+  .slideMenu.isActive {
+    width: 50%;
+  }
+
+  .aboutMeSection {
+    height: 1200px;
+  }
+  .aboutMeSection .aboutMeContent {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 75%;
+    margin: 0 auto;
+  }
+  .aboutMeSection .aboutMeContent p {
+    padding: 30px 0;
+  }
+
+  .musicSection {
+    height: 1900px;
+  }
+
+  .musicTrack2 {
+    text-align: right;
+    margin: 0 0 0 300px;
+  }
+
+  .musicTrack1, .musicTrack3 {
+    margin: 0 300px 0 0;
+  }
+
+  .musicTrack1 {
+    padding-top: 25px;
+  }
+}
+@media (max-width: 750px) {
+  .contactSection {
+    height: 1200px;
+  }
+  .contactSection .formContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    width: 100%;
+  }
+  .contactSection .formContainer form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contactSection .formContainer .contactInfo {
+    width: 100%;
+  }
+
+  .skillsContainer .skillsContent {
+    padding-top: 70px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .skillsContainer .skillsContent .skillsBtnContainer {
+    width: 100%;
+  }
+  .skillsContainer .skillsContent .skillsBtnContainer button {
+    margin: 20px 15px;
+  }
+  .skillsContainer .skillsContent .skillsInfo {
+    width: 80%;
+    padding-top: 35px;
+  }
+
+  .projectSection .projectContent {
+    width: 90%;
+    height: 750px;
+  }
+
+  .musicTrack2 {
+    text-align: right;
+    margin: 0 0 0 200px;
+    padding-top: 15px;
+  }
+
+  .musicTrack1, .musicTrack3 {
+    margin: 0 200px 0 0;
+  }
+}
+@media (max-width: 600px) {
+  .aboutMeSection {
+    height: 1300px;
+  }
+  .aboutMeSection .aboutMeContent {
+    width: 95%;
+  }
+
+  .skillsSection {
+    height: 1100px;
+  }
+
+  .musicSection {
+    height: 2000px;
+  }
+
+  .contactSection {
+    height: 1375px;
+  }
+  .contactSection .formContainer form input[type=text], .contactSection .formContainer form input[type=email] {
+    width: 100%;
+  }
+  .contactSection .formContainer form textarea {
+    width: 100%;
+  }
+
+  .slideMenu.isActive {
+    width: 100%;
+  }
+
+  .musicTrack2 {
+    text-align: right;
+    margin: 0 0 0 50px;
+    padding-top: 30px;
+  }
+
+  .musicTrack1, .musicTrack3 {
+    margin: 0 50px 0 0;
+    padding-top: 30px;
+  }
+
+  .projectSection {
+    height: 1200px;
+  }
+  .projectSection .projectContent {
+    width: 90%;
+    height: 800px;
+  }
+
+  footer .footerTag p {
+    padding: 10px;
+  }
+}
+@media (max-width: 482px) {
+  .projectSection {
+    height: 1400px;
+  }
+  .projectSection .projectContent {
+    height: 975px;
+  }
+
+  .skillsSection {
+    height: 1250px;
+  }
+
+  header nav ul {
+    right: 120%;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .aboutMeSection {
+    height: 1475px;
+  }
+  .aboutMeSection .aboutMeContainer h2 {
+    margin-top: 50px;
+  }
+  .aboutMeSection .aboutMeContainer .aboutMeContent {
+    width: 100%;
+    padding: 20px 0;
+  }
+
+  .musicTrack1, .musicTrack2, .musicTrack3 {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contactSection {
+    height: 1425px;
+  }
 }

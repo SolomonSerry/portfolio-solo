@@ -1,0 +1,73 @@
+.musicSection {
+    background-color: $secondary;
+    height: 1800px;
+    .musicContainer {
+        padding-top: 80px;
+        h2 {
+            text-align: center;
+            position: relative;
+            width: 225px;
+            margin: 0 auto;
+
+            &::before {
+                content: ' ';
+                width: 35%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border-bottom: 2px solid $text;
+            }
+        }
+
+        .musicContent {
+            display: flex;
+            flex-direction: column;
+            .tracks {
+                h4 {
+                    padding: 20px 0;
+                }
+                .musicBtn {
+                    padding: 15px 0;
+                    button {
+                        padding: 10px 20px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+
+        
+    }
+}
+
+
+
+
+
+
+// styling music images
+.tracks img {
+    width: 300px;
+    height: 168px;
+    border-top: 10px solid $accentColor;
+    border-bottom: 10px solid $accentColor;
+    border-radius: 15px;
+    
+}
+
+// styling and placement for individuale track
+
+.musicTrack2 {
+    text-align: right;
+    margin-left: 500px;
+    margin-right: 125px;
+}
+
+.musicTrack1, .musicTrack3 {
+    margin-right: 500px;
+    margin-left: 125px;
+}
+
+.musicTrack1 {
+    margin-top: 40px;
+}
