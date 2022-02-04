@@ -1020,7 +1020,7 @@ footer .footerTag p {
 }
 @media (max-width: 600px) {
   .aboutMeSection {
-    height: 1300px;
+    height: 1500px;
   }
   .aboutMeSection .aboutMeContent {
     width: 95%;
@@ -1084,7 +1084,7 @@ footer .footerTag p {
   }
 
   .skillsSection {
-    height: 700px;
+    height: 900px;
     padding: 0;
   }
   .skillsSection .skillsContent {
