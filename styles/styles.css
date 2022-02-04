@@ -1020,7 +1020,7 @@ footer .footerTag p {
 }
 @media (max-width: 600px) {
   .aboutMeSection {
-    height: 1500px;
+    height: 1800px;
   }
   .aboutMeSection .aboutMeContent {
     width: 95%;
