@@ -260,16 +260,18 @@ header nav h3 {
 }
 header nav .hamburgerMenu {
   display: block;
-  width: 45px;
+  width: 65px;
   cursor: pointer;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  background: none;
+  background: #dddddd;
   outline: none;
   border: none;
   position: relative;
   z-index: 20;
+  border-radius: 10px;
+  padding: 10px;
 }
 header nav ul {
   position: fixed;
@@ -309,7 +311,7 @@ header nav ul a:hover, header nav ul a :focus {
   display: block;
   height: 5px;
   width: 100%;
-  background: whitesmoke;
+  background: #000;
   margin: 6px 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
@@ -896,6 +898,10 @@ footer .footerTag p {
   .musicTrack1, .musicTrack3 {
     margin-right: 450px;
     margin-left: 100px;
+  }
+
+  .aboutMeSection {
+    height: 1000px;
   }
 }
 @media (max-width: 950px) {

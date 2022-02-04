@@ -19,14 +19,17 @@ header {
             }
             .hamburgerMenu {
                 display: block;
-                width: 45px;
+                width: 65px;
                 cursor: pointer;
                 appearance: none;
-                background: none;
+                background: $primary;
                 outline: none;
                 border: none;
                 position: relative;
                 z-index: 20;
+                border-radius: 10px;
+                padding: 10px;
+
 
             }
             ul {
@@ -68,7 +71,7 @@ header {
     display: block;
     height: 5px;
     width: 100%;
-    background: whitesmoke;
+    background: $text;
     margin: 6px 0;
     transition: 0.4s;
 }
@@ -81,11 +84,13 @@ header {
 .hamburgerMenu.isActive::after {
     transform: rotate(45deg) translate(-9px, -8px);
     background: $text;
+
 }
 
 .hamburgerMenu.isActive .bar {
     opacity: 0;
 }
+
 
 .slideMenu.isActive {
     right: 0;
