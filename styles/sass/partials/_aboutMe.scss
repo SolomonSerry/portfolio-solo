@@ -1,17 +1,16 @@
 .aboutMeSection {
     height: 800px;
-    overflow-x: hidden;
+    background: $primary;
 }
 
 .aboutMeContainer {
+    padding-top: 150px;
     
      h2 {
         width: 350px;
         position: relative;
         text-align: center;
         margin: 0 auto;
-        margin-top: 150px;
-        overflow-x: hidden;
         &::before {
             content: ' ';
             width: 25%;
