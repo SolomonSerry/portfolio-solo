@@ -657,6 +657,9 @@ section {
 .skillsContainer .skillsContent .skillsBtnContainer button .fab:hover, .skillsContainer .skillsContent .skillsBtnContainer button .fab :focus, .skillsContainer .skillsContent .skillsBtnContainer button .fas:hover, .skillsContainer .skillsContent .skillsBtnContainer button .fas :focus, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-firebase-plain:hover, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-firebase-plain :focus, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-jquery-plain:hover, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-jquery-plain :focus {
   color: #FFBF00;
 }
+.skillsContainer .skillsContent .skillsBtnContainer button p {
+  color: #000;
+}
 .skillsContainer .skillsContent .skillsInfo {
   width: 50%;
   text-align: center;
