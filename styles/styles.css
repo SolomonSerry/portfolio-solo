@@ -529,6 +529,7 @@ section {
   background-color: #f0f0f0;
   height: 1100px;
   padding-top: 80px;
+  overflow: hidden;
 }
 .projectSection h2 {
   text-align: center;
