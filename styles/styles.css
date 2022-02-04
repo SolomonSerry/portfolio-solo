@@ -674,6 +674,7 @@ section {
 .musicSection {
   background-color: #f0f0f0;
   height: 1800px;
+  overflow: hidden;
 }
 .musicSection .musicContainer {
   padding-top: 80px;
