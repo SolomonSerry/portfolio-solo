@@ -1048,19 +1048,31 @@ footer .footerTag p {
 }
 @media (max-width: 482px) {
   .projectSection {
-    height: 1000px;
+    height: 900px;
     padding: 0;
   }
   .projectSection .projectContent {
-    height: 700px;
+    height: 600px;
+  }
+  .projectSection .projectContent .slides img {
+    height: 200px;
   }
 
   .skillsSection {
-    height: 1000px;
+    height: 620px;
     padding: 0;
   }
   .skillsSection .skillsContent {
     padding-top: 0;
+  }
+  .skillsSection .skillsContent .skillsBtnContainer button {
+    margin: 20px 0;
+  }
+  .skillsSection .skillsContent .skillsBtnContainer button .fab, .skillsSection .skillsContent .skillsBtnContainer button .fas, .skillsSection .skillsContent .skillsBtnContainer button .devicon-firebase-plain, .skillsSection .skillsContent .skillsBtnContainer button .devicon-jquery-plain {
+    font-size: 2.3rem;
+  }
+  .skillsSection .skillsContent .skillsInfo {
+    padding-top: 5px;
   }
 
   header nav ul {

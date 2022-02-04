@@ -211,18 +211,37 @@
 
 @media(max-width:482px) {
     .projectSection {
-        height: 1000px;
+        height: 900px;
         padding: 0;
         .projectContent {
-            height: 700px;
+            height: 600px;
+             .slides {
+                img {
+                    height: 200px;
+                }
+            }
         }
     }
 
     .skillsSection {
-        height: 1000px;
+        height: 620px;
         padding: 0;
         .skillsContent {
             padding-top: 0;
+           
+            .skillsBtnContainer {
+                button {
+                    margin: 20px 0;
+                    .fab, .fas, .devicon-firebase-plain, .devicon-jquery-plain {
+                        font-size: 2.3rem;
+                    }
+                }
+
+
+            }
+            .skillsInfo {
+                padding-top: 5px;
+            }
         }
     }
     
