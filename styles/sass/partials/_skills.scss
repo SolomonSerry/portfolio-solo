@@ -39,6 +39,7 @@
                 .fab, .fas, .devicon-firebase-plain, .devicon-jquery-plain {
                     font-size: 3rem;
                     transition: all 0.15s ease-in-out;
+                    color: $text;
                     &:hover, :focus {
                         color: $accentColor3;
                     }

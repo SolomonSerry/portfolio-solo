@@ -365,6 +365,7 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
+  overflow-x: hidden;
 }
 
 h1,
@@ -596,6 +597,7 @@ section {
 .projectSection .btnContainer button .fas {
   font-size: 4rem;
   margin: 0 30px;
+  color: #000;
 }
 
 .skillsSection {
@@ -650,6 +652,7 @@ section {
   font-size: 3rem;
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
+  color: #000;
 }
 .skillsContainer .skillsContent .skillsBtnContainer button .fab:hover, .skillsContainer .skillsContent .skillsBtnContainer button .fab :focus, .skillsContainer .skillsContent .skillsBtnContainer button .fas:hover, .skillsContainer .skillsContent .skillsBtnContainer button .fas :focus, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-firebase-plain:hover, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-firebase-plain :focus, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-jquery-plain:hover, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-jquery-plain :focus {
   color: #FFBF00;
@@ -709,6 +712,7 @@ section {
   border-radius: 5px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+  color: #000;
 }
 .musicSection .musicContainer .musicContent .tracks .musicBtn button:hover, .musicSection .musicContainer .musicContent .tracks .musicBtn button :focus {
   -webkit-box-shadow: inset -2em 0 1.5em 0 #f9d976, inset 3.5em 0 0 0 #FFBF00;
@@ -803,6 +807,7 @@ section {
   border-radius: 10px;
   border: none;
   background: #f0f0f0;
+  color: #000;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
