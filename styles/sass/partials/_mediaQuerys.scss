@@ -231,12 +231,12 @@
     }
 }
 
-@media(max-width:482px) {
+@media(max-width:488px) {
     .projectSection {
-        height: 900px;
+        height: 960px;
         padding: 0;
         .projectContent {
-            height: 600px;
+            height: 680px;
              .slides {
                 img {
                     height: 200px;
@@ -246,7 +246,7 @@
     }
 
     .skillsSection {
-        height: 900px;
+        height: 600px;
         padding: 0;
         .skillsContent {
             padding-top: 0;
@@ -279,8 +279,9 @@
     }
 
     .aboutMeSection {
-        height: 1000px;
+        height: 800px;
         .aboutMeContainer {
+            padding-top: 20px;
             h2 {
                margin: 0 auto;
                width: 320px;
@@ -297,6 +298,9 @@
 
     .musicSection {
         height: 1600px;
+        .musicContainer {
+            padding-top: 20px;
+        }
     }
 
     .musicTrack1, .musicTrack2, .musicTrack3 {

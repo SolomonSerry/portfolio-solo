@@ -1113,20 +1113,20 @@ footer .footerTag p {
     padding: 10px;
   }
 }
-@media (max-width: 482px) {
+@media (max-width: 488px) {
   .projectSection {
-    height: 900px;
+    height: 960px;
     padding: 0;
   }
   .projectSection .projectContent {
-    height: 600px;
+    height: 680px;
   }
   .projectSection .projectContent .slides img {
     height: 200px;
   }
 
   .skillsSection {
-    height: 900px;
+    height: 600px;
     padding: 0;
   }
   .skillsSection .skillsContent {
@@ -1154,7 +1154,10 @@ footer .footerTag p {
   }
 
   .aboutMeSection {
-    height: 1000px;
+    height: 800px;
+  }
+  .aboutMeSection .aboutMeContainer {
+    padding-top: 20px;
   }
   .aboutMeSection .aboutMeContainer h2 {
     margin: 0 auto;
@@ -1170,6 +1173,9 @@ footer .footerTag p {
 
   .musicSection {
     height: 1600px;
+  }
+  .musicSection .musicContainer {
+    padding-top: 20px;
   }
 
   .musicTrack1, .musicTrack2, .musicTrack3 {
