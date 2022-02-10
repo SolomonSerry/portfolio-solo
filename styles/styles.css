@@ -243,7 +243,6 @@ header {
   height: 900px;
   color: #000;
   background-position: right;
-  overflow-x: hidden;
 }
 header nav {
   display: -webkit-box;
