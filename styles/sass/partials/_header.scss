@@ -98,18 +98,18 @@ header {
 
 .nameTag {
     margin-top: 200px;
-    width: 300px;
+    width: 372px;
     line-height: 2.7em;
     h1 {
         color: $primary;
         background-color: black;
-        padding: 20px 0 20px 10px;
+        padding: 25px 0 25px 46px;
         border-radius: 10px;
         text-shadow: -1px 1px 2px $primary;
     }
     h4 {
         position: relative;
-        width: 130px;
+        width: 200px;
         background-color: black;
         border-radius: 10px;
         text-shadow: 0 0 1px $primary;
@@ -118,10 +118,10 @@ header {
         
         &::after {
             content: ' ';
-            width: 45%;
+            width: 35%;
             position: absolute;
             bottom: 10px;
-            right: 20px;
+            right: 38px;
             border-bottom: 2px solid $primary;
             
         }

@@ -1,7 +1,7 @@
 
 .projectSection {
     background-color: $secondary;
-    height: 1100px;
+    height: 1300px;
     padding-top: 80px;
     h2 {
         text-align: center;
@@ -19,8 +19,8 @@
         }
     }
     .projectContent {
-        width: 700px;
-        height: 675px;
+        width: 800px;
+        height: 775px;
         text-align: center;
         position: relative;
         overflow: hidden;
@@ -43,6 +43,31 @@
             .fab, .devicon-firebase-plain {
                 font-size: 2.8rem;
                 padding: 0 5px;
+            }
+            .siteLinks {
+                display: flex;
+                width: 100%;
+                margin: 0 auto;
+                padding-top: 30px;
+                justify-content: center;
+                a {
+                    display: block;
+                    margin: 0 20px;
+                    padding-top: 10px;
+                    font-weight: 700;
+                    transition: all 0.25s ease-in-out;
+                    &:hover, :focus {
+                    box-shadow: 0 0.5em 0.5em -0.4em $accentColor; 
+                    transform: translateY(-0.25em);
+                    color: $accentColor;
+
+                    }
+                }
+
+                p {
+                    padding: 0;
+                    font-size: 1.2rem;
+                }
             }
         
         }
@@ -67,4 +92,6 @@
             }
         }
     }
+
+    
 }

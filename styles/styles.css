@@ -339,19 +339,19 @@ header nav ul a:hover, header nav ul a :focus {
 
 .nameTag {
   margin-top: 200px;
-  width: 300px;
+  width: 372px;
   line-height: 2.7em;
 }
 .nameTag h1 {
   color: #dddddd;
   background-color: black;
-  padding: 20px 0 20px 10px;
+  padding: 25px 0 25px 46px;
   border-radius: 10px;
   text-shadow: -1px 1px 2px #dddddd;
 }
 .nameTag h4 {
   position: relative;
-  width: 130px;
+  width: 200px;
   background-color: black;
   border-radius: 10px;
   text-shadow: 0 0 1px #dddddd;
@@ -360,10 +360,10 @@ header nav ul a:hover, header nav ul a :focus {
 }
 .nameTag h4::after {
   content: " ";
-  width: 45%;
+  width: 35%;
   position: absolute;
   bottom: 10px;
-  right: 20px;
+  right: 38px;
   border-bottom: 2px solid #dddddd;
 }
 .nameTag h4 a {
@@ -547,7 +547,7 @@ section {
 
 .projectSection {
   background-color: #9fb3e0;
-  height: 1100px;
+  height: 1300px;
   padding-top: 80px;
 }
 .projectSection h2 {
@@ -565,8 +565,8 @@ section {
   border-bottom: 2px solid #000;
 }
 .projectSection .projectContent {
-  width: 700px;
-  height: 675px;
+  width: 800px;
+  height: 775px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -592,6 +592,36 @@ section {
 .projectSection .projectContent .slides .fab, .projectSection .projectContent .slides .devicon-firebase-plain {
   font-size: 2.8rem;
   padding: 0 5px;
+}
+.projectSection .projectContent .slides .siteLinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 30px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.projectSection .projectContent .slides .siteLinks a {
+  display: block;
+  margin: 0 20px;
+  padding-top: 10px;
+  font-weight: 700;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.projectSection .projectContent .slides .siteLinks a:hover, .projectSection .projectContent .slides .siteLinks a :focus {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
+          box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+  color: #f9d976;
+}
+.projectSection .projectContent .slides .siteLinks p {
+  padding: 0;
+  font-size: 1.2rem;
 }
 .projectSection .btnContainer {
   text-align: center;
@@ -815,7 +845,7 @@ section {
   border-radius: 10px;
   padding: 15px 15px;
   margin-bottom: 25px;
-  width: 75%;
+  width: 85%;
   background: #9fb3e0;
 }
 .contactSection .formContainer form textarea {
@@ -909,6 +939,10 @@ footer .footerTag p {
     margin: 20px 15px;
   }
 
+  header {
+    background-image: linear-gradient(200deg, #6a93cb 0%, #a4bfef 74%);
+  }
+
   .musicTrack2 {
     text-align: right;
     margin-left: 400px;
@@ -926,7 +960,7 @@ footer .footerTag p {
   }
 
   .aboutMeSection {
-    height: 1200px;
+    height: 1400px;
   }
   .aboutMeSection .aboutMeContent {
     -webkit-box-orient: vertical;
@@ -1020,7 +1054,7 @@ footer .footerTag p {
 }
 @media (max-width: 600px) {
   .aboutMeSection {
-    height: 1600px;
+    height: 1300px;
   }
   .aboutMeSection .aboutMeContent {
     width: 95%;
@@ -1102,6 +1136,13 @@ footer .footerTag p {
 
   header nav ul {
     right: 120%;
+  }
+
+  .nameTag {
+    width: 330px;
+  }
+  .nameTag h1 {
+    padding: 20px 0 20px 28px;
   }
 
   .aboutMeSection {
