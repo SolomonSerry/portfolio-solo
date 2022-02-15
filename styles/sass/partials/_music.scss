@@ -62,11 +62,113 @@
     border-bottom: 10px solid $accentColor3;
     border-radius: 15px;
     transition: all 0.2s ease-in-out;
+    position: relative;
     &:hover {
         filter: drop-shadow(0 10px 0.6rem black);
     }
     
 }
+
+// hover for play and stop on img 
+.trackArt {
+    position: relative;
+    width: 300px;
+    height: 168px;
+    &:hover .playStopHover::before, :hover.playStopHover::after {
+        // filter: drop-shadow(0 10px 0.6rem black);
+        opacity: 50%;
+        z-index: 10;
+    }
+    
+}
+
+.playStopHover {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.playStop2 {
+    left: -275px;
+}
+
+.playStopHover::before {
+    content: '';
+    position: absolute;
+    border: 8px solid $primary;
+    border-radius: 5px;
+    top: 10px;
+    left: 0;
+    // z-index: -10;
+    opacity: 0;
+    width: 300px;
+    height: 148px;
+    transition: opacity 0.3s ease-in-out;
+    // transition: z-index 0.05s ease-in-out;
+}
+
+.playStopHover::after {
+    content: '▶';
+    position: absolute;
+    color: $primary;
+    font-size: 3rem;
+    border: 8px solid $primary;
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    padding: 2px 0 0 12px;
+    top: 40px;
+    left: 105px;
+    // z-index: -10;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    // transition: z-index 0.05s ease-in-out;
+   
+}
+
+.playStop2::before {
+    content: '';
+    position: absolute;
+    border: 8px solid $primary;
+    border-radius: 5px;
+    top: 10px;
+    left: 275px;
+    // z-index: -10;
+    opacity: 0;
+    width: 300px;
+    height: 148px;
+    transition: opacity 0.3s ease-in-out;
+    // transition: z-index 0.05s ease-in-out;
+}
+
+.playStop2::after {
+     content: '▶';
+    position: absolute;
+    color: $primary;
+    font-size: 3rem;
+    border: 8px solid $primary;
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    padding: 2px 0 0 12px;
+    top: 40px;
+    left: 385px;
+    // z-index: -10;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    // transition: z-index 0.05s ease-in-out;
+   
+}
+
+.tracks:nth-child(2) {
+   display: flex;
+   justify-content: right;
+   flex-direction: column;
+   align-items: flex-end;
+
+}
+
+
 
 // styling and placement for individuale track
 
@@ -74,6 +176,7 @@
     text-align: right;
     margin-left: 500px;
     margin-right: 125px;
+
 }
 
 .musicTrack1, .musicTrack3 {
@@ -83,4 +186,21 @@
 
 .musicTrack1 {
     margin-top: 40px;
+}
+
+.mainPlayer {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 12px;
+    background-color: $primary;
+    width: 60%;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+
+.playerVisible {
+    opacity: 100%;
+    transition: opacity 0.25s ease-in-out;
 }

@@ -32,18 +32,19 @@
                 border: none;
                 background: $primary;
                 margin: 20px 59px;
-                transition: all 0.25s ease-in-out;
+                transition: box-shadow 0.25s ease-in-out;
+                transition: transform 0.25s ease-in-out;
                 &:hover, :focus {
-                    box-shadow: 0 0.5em 0.5em -0.4em $accentColor; 
+                    box-shadow: 0 0.5em 0.5em -0.4em $secondary; 
                     transform: translateY(-0.25em);
                 }
                 .fab, .fas, .devicon-firebase-plain, .devicon-jquery-plain {
                     font-size: 3rem;
-                    transition: all 0.15s ease-in-out;
+                    transition: color 0.15s ease-in-out;
                     color: $text;
-                    &:hover, :focus {
-                        color: $accentColor3;
-                    }
+                    // &:hover, :focus {
+                    //     color: $accentColor3;
+                    // }
                 }
                 p {
                     color: $text;

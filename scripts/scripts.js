@@ -8,11 +8,11 @@ portfolio.skillsInfo = [
     },
     {
         name: "css3",
-        description: "Learned CSS basic styling as well as advanced selectors.  Also Worked with advanced layouts, flex-box, grid systems and CSS grids. "
+        description: "Learned CSS basic styling as well as advanced selectors.  Also Worked with advanced layouts: flex-box, grid systems and CSS grids. "
     },
     {
         name: "sass",
-        description: "Used SCSS partials to avoid Repeating code by impoorting into style sheet.  As well as used mixin's and varibles to group together consistently used code."
+        description: "Used SCSS partials to avoid Repeating code by importing into style sheet.  As well as used mixin's and varibles to group together consistently used code."
     },
     {
         name: "html5",
@@ -20,11 +20,11 @@ portfolio.skillsInfo = [
     },
     {
         name: "accessibility",
-        description: "Made sure all sites are fully accessable to everyone.  Used accessibilty guidelines from sites like WCAG and WebAim to make sure sites are up to standards. "
+        description: "Made sure all sites are fully accessible to everyone.  Used accessibilty guidelines from sites like WCAG and WebAim to make sure sites are up to standards. "
     },
     {
         name: "firebase",
-        description: "Fire Base intigration into both in React and JS.  Able to store user data and acesses it when needed"
+        description: "Firebase intigration into both React and JS.  Able to store user data and acesses it when needed"
     },
     {
         name: "jquery",
@@ -32,7 +32,7 @@ portfolio.skillsInfo = [
     },
     {
         name: "git",
-        description: "Created git init for sevreal different projects on the command line.  Used branching and other methods through git to colaberate with different people."
+        description: "Created git init for sevreal different projects on the command line.  Used branching and other methods through git to colaberate with various developers."
     },
     {
         name: "github",
@@ -58,8 +58,19 @@ portfolio.slideMenu = document.querySelector('.slideMenu')
 portfolio.audio  = document.querySelectorAll('#audio')
 portfolio.playBtn = document.querySelectorAll('.play')
 portfolio.stopBtn = document.querySelectorAll('.stop')
+portfolio.mainPlayer = document.querySelector('.mainPlayer')
 
 portfolio.navBtn = document.querySelectorAll('li')
+
+portfolio.musicArea = document.querySelector('.musicContainer')
+portfolio.contactArea = document.querySelector('.contactSection')
+portfolio.imgClick = document.querySelectorAll('.trackArt')
+
+portfolio.icon1 = document.querySelectorAll('.playStopHover')
+portfolio.icon2 = document.querySelectorAll('.playStop2')
+
+console.log(portfolio.icon1)
+console.log(portfolio.icon2)
 
 
 // setting position on images
@@ -139,42 +150,113 @@ let play = 0;
 
 portfolio.userListen = () => {
     
-        portfolio.playBtn.forEach( function(playPause) {
+        portfolio.imgClick.forEach( function(playPause) {
            playPause.addEventListener('click', function() {
+               console.log(playPause)
                if (play === 0) {
                    portfolio.audio.forEach( function(track) {
                        if (playPause.classList.contains(track.title)) {
-                           play = 1;
-                           track.play();
-                           playPause.innerHTML = "Pause &#9614&#9614";
+                           portfolio.mainPlayer.src = track.src;
+                           portfolio.mainPlayer.play();
+                        //    playPause.innerText = "Pause";
+                           play = 1;  
                         }
-                      
                     })
-
-                } else if (play === 1) {
-                   portfolio.audio.forEach(function (track) {
-                       if (playPause.classList.contains(track.title)) {
-                           play = 0;
-                           track.pause();
-                           playPause.innerHTML = "Play &#9658";
-                       }
-
-                   })
-                }
-           })
-        })
-    
-    portfolio.stopBtn.forEach(function (stop) {
-        stop.addEventListener('click', function () {
-            portfolio.audio.forEach(function (track) {
-                if (stop.classList.contains(track.title)) {
-                    track.pause();
-                    track.currentTime = 0;
-                }
+                    
+                } 
+                else if (play === 1) {
+                    portfolio.audio.forEach(function (track) {
+                        if (playPause.classList.contains(track.title)) {
+                            portfolio.mainPlayer.currentTime = 0;
+                            portfolio.mainPlayer.pause()
+                            play = 0;
+                            // playPause.innerText = "Pause";
+                        }
+                    })
+                    
+                } 
+                // else if (play === 1) {
+                //     portfolio.audio.forEach(function (track) {
+                //         if (btn.target.classList.contains(track.title)) {
+                //             portfolio.mainPlayer.pause();
+                //             portfolio.mainPlayer.currentTime = 0;
+                //             // playPause.innerText = "Play";
+                //             play = 0;
+                //             // console.log(track)
+                //         }
+                        
+                //    })
+                // }
             })
         })
-    })
+        
+        // portfolio.stopBtn.forEach(function (stop) {
+        //     stop.addEventListener('click', function () {
+        //         portfolio.audio.forEach(function (track) {
+        //             if (stop.classList.contains(track.title)) {
+        //                 portfolio.mainPlayer.src = track.src;
+        //                 track.pause();
+        //                 track.currentTime = 0;
+        //                 portfolio.playBtn[0].innerText = "Play";
+        //                 portfolio.playBtn[1].innerText = "Play";
+        //                 portfolio.playBtn[2].innerText = "Play";
+        //                 // console.log(portfolio.playBtn[index]);
+        //                 play = 0;
+        //             }
+
+                        
+        //         })
+            
+        //     })
+        // })
+
 }   
+
+// sound bar appear on scroll 
+
+// const scrollPosTop = 3500
+// const scrollPosBottom = 4400
+
+// portfolio.checkPos = () => {
+//     let windowY = window.scrollY;
+//     if (windowY > scrollPosTop) {
+//         portfolio.mainPlayer.classList.add('playerVisible');
+//     } else {
+//         portfolio.mainPlayer.classList.remove('playerVisible')
+//     }
+//     window.addEventListener('scroll', portfolio.checkPos);
+// }
+
+// portfolio.checkPosBottom = () => {
+//     let windowY = window.scrollY;
+//     if (windowY > scrollPosBottom) {
+//         portfolio.mainPlayer.classList.remove('playerVisible')
+//     }
+//     window.addEventListener('scroll', portfolio.checkPosBottom);
+// }
+
+window.addEventListener('scroll', () => {
+    if (portfolio.musicArea.getBoundingClientRect().top < window.innerHeight) {
+        portfolio.mainPlayer.classList.add('playerVisible')
+    }
+    
+    if (portfolio.musicArea.getBoundingClientRect().top > window.innerHeight) {
+        portfolio.mainPlayer.classList.remove('playerVisible')
+    }
+})
+
+
+
+
+ window.addEventListener('scroll', ()=> {
+    
+    if (portfolio.contactArea.getBoundingClientRect().top < window.innerHeight) {
+        portfolio.mainPlayer.classList.remove('playerVisible')
+    }
+    
+ })
+
+
 
 
 
@@ -198,6 +280,8 @@ portfolio.userListen = () => {
 portfolio.init = () => {
     portfolio.userSkillsClick();
     portfolio.userListen();
+    // portfolio.checkPos();
+    // portfolio.checkPosBottom();
     AOS.init();
 };
 

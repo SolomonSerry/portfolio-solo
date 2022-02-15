@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -690,23 +691,26 @@ section {
   border: none;
   background: #dddddd;
   margin: 20px 59px;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
+  -webkit-transition: -webkit-box-shadow 0.25s ease-in-out;
+  transition: -webkit-box-shadow 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out;
+  transition: box-shadow 0.25s ease-in-out, -webkit-box-shadow 0.25s ease-in-out;
+  -webkit-transition: -webkit-transform 0.25s ease-in-out;
+  transition: -webkit-transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out;
+  transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 .skillsContainer .skillsContent .skillsBtnContainer button:hover, .skillsContainer .skillsContent .skillsBtnContainer button :focus {
-  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
-          box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #9fb3e0;
+          box-shadow: 0 0.5em 0.5em -0.4em #9fb3e0;
   -webkit-transform: translateY(-0.25em);
           transform: translateY(-0.25em);
 }
 .skillsContainer .skillsContent .skillsBtnContainer button .fab, .skillsContainer .skillsContent .skillsBtnContainer button .fas, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-firebase-plain, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-jquery-plain {
   font-size: 3rem;
-  -webkit-transition: all 0.15s ease-in-out;
-  transition: all 0.15s ease-in-out;
+  -webkit-transition: color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out;
   color: #000;
-}
-.skillsContainer .skillsContent .skillsBtnContainer button .fab:hover, .skillsContainer .skillsContent .skillsBtnContainer button .fab :focus, .skillsContainer .skillsContent .skillsBtnContainer button .fas:hover, .skillsContainer .skillsContent .skillsBtnContainer button .fas :focus, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-firebase-plain:hover, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-firebase-plain :focus, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-jquery-plain:hover, .skillsContainer .skillsContent .skillsBtnContainer button .devicon-jquery-plain :focus {
-  color: #FFBF00;
 }
 .skillsContainer .skillsContent .skillsBtnContainer button p {
   color: #000;
@@ -782,10 +786,109 @@ section {
   border-radius: 15px;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
+  position: relative;
 }
 .tracks img:hover {
   -webkit-filter: drop-shadow(0 10px 0.6rem black);
           filter: drop-shadow(0 10px 0.6rem black);
+}
+
+.trackArt {
+  position: relative;
+  width: 300px;
+  height: 168px;
+}
+.trackArt:hover .playStopHover::before, .trackArt :hover.playStopHover::after {
+  opacity: 50%;
+  z-index: 10;
+}
+
+.playStopHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.playStop2 {
+  left: -275px;
+}
+
+.playStopHover::before {
+  content: "";
+  position: absolute;
+  border: 8px solid #dddddd;
+  border-radius: 5px;
+  top: 10px;
+  left: 0;
+  opacity: 0;
+  width: 300px;
+  height: 148px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.playStopHover::after {
+  content: "▶";
+  position: absolute;
+  color: #dddddd;
+  font-size: 3rem;
+  border: 8px solid #dddddd;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  padding: 2px 0 0 12px;
+  top: 40px;
+  left: 105px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.playStop2::before {
+  content: "";
+  position: absolute;
+  border: 8px solid #dddddd;
+  border-radius: 5px;
+  top: 10px;
+  left: 275px;
+  opacity: 0;
+  width: 300px;
+  height: 148px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.playStop2::after {
+  content: "▶";
+  position: absolute;
+  color: #dddddd;
+  font-size: 3rem;
+  border: 8px solid #dddddd;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  padding: 2px 0 0 12px;
+  top: 40px;
+  left: 385px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.tracks:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .musicTrack2 {
@@ -801,6 +904,26 @@ section {
 
 .musicTrack1 {
   margin-top: 40px;
+}
+
+.mainPlayer {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 12px;
+  background-color: #dddddd;
+  width: 60%;
+  opacity: 0;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
+}
+
+.playerVisible {
+  opacity: 100%;
+  -webkit-transition: opacity 0.25s ease-in-out;
+  transition: opacity 0.25s ease-in-out;
 }
 
 .contactSection {
