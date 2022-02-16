@@ -66,11 +66,15 @@ portfolio.musicArea = document.querySelector('.musicContainer')
 portfolio.contactArea = document.querySelector('.contactSection')
 portfolio.imgClick = document.querySelectorAll('.trackArt')
 
-portfolio.icon1 = document.querySelectorAll('.playStopHover')
-portfolio.icon2 = document.querySelectorAll('.playStop2')
+portfolio.hoverPlay = document.querySelectorAll('.playHover')
+portfolio.hoverStop = document.querySelectorAll('.stopHover')
 
-console.log(portfolio.icon1)
-console.log(portfolio.icon2)
+console.log(portfolio.hoverPlay)
+
+
+
+
+
 
 
 // setting position on images
@@ -150,28 +154,56 @@ let play = 0;
 
 portfolio.userListen = () => {
     
-        portfolio.imgClick.forEach( function(playPause) {
-           playPause.addEventListener('click', function() {
-               console.log(playPause)
+        portfolio.imgClick.forEach( function(playStop) {
+           playStop.addEventListener('click', function() {
+               console.log(playStop)
                if (play === 0) {
+
                    portfolio.audio.forEach( function(track) {
-                       if (playPause.classList.contains(track.title)) {
-                           portfolio.mainPlayer.src = track.src;
-                           portfolio.mainPlayer.play();
-                        //    playPause.innerText = "Pause";
-                           play = 1;  
-                        }
+                       if (playStop.classList.contains(track.title)) {
+                           portfolio.hoverPlay.forEach( (hoverPlay) => {
+                            if (hoverPlay.offsetParent.classList.contains(track.title)) {
+                                portfolio.hoverStop.forEach( (hoverStop) => {
+                                    if(hoverStop.parentElement.classList.contains(track.title)) {
+                                        hoverPlay.style.display = "none"
+                                        hoverStop.style.display = "block"
+                                        portfolio.mainPlayer.src = track.src;
+                                        portfolio.mainPlayer.play();
+                                     //    playPause.innerText = "Pause";
+                                        play = 1;
+
+                                    }
+                                  
+                                })
+                            
+                            }
+                        })
+
+                          
+                       }
                     })
                     
                 } 
                 else if (play === 1) {
                     portfolio.audio.forEach(function (track) {
-                        if (playPause.classList.contains(track.title)) {
-                            portfolio.mainPlayer.currentTime = 0;
-                            portfolio.mainPlayer.pause()
-                            play = 0;
-                            // playPause.innerText = "Pause";
-                        }
+                        if (playStop.classList.contains(track.title)) {
+                            portfolio.hoverPlay.forEach( (hoverPlay) => {
+                                console.log(hoverPlay)
+                                if(hoverPlay.parentElement.classList.contains(track.title)) {
+                                    portfolio.hoverStop.forEach( (hoverStop) => {
+                                        if (hoverStop.parentElement.classList.contains(track.title)) {
+                                            hoverPlay.style.display = "block"
+                                            hoverStop.style.display = "none"
+                                            portfolio.mainPlayer.currentTime = 0;
+                                            portfolio.mainPlayer.pause()
+                                            play = 0;
+
+                                        }
+                                    })
+                                }
+                            })
+                           
+                        } 
                     })
                     
                 } 
@@ -244,8 +276,6 @@ window.addEventListener('scroll', () => {
         portfolio.mainPlayer.classList.remove('playerVisible')
     }
 })
-
-
 
 
  window.addEventListener('scroll', ()=> {

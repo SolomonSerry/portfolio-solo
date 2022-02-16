@@ -798,23 +798,23 @@ section {
   width: 300px;
   height: 168px;
 }
-.trackArt:hover .playStopHover::before, .trackArt :hover.playStopHover::after {
+.trackArt:hover .playHover::before, .trackArt :hover.playHover::after, .trackArt :hover.stopHover::before, .trackArt :hover.stopHover:after {
   opacity: 50%;
   z-index: 10;
 }
 
-.playStopHover {
+.playHover {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-.playStop2 {
+.play2 {
   left: -275px;
 }
 
-.playStopHover::before {
-  content: "";
+.playHover::before {
+  content: " play ";
   position: absolute;
   border: 8px solid #dddddd;
   border-radius: 5px;
@@ -825,9 +825,11 @@ section {
   height: 148px;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
+  color: #dddddd;
+  padding-left: 10px;
 }
 
-.playStopHover::after {
+.playHover::after {
   content: "▶";
   position: absolute;
   color: #dddddd;
@@ -844,8 +846,80 @@ section {
   transition: opacity 0.3s ease-in-out;
 }
 
-.playStop2::before {
-  content: "";
+.play2::before {
+  content: " play ";
+  position: absolute;
+  border: 8px solid #dddddd;
+  border-radius: 5px;
+  top: 10px;
+  left: 275px;
+  opacity: 0;
+  width: 300px;
+  height: 148px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  color: #dddddd;
+  padding-left: 10px;
+}
+
+.play2::after {
+  content: "▶";
+  position: absolute;
+  color: #dddddd;
+  font-size: 3rem;
+  border: 8px solid #dddddd;
+  border-radius: 50%;
+  width: 85px;
+  height: 85px;
+  padding: 2px 0 0 12px;
+  top: 40px;
+  left: 385px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.stopHover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: none;
+}
+
+.stop2 {
+  left: -275px;
+}
+
+.stopHover::before {
+  content: " stop ";
+  position: absolute;
+  border: 8px solid #dddddd;
+  border-radius: 5px;
+  top: 10px;
+  left: 0;
+  padding-left: 10px;
+  color: #dddddd;
+  opacity: 0;
+  width: 300px;
+  height: 148px;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.stopHover::after {
+  content: "■";
+  position: absolute;
+  color: #dddddd;
+  font-size: 7.7rem;
+  top: -25px;
+  left: 110px;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.stop2::before {
+  content: " stop ";
   position: absolute;
   border: 8px solid #dddddd;
   border-radius: 5px;
@@ -858,8 +932,8 @@ section {
   transition: opacity 0.3s ease-in-out;
 }
 
-.playStop2::after {
-  content: "▶";
+.stop2::after {
+  content: "■";
   position: absolute;
   color: #dddddd;
   font-size: 3rem;

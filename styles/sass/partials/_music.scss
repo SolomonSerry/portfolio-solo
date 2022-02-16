@@ -74,7 +74,7 @@
     position: relative;
     width: 300px;
     height: 168px;
-    &:hover .playStopHover::before, :hover.playStopHover::after {
+    &:hover .playHover::before, :hover.playHover::after, :hover.stopHover::before, :hover.stopHover:after {
         // filter: drop-shadow(0 10px 0.6rem black);
         opacity: 50%;
         z-index: 10;
@@ -82,18 +82,18 @@
     
 }
 
-.playStopHover {
+.playHover {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-.playStop2 {
+.play2 {
     left: -275px;
 }
 
-.playStopHover::before {
-    content: '';
+.playHover::before {
+    content: ' play ';
     position: absolute;
     border: 8px solid $primary;
     border-radius: 5px;
@@ -105,9 +105,11 @@
     height: 148px;
     transition: opacity 0.3s ease-in-out;
     // transition: z-index 0.05s ease-in-out;
+    color: $primary;
+    padding-left: 10px;
 }
 
-.playStopHover::after {
+.playHover::after {
     content: '▶';
     position: absolute;
     color: $primary;
@@ -123,11 +125,11 @@
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
     // transition: z-index 0.05s ease-in-out;
-   
+    
 }
 
-.playStop2::before {
-    content: '';
+.play2::before {
+    content: ' play ';
     position: absolute;
     border: 8px solid $primary;
     border-radius: 5px;
@@ -139,10 +141,12 @@
     height: 148px;
     transition: opacity 0.3s ease-in-out;
     // transition: z-index 0.05s ease-in-out;
+    color: $primary;
+    padding-left: 10px;
 }
 
-.playStop2::after {
-     content: '▶';
+.play2::after {
+    content: '▶';
     position: absolute;
     color: $primary;
     font-size: 3rem;
@@ -159,6 +163,86 @@
     // transition: z-index 0.05s ease-in-out;
    
 }
+
+// stop hover on image 
+
+.stopHover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+.stop2 {
+    left: -275px;
+}
+
+.stopHover::before {
+    content: ' stop ';
+    position: absolute;
+    border: 8px solid $primary;
+    border-radius: 5px;
+    top: 10px;
+    left: 0;
+    // z-index: -10;
+    padding-left: 10px;
+    color: $primary;
+    opacity: 0;
+    width: 300px;
+    height: 148px;
+    transition: opacity 0.3s ease-in-out;
+    // transition: z-index 0.05s ease-in-out;
+}
+
+.stopHover::after {
+    content: '■';
+    position: absolute;
+    color: $primary;
+    font-size: 7.7rem;
+    top: -25px;
+    left: 110px;
+    // z-index: -10;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    // transition: z-index 0.05s ease-in-out;
+    
+}
+
+.stop2::before {
+    content: ' stop ';
+    position: absolute;
+    border: 8px solid $primary;
+    border-radius: 5px;
+    top: 10px;
+    left: 275px;
+    // z-index: -10;
+    opacity: 0;
+    width: 300px;
+    height: 148px;
+    transition: opacity 0.3s ease-in-out;
+    // transition: z-index 0.05s ease-in-out;
+}
+
+.stop2::after {
+     content: '■';
+    position: absolute;
+    color: $primary;
+    font-size: 3rem;
+    border: 8px solid $primary;
+    border-radius: 50%;
+    width: 85px;
+    height: 85px;
+    padding: 2px 0 0 12px;
+    top: 40px;
+    left: 385px;
+    // z-index: -10;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    // transition: z-index 0.05s ease-in-out;
+   
+}
+
+// position on second track
 
 .tracks:nth-child(2) {
    display: flex;
