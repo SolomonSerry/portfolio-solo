@@ -144,7 +144,8 @@ portfolio.menuBtn.addEventListener('click', ()=> {
 
 portfolio.navBtn.forEach( function(btn) {
     btn.addEventListener('click', function() {
-       portfolio.slideMenu.classList.remove('isActive') 
+       portfolio.slideMenu.classList.remove('isActive')
+       portfolio.menuBtn.classList.toggle('isActive') 
     })
 })
 
