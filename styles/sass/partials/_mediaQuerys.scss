@@ -300,12 +300,23 @@
         height: 1600px;
         .musicContainer {
             padding-top: 20px;
+            
+            .musicTrack1, .musicTrack2, .musicTrack3 {
+                margin: 0 auto;
+            }
+            
+            .musicTrack1, .musicTrack3  {
+                display: flex; 
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .tracks:nth-child(2) {
+                align-items: center;
+                text-align: center;
+            }
         }
-    }
-
-    .musicTrack1, .musicTrack2, .musicTrack3 {
-        margin: 0 auto;
-        text-align: center;
     }
 
     .contactSection {

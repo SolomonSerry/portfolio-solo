@@ -1374,9 +1374,28 @@ footer .footerTag p {
   .musicSection .musicContainer {
     padding-top: 20px;
   }
-
-  .musicTrack1, .musicTrack2, .musicTrack3 {
+  .musicSection .musicContainer .musicTrack1, .musicSection .musicContainer .musicTrack2, .musicSection .musicContainer .musicTrack3 {
     margin: 0 auto;
+  }
+  .musicSection .musicContainer .musicTrack1, .musicSection .musicContainer .musicTrack3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .musicSection .musicContainer .tracks:nth-child(2) {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     text-align: center;
   }
 
