@@ -1001,7 +1001,7 @@ section {
 }
 
 .contactSection {
-  background-color: #dddddd;
+  background: #dddddd;
   height: 800px;
 }
 .contactSection .contactContainer {
@@ -1137,7 +1137,7 @@ footer .footerTag p {
   }
 
   header {
-    background-image: linear-gradient(200deg, #6a93cb 0%, #a4bfef 74%);
+    background-image: linear-gradient(200deg, #9fb3e0 0%, #a4bfef 74%);
   }
 
   .musicTrack2 {

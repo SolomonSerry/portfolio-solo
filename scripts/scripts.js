@@ -44,6 +44,25 @@ portfolio.skillsInfo = [
     },
 ]
 
+portfolio.imageArray = [
+    {
+        name: "image1",
+        pics: ["./assets/NutriNav.png", "./assets/MovieApp.png", "./assets/Pokemon Generator.png"]
+    },
+    {
+        name: "image2",
+        pics: ["./assets/NutriNav.png", "./assets/MovieApp.png", "./assets/Textile.png"]
+    },
+    {
+        name: "image3",
+        pics: ["./assets/NutriNav.png", "./assets/Textile.png", "./assets/Pokemon Generator.png"]
+    },
+    {
+        name: "image4",
+        pics: ["./assets/solo1.jpg", "./assets/solo2.png", "./assets/track-3-image.webp"]
+    }
+]
+
 portfolio.slides = document.querySelectorAll('.slides')
 portfolio.nextBtn = document.querySelector('.nextBtn')
 portfolio.prevBtn = document.querySelector('.prevBtn')
@@ -69,12 +88,7 @@ portfolio.imgClick = document.querySelectorAll('.trackArt')
 portfolio.hoverPlay = document.querySelectorAll('.playHover')
 portfolio.hoverStop = document.querySelectorAll('.stopHover')
 
-console.log(portfolio.hoverPlay)
-
-
-
-
-
+portfolio.projectImg = document.querySelectorAll('.projectImage')
 
 
 // setting position on images
@@ -108,6 +122,7 @@ portfolio.carousel = () => {
 
     portfolio.slides.forEach( (slide) => {
         slide.style.transform = `translateX(-${counter * 100}%)`
+        console.log(slide)
 
     })
 };
@@ -208,65 +223,11 @@ portfolio.userListen = () => {
                     })
                     
                 } 
-                // else if (play === 1) {
-                //     portfolio.audio.forEach(function (track) {
-                //         if (btn.target.classList.contains(track.title)) {
-                //             portfolio.mainPlayer.pause();
-                //             portfolio.mainPlayer.currentTime = 0;
-                //             // playPause.innerText = "Play";
-                //             play = 0;
-                //             // console.log(track)
-                //         }
-                        
-                //    })
-                // }
+             
             })
         })
-        
-        // portfolio.stopBtn.forEach(function (stop) {
-        //     stop.addEventListener('click', function () {
-        //         portfolio.audio.forEach(function (track) {
-        //             if (stop.classList.contains(track.title)) {
-        //                 portfolio.mainPlayer.src = track.src;
-        //                 track.pause();
-        //                 track.currentTime = 0;
-        //                 portfolio.playBtn[0].innerText = "Play";
-        //                 portfolio.playBtn[1].innerText = "Play";
-        //                 portfolio.playBtn[2].innerText = "Play";
-        //                 // console.log(portfolio.playBtn[index]);
-        //                 play = 0;
-        //             }
-
-                        
-        //         })
-            
-        //     })
-        // })
 
 }   
-
-// sound bar appear on scroll 
-
-// const scrollPosTop = 3500
-// const scrollPosBottom = 4400
-
-// portfolio.checkPos = () => {
-//     let windowY = window.scrollY;
-//     if (windowY > scrollPosTop) {
-//         portfolio.mainPlayer.classList.add('playerVisible');
-//     } else {
-//         portfolio.mainPlayer.classList.remove('playerVisible')
-//     }
-//     window.addEventListener('scroll', portfolio.checkPos);
-// }
-
-// portfolio.checkPosBottom = () => {
-//     let windowY = window.scrollY;
-//     if (windowY > scrollPosBottom) {
-//         portfolio.mainPlayer.classList.remove('playerVisible')
-//     }
-//     window.addEventListener('scroll', portfolio.checkPosBottom);
-// }
 
 window.addEventListener('scroll', () => {
     if (portfolio.musicArea.getBoundingClientRect().top < window.innerHeight) {
@@ -279,30 +240,27 @@ window.addEventListener('scroll', () => {
 })
 
 
- window.addEventListener('scroll', ()=> {
+window.addEventListener('scroll', ()=> {
     
     if (portfolio.contactArea.getBoundingClientRect().top < window.innerHeight) {
         portfolio.mainPlayer.classList.remove('playerVisible')
     }
     
- })
+})
 
+portfolio.projectImg.forEach( (project) => {
+    portfolio.imageArray.forEach( (imageArray) => {
+        if (project.classList.contains(imageArray.name)) {
+            setInterval( () => {
+                let random = Math.floor(Math.random() * imageArray.pics.length);
+               project.src = imageArray.pics[random];
 
+            }, 2500);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        }
+    })
+    
+})
 
 
 
@@ -311,8 +269,6 @@ window.addEventListener('scroll', () => {
 portfolio.init = () => {
     portfolio.userSkillsClick();
     portfolio.userListen();
-    // portfolio.checkPos();
-    // portfolio.checkPosBottom();
     AOS.init();
 };
 
