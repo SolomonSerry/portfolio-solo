@@ -408,7 +408,7 @@ h3 {
 
 p {
   font-size: 1rem;
-  line-height: 1.7em;
+  line-height: 1.5em;
 }
 
 h1,
@@ -567,7 +567,7 @@ section {
 }
 .projectSection .projectContent {
   width: 800px;
-  height: 775px;
+  height: 875px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -623,6 +623,24 @@ section {
 .projectSection .projectContent .slides .siteLinks p {
   padding: 0;
   font-size: 1.2rem;
+}
+.projectSection .projectContent .slides .collabContainer {
+  padding-top: 30px;
+}
+.projectSection .projectContent .slides .collabContainer h4 {
+  padding-bottom: 10px;
+}
+.projectSection .projectContent .slides .collabContainer a {
+  padding: 0 5px;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+.projectSection .projectContent .slides .collabContainer a:hover, .projectSection .projectContent .slides .collabContainer a :focus {
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
+          box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
+  -webkit-transform: translateY(-0.25em);
+          transform: translateY(-0.25em);
+  color: #f9d976;
 }
 .projectSection .btnContainer {
   text-align: center;
@@ -1240,7 +1258,7 @@ footer .footerTag p {
 
   .projectSection .projectContent {
     width: 90%;
-    height: 750px;
+    height: 880px;
   }
 
   .musicTrack2 {
@@ -1299,11 +1317,11 @@ footer .footerTag p {
   }
 
   .projectSection {
-    height: 1200px;
+    height: 1275px;
   }
   .projectSection .projectContent {
     width: 90%;
-    height: 800px;
+    height: 910px;
   }
 
   footer .footerTag p {
@@ -1312,11 +1330,11 @@ footer .footerTag p {
 }
 @media (max-width: 488px) {
   .projectSection {
-    height: 960px;
+    height: 980px;
     padding: 0;
   }
   .projectSection .projectContent {
-    height: 680px;
+    height: 710px;
   }
   .projectSection .projectContent .slides img {
     height: 200px;
@@ -1369,7 +1387,7 @@ footer .footerTag p {
   }
 
   .musicSection {
-    height: 1600px;
+    height: 1400px;
   }
   .musicSection .musicContainer {
     padding-top: 20px;

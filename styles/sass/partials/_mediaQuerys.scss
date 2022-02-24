@@ -86,6 +86,7 @@
             }
         }
     }
+    
 
     .musicSection {
         height: 1900px;
@@ -147,7 +148,7 @@
     .projectSection {
         .projectContent {
             width: 90%;
-            height: 750px;
+            height: 880px;
         }
     }
 
@@ -219,10 +220,10 @@
     }
 
     .projectSection {
-        height: 1200px;
+        height: 1275px;
         .projectContent {
             width: 90%;
-            height: 800px;
+            height: 910px;
         }
     }
 
@@ -233,10 +234,10 @@
 
 @media(max-width:488px) {
     .projectSection {
-        height: 960px;
+        height: 980px;
         padding: 0;
         .projectContent {
-            height: 680px;
+            height: 710px;
              .slides {
                 img {
                     height: 200px;
@@ -297,7 +298,7 @@
     }
 
     .musicSection {
-        height: 1600px;
+        height: 1400px;
         .musicContainer {
             padding-top: 20px;
             

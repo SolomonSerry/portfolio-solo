@@ -4,19 +4,19 @@ const portfolio = {};
 portfolio.skillsInfo = [
     {
         name: "react",
-        description: "Learned React concepts (ie. state, props, components, Routing).  Used the React library to create an interactive application."
+        description: "Understanding of React concepts (ie. state, props, components, Routing).  Used the React library to create an interactive application."
     },
     {
         name: "css3",
-        description: "Learned CSS basic styling as well as advanced selectors.  Also Worked with advanced layouts: flex-box, grid systems and CSS grids. "
+        description: "Understanding of CSS basic styling as well as advanced selectors.  Also Worked with advanced layouts: flex-box, grid systems and CSS grids. "
     },
     {
         name: "sass",
-        description: "Used SCSS partials to avoid Repeating code by importing into style sheet.  As well as used mixin's and varibles to group together consistently used code."
+        description: "Used SCSS partials to avoid Repeating code by importing into style sheet. Included mixin's and variables to group together consistently used code."
     },
     {
         name: "html5",
-        description: "Create well structred documents with best practies.  Learn proper uses for classes and ID's and used right semantic elements for page."
+        description: "Create well-structured documents with best practices. Use classes and ID's in appropriate settings and along with other semantic elements for page."
     },
     {
         name: "accessibility",
@@ -24,7 +24,7 @@ portfolio.skillsInfo = [
     },
     {
         name: "firebase",
-        description: "Firebase intigration into both React and JS.  Able to store user data and acesses it when needed"
+        description: "Firebase integration into both React and JS. Able to store user data and access it when needed."
     },
     {
         name: "jquery",
@@ -32,7 +32,7 @@ portfolio.skillsInfo = [
     },
     {
         name: "git",
-        description: "Created git init for sevreal different projects on the command line.  Used branching and other methods through git to colaberate with various developers."
+        description: "Created git init for several different projects on iTerm. Used branching and other methods through git to collaborate with various developers."
     },
     {
         name: "github",
@@ -47,19 +47,19 @@ portfolio.skillsInfo = [
 portfolio.imageArray = [
     {
         name: "image1",
-        pics: ["./assets/NutriNav.png", "./assets/MovieApp.png", "./assets/Pokemon Generator.png"]
+        pics: ["./assets/text1.png", "./assets/text2.png", "./assets/text3.png", "./assets/text4.png", "./assets/text5.png"]
     },
     {
         name: "image2",
-        pics: ["./assets/NutriNav.png", "./assets/MovieApp.png", "./assets/Textile.png"]
+        pics: ["./assets/pokemon1.png", "./assets/pokemon2.png", "./assets/pokemon3.png", "./assets/pokemon4.png", "./assets/pokemon5.png"]
     },
     {
         name: "image3",
-        pics: ["./assets/NutriNav.png", "./assets/Textile.png", "./assets/Pokemon Generator.png"]
+        pics: ["./assets/movie1.png", "./assets/movie2.png", "./assets/movie3.png", "./assets/movie4.png", "./assets/movie5.png"]
     },
     {
         name: "image4",
-        pics: ["./assets/solo1.jpg", "./assets/solo2.png", "./assets/track-3-image.webp"]
+        pics: ["./assets/nutriNav1.png", "./assets/nutriNav2.png", "./assets/nutriNav3.png", "./assets/nutriNav4.png", "./assets/nutriNav5.png"]
     }
 ]
 
@@ -166,19 +166,20 @@ portfolio.navBtn.forEach( function(btn) {
 
 // playing my music 
 
-let play = 0;
+let play = true;
 
 portfolio.userListen = () => {
     
         portfolio.imgClick.forEach( function(playStop) {
            playStop.addEventListener('click', function() {
-               console.log(playStop)
-               if (play === 0) {
+            //    console.log(playStop)
+               if (play === true) {
 
                    portfolio.audio.forEach( function(track) {
                        if (playStop.classList.contains(track.title)) {
                            portfolio.hoverPlay.forEach( (hoverPlay) => {
                             if (hoverPlay.offsetParent.classList.contains(track.title)) {
+                                console.log(hoverPlay)
                                 portfolio.hoverStop.forEach( (hoverStop) => {
                                     if(hoverStop.parentElement.classList.contains(track.title)) {
                                         hoverPlay.style.display = "none"
@@ -186,7 +187,7 @@ portfolio.userListen = () => {
                                         portfolio.mainPlayer.src = track.src;
                                         portfolio.mainPlayer.play();
                                      //    playPause.innerText = "Pause";
-                                        play = 1;
+                                        play = (!play);
 
                                     }
                                   
@@ -200,11 +201,11 @@ portfolio.userListen = () => {
                     })
                     
                 } 
-                else if (play === 1) {
+                else if (play === false) {
                     portfolio.audio.forEach(function (track) {
                         if (playStop.classList.contains(track.title)) {
                             portfolio.hoverPlay.forEach( (hoverPlay) => {
-                                console.log(hoverPlay)
+                                // console.log(hoverPlay)
                                 if(hoverPlay.parentElement.classList.contains(track.title)) {
                                     portfolio.hoverStop.forEach( (hoverStop) => {
                                         if (hoverStop.parentElement.classList.contains(track.title)) {
@@ -212,7 +213,7 @@ portfolio.userListen = () => {
                                             hoverStop.style.display = "none"
                                             portfolio.mainPlayer.currentTime = 0;
                                             portfolio.mainPlayer.pause()
-                                            play = 0;
+                                            play = (!play);
 
                                         }
                                     })
