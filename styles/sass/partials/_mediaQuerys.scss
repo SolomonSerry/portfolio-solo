@@ -234,10 +234,10 @@
 
 @media(max-width:488px) {
     .projectSection {
-        height: 980px;
+        height: 1020px;
         padding: 0;
         .projectContent {
-            height: 710px;
+            height: 750px;
              .slides {
                 img {
                     height: 200px;
@@ -249,21 +249,30 @@
     .skillsSection {
         height: 850px;
         padding: 0;
-        .skillsContent {
-            padding-top: 0;
-           
-            .skillsBtnContainer {
-                button {
-                    margin: 20px 0;
-                    .fab, .fas, .devicon-firebase-plain, .devicon-jquery-plain {
-                        font-size: 2.3rem;
-                    }
+        .skillsContainer {
+            h2 {
+                padding: 40px 0 0 0;
+                &::before {
+                    padding: 40px 0 0 0;
                 }
-
-
             }
-            .skillsInfo {
-                padding-top: 5px;
+
+            .skillsContent {
+                padding-top: 0;
+               
+                .skillsBtnContainer {
+                    button {
+                        margin: 20px 0;
+                        .fab, .fas, .devicon-firebase-plain, .devicon-jquery-plain {
+                            font-size: 2.3rem;
+                        }
+                    }
+    
+    
+                }
+                .skillsInfo {
+                    padding-top: 5px;
+                }
             }
         }
     }
@@ -325,7 +334,10 @@
         .contactContainer {
             padding: 0;
             h2 {
-                padding: 0;
+                padding: 40px 0 0 0;
+                &::before {
+                    padding: 40px 0 0 0;
+                }
             }
         }
     }

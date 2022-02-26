@@ -68,27 +68,41 @@ portfolio.nextBtn = document.querySelector('.nextBtn')
 portfolio.prevBtn = document.querySelector('.prevBtn')
 portfolio.skillsBtn = document.querySelectorAll('.skillsBtn')
 
-portfolio.skillTitle = document.querySelector('.skillsTitle')
-portfolio.skilldescription = document.querySelector('article')
 
 portfolio.menuBtn = document.querySelector('.hamburgerMenu')
 portfolio.slideMenu = document.querySelector('.slideMenu')
-
-portfolio.audio  = document.querySelectorAll('#audio')
-portfolio.playBtn = document.querySelectorAll('.play')
-portfolio.stopBtn = document.querySelectorAll('.stop')
-portfolio.mainPlayer = document.querySelector('.mainPlayer')
-
 portfolio.navBtn = document.querySelectorAll('li')
 
-portfolio.musicArea = document.querySelector('.musicContainer')
-portfolio.contactArea = document.querySelector('.contactSection')
-portfolio.imgClick = document.querySelectorAll('.trackArt')
+portfolio.skillTitle = document.querySelector('.skillsTitle')
+portfolio.skilldescription = document.querySelector('article')
 
-portfolio.hoverPlay = document.querySelectorAll('.playHover')
-portfolio.hoverStop = document.querySelectorAll('.stopHover')
 
 portfolio.projectImg = document.querySelectorAll('.projectImage')
+
+portfolio.mainPlayer = document.querySelector('.mainPlayer')
+
+portfolio.musicArea = document.querySelector('.musicContainer')
+
+portfolio.track1 = document.querySelector('.track1')
+portfolio.track2 = document.querySelector('.track2')
+portfolio.track3 = document.querySelector('.track3')
+
+portfolio.audio1 = document.querySelector('#audio1')
+portfolio.audio2 = document.querySelector('#audio2')
+portfolio.audio3 = document.querySelector('#audio3')
+
+portfolio.playHover1 = document.querySelector('.playHover1')
+portfolio.playHover2 = document.querySelector('.playHover2')
+portfolio.playHover3 = document.querySelector('.playHover3')
+
+portfolio.stopHover1 = document.querySelector('.stopHover1')
+portfolio.stopHover2 = document.querySelector('.stopHover2')
+portfolio.stopHover3 = document.querySelector('.stopHover3')
+
+
+portfolio.contactArea = document.querySelector('.contactSection')
+
+console.log(portfolio.track1)
 
 
 // setting position on images
@@ -166,67 +180,110 @@ portfolio.navBtn.forEach( function(btn) {
 
 // playing my music 
 
-let play = true;
+
+let count1 = 0;
+let count2 = 0;
+let count3 = 0;
 
 portfolio.userListen = () => {
+    portfolio.track1.addEventListener('click', (event) => {
+       
+       
+        if (count1 === 0) {
+            portfolio.mainPlayer.src = portfolio.audio1.src;
+            portfolio.mainPlayer.play();
+            count1 = 1;
+            
+            portfolio.playHover1.style.display = 'none'
+            portfolio.stopHover1.style.display = 'block'
+
+            portfolio.playHover2.style.display = 'block'
+            portfolio.stopHover2.style.display = 'none'
+            portfolio.playHover3.style.display = 'block'
+            portfolio.stopHover3.style.display = 'none'
+
+            count2 = 0
+            count3 = 0 
+
+            
+            
+        } else if (count1 === 1) {
+           
+            portfolio.mainPlayer.pause();
+            portfolio.mainPlayer.currentTime = 0;
+            count1 = 0;
+
+            portfolio.playHover1.style.display = 'block'
+            portfolio.stopHover1.style.display = 'none'
+            
+        } 
+    })
+
+    portfolio.track2.addEventListener('click', () => {
+        if (count2 === 0) {
+            portfolio.mainPlayer.src = portfolio.audio2.src;
+            portfolio.mainPlayer.play();
+            count2 = 1;
+
+            portfolio.playHover2.style.display = 'none'
+            portfolio.stopHover2.style.display = 'block'
+
+            portfolio.playHover1.style.display = 'block'
+            portfolio.stopHover1.style.display = 'none'
+            portfolio.playHover3.style.display = 'block'
+            portfolio.stopHover3.style.display = 'none'
+
+            count1 = 0
+            count3 = 0 
+
+            
+            
+
+
+
+        } else if (count2 === 1) {
+
+            portfolio.mainPlayer.pause();
+            portfolio.mainPlayer.currentTime = 0;
+            count2 = 0;
+
+            portfolio.playHover2.style.display = 'block'
+            portfolio.stopHover2.style.display = 'none'
+
+        } 
     
-        portfolio.imgClick.forEach( function(playStop) {
-           playStop.addEventListener('click', function() {
-            //    console.log(playStop)
-               if (play === true) {
+    })
 
-                   portfolio.audio.forEach( function(track) {
-                       if (playStop.classList.contains(track.title)) {
-                           portfolio.hoverPlay.forEach( (hoverPlay) => {
-                            if (hoverPlay.offsetParent.classList.contains(track.title)) {
-                                console.log(hoverPlay)
-                                portfolio.hoverStop.forEach( (hoverStop) => {
-                                    if(hoverStop.parentElement.classList.contains(track.title)) {
-                                        hoverPlay.style.display = "none"
-                                        hoverStop.style.display = "block"
-                                        portfolio.mainPlayer.src = track.src;
-                                        portfolio.mainPlayer.play();
-                                     //    playPause.innerText = "Pause";
-                                        play = (!play);
+    portfolio.track3.addEventListener('click', () => {
+        if (count3 === 0) {
+            portfolio.mainPlayer.src = portfolio.audio3.src;
+            portfolio.mainPlayer.play();
+            count3 = 1;
 
-                                    }
-                                  
-                                })
-                            
-                            }
-                        })
+            portfolio.playHover3.style.display = 'none'
+            portfolio.stopHover3.style.display = 'block'
 
-                          
-                       }
-                    })
-                    
-                } 
-                else if (play === false) {
-                    portfolio.audio.forEach(function (track) {
-                        if (playStop.classList.contains(track.title)) {
-                            portfolio.hoverPlay.forEach( (hoverPlay) => {
-                                // console.log(hoverPlay)
-                                if(hoverPlay.parentElement.classList.contains(track.title)) {
-                                    portfolio.hoverStop.forEach( (hoverStop) => {
-                                        if (hoverStop.parentElement.classList.contains(track.title)) {
-                                            hoverPlay.style.display = "block"
-                                            hoverStop.style.display = "none"
-                                            portfolio.mainPlayer.currentTime = 0;
-                                            portfolio.mainPlayer.pause()
-                                            play = (!play);
+            portfolio.playHover2.style.display = 'block'
+            portfolio.stopHover2.style.display = 'none'
+            portfolio.playHover1.style.display = 'block'
+            portfolio.stopHover1.style.display = 'none'
 
-                                        }
-                                    })
-                                }
-                            })
-                           
-                        } 
-                    })
-                    
-                } 
-             
-            })
-        })
+            count2 = 0
+            count1 = 0 
+
+
+
+        } else if (count3 === 1) {
+
+            portfolio.mainPlayer.pause();
+            portfolio.mainPlayer.currentTime = 0;
+            count3 = 0;
+
+            portfolio.playHover3.style.display = 'block'
+            portfolio.stopHover3.style.display = 'none'
+
+        } 
+    })
 
 }   
 
@@ -256,7 +313,7 @@ portfolio.projectImg.forEach( (project) => {
                 let random = Math.floor(Math.random() * imageArray.pics.length);
                project.src = imageArray.pics[random];
 
-            }, 2500);
+            }, 2000);
 
         }
     })

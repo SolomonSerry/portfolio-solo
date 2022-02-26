@@ -825,6 +825,7 @@ section {
   position: absolute;
   top: 0;
   left: 0;
+  display: block;
 }
 
 .play2 {
@@ -931,37 +932,6 @@ section {
   font-size: 7.7rem;
   top: -25px;
   left: 110px;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.stop2::before {
-  content: " stop ";
-  position: absolute;
-  border: 8px solid #dddddd;
-  border-radius: 5px;
-  top: 10px;
-  left: 275px;
-  opacity: 0;
-  width: 300px;
-  height: 148px;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.stop2::after {
-  content: "■";
-  position: absolute;
-  color: #dddddd;
-  font-size: 3rem;
-  border: 8px solid #dddddd;
-  border-radius: 50%;
-  width: 85px;
-  height: 85px;
-  padding: 2px 0 0 12px;
-  top: 40px;
-  left: 385px;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
@@ -1330,11 +1300,11 @@ footer .footerTag p {
 }
 @media (max-width: 488px) {
   .projectSection {
-    height: 980px;
+    height: 1020px;
     padding: 0;
   }
   .projectSection .projectContent {
-    height: 710px;
+    height: 750px;
   }
   .projectSection .projectContent .slides img {
     height: 200px;
@@ -1344,16 +1314,22 @@ footer .footerTag p {
     height: 850px;
     padding: 0;
   }
-  .skillsSection .skillsContent {
+  .skillsSection .skillsContainer h2 {
+    padding: 40px 0 0 0;
+  }
+  .skillsSection .skillsContainer h2::before {
+    padding: 40px 0 0 0;
+  }
+  .skillsSection .skillsContainer .skillsContent {
     padding-top: 0;
   }
-  .skillsSection .skillsContent .skillsBtnContainer button {
+  .skillsSection .skillsContainer .skillsContent .skillsBtnContainer button {
     margin: 20px 0;
   }
-  .skillsSection .skillsContent .skillsBtnContainer button .fab, .skillsSection .skillsContent .skillsBtnContainer button .fas, .skillsSection .skillsContent .skillsBtnContainer button .devicon-firebase-plain, .skillsSection .skillsContent .skillsBtnContainer button .devicon-jquery-plain {
+  .skillsSection .skillsContainer .skillsContent .skillsBtnContainer button .fab, .skillsSection .skillsContainer .skillsContent .skillsBtnContainer button .fas, .skillsSection .skillsContainer .skillsContent .skillsBtnContainer button .devicon-firebase-plain, .skillsSection .skillsContainer .skillsContent .skillsBtnContainer button .devicon-jquery-plain {
     font-size: 2.3rem;
   }
-  .skillsSection .skillsContent .skillsInfo {
+  .skillsSection .skillsContainer .skillsContent .skillsInfo {
     padding-top: 5px;
   }
 
@@ -1424,7 +1400,10 @@ footer .footerTag p {
     padding: 0;
   }
   .contactSection .contactContainer h2 {
-    padding: 0;
+    padding: 40px 0 0 0;
+  }
+  .contactSection .contactContainer h2::before {
+    padding: 40px 0 0 0;
   }
 
   p {
