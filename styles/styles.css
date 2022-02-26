@@ -1385,6 +1385,7 @@ footer .footerTag p {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    text-align: center;
   }
   .musicSection .musicContainer .tracks:nth-child(2) {
     -webkit-box-align: center;
