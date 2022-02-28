@@ -12,11 +12,11 @@ portfolio.skillsInfo = [
     },
     {
         name: "sass",
-        description: "Used SCSS partials to avoid Repeating code by importing into style sheet. Included mixin's and variables to group together consistently used code."
+        description: "Used SCSS partials to avoid repeating code by importing into style sheet. Included mixin's and variables to group together consistently used code."
     },
     {
         name: "html5",
-        description: "Create well-structured documents with best practices. Use classes and ID's in appropriate settings and along with other semantic elements for page."
+        description: "Create well-structured documents with best practices. Use classes and ID's in appropriate settings, along with other semantic elements for page."
     },
     {
         name: "accessibility",
