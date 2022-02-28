@@ -99,10 +99,12 @@ portfolio.stopHover1 = document.querySelector('.stopHover1')
 portfolio.stopHover2 = document.querySelector('.stopHover2')
 portfolio.stopHover3 = document.querySelector('.stopHover3')
 
+portfolio.playing1 = document.querySelector('.playing1')
+portfolio.playing2 = document.querySelector('.playing2')
+portfolio.playing3 = document.querySelector('.playing3')
 
 portfolio.contactArea = document.querySelector('.contactSection')
 
-console.log(portfolio.track1)
 
 
 // setting position on images
@@ -202,6 +204,10 @@ portfolio.userListen = () => {
             portfolio.playHover3.style.display = 'block'
             portfolio.stopHover3.style.display = 'none'
 
+            portfolio.playing1.innerHTML = `<em>Playing...</em>`
+            portfolio.playing2.innerHTML = `<em>Click Image To Play</em>`
+            portfolio.playing3.innerHTML = `<em>Click Image To Play</em>`
+
             count2 = 0
             count3 = 0 
 
@@ -215,6 +221,8 @@ portfolio.userListen = () => {
 
             portfolio.playHover1.style.display = 'block'
             portfolio.stopHover1.style.display = 'none'
+            
+            portfolio.playing1.innerHTML = `<em>Click Image To Play</em>`
             
         } 
     })
@@ -233,6 +241,10 @@ portfolio.userListen = () => {
             portfolio.playHover3.style.display = 'block'
             portfolio.stopHover3.style.display = 'none'
 
+            portfolio.playing2.innerHTML = `<em>Playing...</em>`
+            portfolio.playing1.innerHTML = `<em>Click Image To Play</em>`
+            portfolio.playing3.innerHTML = `<em>Click Image To Play</em>`
+
             count1 = 0
             count3 = 0 
 
@@ -249,6 +261,8 @@ portfolio.userListen = () => {
 
             portfolio.playHover2.style.display = 'block'
             portfolio.stopHover2.style.display = 'none'
+
+            portfolio.playing2.innerHTML = `<em>Click Image To Play</em>`
 
         } 
     
@@ -268,6 +282,10 @@ portfolio.userListen = () => {
             portfolio.playHover1.style.display = 'block'
             portfolio.stopHover1.style.display = 'none'
 
+            portfolio.playing3.innerHTML = `<em>Playing...</em>`
+            portfolio.playing2.innerHTML = `<em>Click Image To Play</em>`
+            portfolio.playing1.innerHTML = `<em>Click Image To Play</em>`
+
             count2 = 0
             count1 = 0 
 
@@ -281,6 +299,8 @@ portfolio.userListen = () => {
 
             portfolio.playHover3.style.display = 'block'
             portfolio.stopHover3.style.display = 'none'
+
+            portfolio.playing3.innerHTML = `<em>Click Image To Play</em>`
 
         } 
     })

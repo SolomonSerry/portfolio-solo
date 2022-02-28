@@ -778,6 +778,9 @@ section {
 .musicSection .musicContainer .musicContent .tracks h4 {
   padding: 20px 0;
 }
+.musicSection .musicContainer .musicContent .tracks .playing p {
+  padding-bottom: 15px;
+}
 .musicSection .musicContainer .musicContent .tracks .musicBtn {
   padding: 15px 0;
 }
