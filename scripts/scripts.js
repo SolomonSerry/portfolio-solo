@@ -326,19 +326,19 @@ window.addEventListener('scroll', ()=> {
     
 })
 
-// portfolio.projectImg.forEach( (project) => {
-//     portfolio.imageArray.forEach( (imageArray) => {
-//         if (project.classList.contains(imageArray.name)) {
-//             setInterval( () => {
-//                 let random = Math.floor(Math.random() * imageArray.pics.length);
-//                project.src = imageArray.pics[random];
+portfolio.projectImg.forEach( (project) => {
+    portfolio.imageArray.forEach( (imageArray) => {
+        if (project.classList.contains(imageArray.name)) {
+            setInterval( () => {
+                let random = Math.floor(Math.random() * imageArray.pics.length);
+               project.src = imageArray.pics[random];
 
-//             }, 2000);
+            }, 2000);
 
-//         }
-//     })
+        }
+    })
     
-// })
+})
 
 
 
