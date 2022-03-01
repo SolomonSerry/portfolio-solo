@@ -87,6 +87,8 @@ portfolio.track1 = document.querySelector('.track1')
 portfolio.track2 = document.querySelector('.track2')
 portfolio.track3 = document.querySelector('.track3')
 
+portfolio.tracks = document.querySelectorAll('.tracks')
+
 portfolio.audio1 = document.querySelector('#audio1')
 portfolio.audio2 = document.querySelector('#audio2')
 portfolio.audio3 = document.querySelector('#audio3')
@@ -104,7 +106,11 @@ portfolio.playing2 = document.querySelector('.playing2')
 portfolio.playing3 = document.querySelector('.playing3')
 
 portfolio.contactArea = document.querySelector('.contactSection')
+portfolio.aboutMeArea = document.querySelector('.aboutMeSection')
+portfolio.skillsArea = document.querySelector('.skillsSection')
+portfolio.aboutMeContent = document.querySelector('.aboutMeContent')
 
+portfolio.formContent = document.querySelector('.formContainer')
 
 
 // setting position on images
@@ -322,9 +328,35 @@ window.addEventListener('scroll', ()=> {
     
     if (portfolio.contactArea.getBoundingClientRect().top < window.innerHeight) {
         portfolio.mainPlayer.classList.remove('playerVisible')
+        portfolio.formContent.style.opacity = '100%'
     }
     
 })
+
+window.addEventListener('scroll', ()=> {
+    
+    if (portfolio.aboutMeArea.getBoundingClientRect().top < window.innerHeight) {
+        portfolio.aboutMeContent.style.opacity = "100%"
+    } 
+})
+
+window.addEventListener('scroll', ()=> {
+    
+    if (portfolio.skillsArea.getBoundingClientRect().top < window.innerHeight) {
+        portfolio.skillsBtn.forEach( (skill) => {
+            skill.style.opacity = "100%"
+        })
+    } 
+})
+
+window.addEventListener('scroll', ()=> {
+    portfolio.tracks.forEach( (track) => {
+        if (track.getBoundingClientRect().top < window.innerHeight) {
+            track.style.opacity = "100%"
+        } 
+    })
+})
+
 
 portfolio.projectImg.forEach( (project) => {
     portfolio.imageArray.forEach( (imageArray) => {
@@ -347,7 +379,6 @@ portfolio.projectImg.forEach( (project) => {
 portfolio.init = () => {
     portfolio.userSkillsClick();
     portfolio.userListen();
-    AOS.init();
 };
 
 // Calling init 

@@ -32,8 +32,11 @@
                 border: none;
                 background: $primary;
                 margin: 20px 59px;
+                opacity: 0;
                 transition: box-shadow 0.25s ease-in-out;
                 transition: transform 0.25s ease-in-out;
+                transition: opacity 0.25s ease-in-out;
+
                 &:hover, :focus {
                     box-shadow: 0 0.5em 0.5em -0.4em $secondary; 
                     transform: translateY(-0.25em);

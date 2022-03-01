@@ -24,6 +24,8 @@
             display: flex;
             flex-direction: column;
             .tracks {
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
                 h4 {
                     padding: 20px 0;
                 }
