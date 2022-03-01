@@ -328,7 +328,6 @@ window.addEventListener('scroll', ()=> {
     
     if (portfolio.contactArea.getBoundingClientRect().top < window.innerHeight) {
         portfolio.mainPlayer.classList.remove('playerVisible')
-        portfolio.formContent.style.opacity = '100%'
     }
     
 })
@@ -340,14 +339,6 @@ window.addEventListener('scroll', ()=> {
     } 
 })
 
-window.addEventListener('scroll', ()=> {
-    
-    if (portfolio.skillsArea.getBoundingClientRect().top < window.innerHeight) {
-        portfolio.skillsBtn.forEach( (skill) => {
-            skill.style.opacity = "100%"
-        })
-    } 
-})
 
 window.addEventListener('scroll', ()=> {
     portfolio.tracks.forEach( (track) => {
