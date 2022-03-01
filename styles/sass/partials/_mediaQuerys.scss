@@ -254,7 +254,7 @@
         height: 1020px;
         padding: 0;
         .projectContent {
-            height: 750px;
+            height: 900px;
              .slides {
                 img {
                     height: 200px;
@@ -262,6 +262,11 @@
                 p {
                     padding: 20px 35px;
                 }
+            }
+        }
+        .btnContainer {
+            button {
+                margin: auto 0;
             }
         }
     }

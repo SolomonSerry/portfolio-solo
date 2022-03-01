@@ -570,7 +570,7 @@ section {
 }
 .projectSection .projectContent {
   width: 800px;
-  height: 875px;
+  height: 1075px;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -1325,13 +1325,16 @@ footer .footerTag p {
     padding: 0;
   }
   .projectSection .projectContent {
-    height: 750px;
+    height: 900px;
   }
   .projectSection .projectContent .slides img {
     height: 200px;
   }
   .projectSection .projectContent .slides p {
     padding: 20px 35px;
+  }
+  .projectSection .btnContainer button {
+    margin: auto 0;
   }
 
   .skillsSection {
