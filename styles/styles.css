@@ -712,7 +712,6 @@ section {
   border: none;
   background: #dddddd;
   margin: 20px 59px;
-  opacity: 0;
   -webkit-transition: -webkit-box-shadow 0.25s ease-in-out;
   transition: -webkit-box-shadow 0.25s ease-in-out;
   transition: box-shadow 0.25s ease-in-out;
@@ -721,8 +720,6 @@ section {
   transition: -webkit-transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out;
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
-  -webkit-transition: opacity 0.25s ease-in-out;
-  transition: opacity 0.25s ease-in-out;
 }
 .skillsContainer .skillsContent .skillsBtnContainer button:hover, .skillsContainer .skillsContent .skillsBtnContainer button :focus {
   -webkit-box-shadow: 0 0.5em 0.5em -0.4em #9fb3e0;
@@ -1028,9 +1025,6 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  opacity: 0;
-  -webkit-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
 }
 .contactSection .formContainer form {
   display: -webkit-box;
