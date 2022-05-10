@@ -1,12 +1,12 @@
 header {
-    // background: $secondary;
-    background-image: url('../assets/ICT10062-2 copy.jpg');
+    background: #071214;
+    // background-image: url('../assets/ICT10062-2 copy.jpg');
     background-size: cover;
     position: relative;
     // background-size: contain;
     width: 100%;
     height: 900px;
-    color: $text;
+    color: $text2;
     background-position: right;
     // overflow-x: hidden;
     nav {
@@ -16,13 +16,15 @@ header {
             h3 {
                 font-family: 'Yellowtail', cursive;
                 color: $accentColor3;
+                font-size: 3rem;
+                letter-spacing: 0.01px;
             }
             .hamburgerMenu {
                 display: block;
                 width: 65px;
                 cursor: pointer;
                 appearance: none;
-                background: $primary;
+                background: none;
                 outline: none;
                 border: none;
                 position: relative;
@@ -63,6 +65,20 @@ header {
    
     }
 
+    .headerFlex {
+        display: flex;
+        justify-content: space-between;
+        img {
+           width: 25rem;
+           height: 40rem;
+           border-radius: 25%;
+            
+        }
+      
+    }
+
+    
+
 }
 
 // making my own hamburger 
@@ -71,19 +87,19 @@ header {
     display: block;
     height: 5px;
     width: 100%;
-    background: $text;
+    background: $text2;
     margin: 6px 0;
     transition: 0.4s;
 }
 
 .hamburgerMenu.isActive::before {
     transform: rotate(-45deg) translate(-8px, 6px);
-    background: $text;
+    background: $text2;
 }
 
 .hamburgerMenu.isActive::after {
     transform: rotate(45deg) translate(-9px, -8px);
-    background: $text;
+    background: $text2;
 
 }
 
@@ -98,21 +114,21 @@ header {
 
 .nameTag {
     margin-top: 200px;
-    width: 372px;
-    line-height: 2.7em;
+    // width: 372px;
+    line-height: 3.5em;
     h1 {
-        color: $primary;
-        background-color: black;
+        color: $text2;
+        // background-color: black;
         padding: 25px 0 25px 46px;
-        border-radius: 10px;
-        text-shadow: -1px 1px 2px $primary;
+        // border-radius: 10px;
+        // text-shadow: -1px 1px 2px $primary;
     }
     h4 {
         position: relative;
         width: 200px;
-        background-color: black;
-        border-radius: 10px;
-        text-shadow: 0 0 1px $primary;
+        // background-color: black;
+        // border-radius: 10px;
+        // text-shadow: 0 0 1px $primary;
         text-align: center;
         margin-top: 20px;
         
@@ -122,15 +138,15 @@ header {
             position: absolute;
             bottom: 10px;
             right: 38px;
-            border-bottom: 2px solid $primary;
+            border-bottom: 2px solid $text2;
             
         }
         
         a {
-            color: $primary;
+            color: $text2;
             transition: all 0.2s ease-in-out;
             &:hover {
-                color: $accentColor2;
+                color: $accentColor3;
             }
         }
     }
