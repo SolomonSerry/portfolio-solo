@@ -357,13 +357,14 @@ header .headerFlex img {
 }
 .nameTag h1 {
   color: aliceblue;
-  padding: 25px 0 25px 46px;
+}
+.nameTag h1 span {
+  display: block;
 }
 .nameTag h4 {
   position: relative;
   width: 200px;
-  text-align: center;
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 .nameTag h4::after {
   content: " ";
@@ -1404,7 +1405,6 @@ footer .footerTag p {
   }
 
   .nameTag h1 {
-    padding: 20px 0 20px 28px;
     font-size: 2.8rem;
     line-height: 50px;
   }
