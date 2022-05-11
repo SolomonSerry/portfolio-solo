@@ -241,7 +241,6 @@ header {
   background-size: cover;
   position: relative;
   width: 100%;
-  height: 900px;
   color: aliceblue;
   background-position: right;
 }
@@ -364,7 +363,7 @@ header .headerFlex img {
   position: relative;
   width: 200px;
   text-align: center;
-  margin-top: 20px;
+  margin-bottom: 20px;
 }
 .nameTag h4::after {
   content: " ";
@@ -1154,7 +1153,21 @@ footer .footerTag p {
   }
 
   header {
-    background-image: linear-gradient(200deg, #9fb3e0 0%, #a4bfef 74%);
+    background: #071214;
+  }
+  header .headerFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .headerFlex img {
+    width: 65%;
+    border-radius: 25%;
+    margin: 0 auto;
+  }
+  header .headerFlex .nameTag {
+    margin: 0;
   }
 
   .musicTrack2 {
@@ -1269,6 +1282,10 @@ footer .footerTag p {
   .musicTrack1, .musicTrack3 {
     margin: 0 200px 0 0;
   }
+
+  header .headerFlex img {
+    width: 85%;
+  }
 }
 @media (max-width: 600px) {
   .aboutMeSection {
@@ -1301,6 +1318,9 @@ footer .footerTag p {
   }
 
   header nav ul {
+    width: 100%;
+  }
+  header .headerFlex img {
     width: 100%;
   }
 
@@ -1372,11 +1392,21 @@ footer .footerTag p {
     right: 120%;
   }
 
-  .nameTag {
-    width: 330px;
+  header nav {
+    padding: 50px 0;
   }
+  header nav h3 {
+    font-size: 2.5rem;
+  }
+  header .headerFlex img {
+    width: 100%;
+    height: 100%;
+  }
+
   .nameTag h1 {
     padding: 20px 0 20px 28px;
+    font-size: 2.8rem;
+    line-height: 50px;
   }
 
   .aboutMeSection {

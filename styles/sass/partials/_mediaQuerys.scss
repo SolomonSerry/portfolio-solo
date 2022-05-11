@@ -63,7 +63,25 @@
 
 
     header {
-        background-image: linear-gradient(200deg, $secondary 0%, #a4bfef 74%);
+        // background-image: linear-gradient(200deg, $secondary 0%, #a4bfef 74%);
+        background: #071214;
+        // height: 1100px;
+
+        .headerFlex {
+               flex-direction: column;
+        
+                img {
+                    width: 65%;
+                    border-radius: 25%;
+                    margin: 0 auto;
+        
+                }
+
+                .nameTag {
+                    margin: 0;
+                }
+        
+            }
     }
 
     .musicTrack2 {
@@ -179,6 +197,15 @@
     .musicTrack1, .musicTrack3 {
        margin: 0 200px 0 0;
     }
+
+    header {
+        // height: 1200px;
+        .headerFlex {
+            img {
+                width: 85%;
+            }
+        }    
+    }
 }
 
 @media(max-width:600px) {
@@ -219,6 +246,11 @@
     header {
         nav {
             ul {
+                width: 100%;
+            }
+        }
+        .headerFlex {
+            img {
                 width: 100%;
             }
         }
@@ -306,10 +338,27 @@
         right: 120%;
     }
 
+    header {
+        // height: 900px;
+        nav {
+            padding: 50px 0;
+            h3 {
+                font-size: 2.5rem;
+            }
+        }
+        .headerFlex {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
     .nameTag {
-        width: 330px;
         h1 {
             padding: 20px 0 20px 28px;
+            font-size: 2.8rem;
+            line-height: 50px;
         }
     }
 
