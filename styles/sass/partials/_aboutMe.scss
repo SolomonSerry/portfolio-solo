@@ -1,7 +1,6 @@
 .aboutMeSection {
-    height: 800px;
+    height: 1000px;
     background: $primary;
-
 }
 
 .aboutMeContainer {
@@ -23,19 +22,88 @@
         }
     }
     .aboutMeContent {
-        display: flex;
+        // display: flex;
         padding: 50px 0;
         opacity: 0;
         transition: opacity 1s ease-in-out;
-       
-        p {
-            margin: 0 20px;
-            &:first-child {
-                font-weight: 700;
-                text-align: right;
+        
+        .softSkills {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 50px 0;
+            div {
+                text-align: center;
+                .fas, .far {
+                    font-size: 1.3rem;
+                }
+
+                .fa-users {
+                    border-radius: 50%;
+                    background-color: $accentColor;
+                    width: 50px;
+                    height: 50px;
+                    padding-top: 12px;
+                    
+                }
+                
+                .fa-puzzle-piece {
+                    border-radius: 50%;
+                    background-color: $accentColor2;
+                    width: 50px;
+                    height: 50px;
+                    padding: 10px 0 0 4px;
+                    
+                }
+                
+                .fa-lightbulb {
+                    border-radius: 50%;
+                    background-color: $accentColor3;
+                    width: 50px;
+                    height: 50px;
+                    padding-top: 12px;
+                    
+                }
+                
+                .fa-desktop {
+                    border-radius: 50%;
+                    background-color: tomato;
+                    width: 50px;
+                    height: 50px;
+                    padding: 12px 0 0 1px;
+                    
+                }
+                
+                .fa-user {
+                    border-radius: 50%;
+                    background-color: grey;
+                    width: 50px;
+                    height: 50px;
+                    padding-top: 11px;
+
+                }
+
+                p {
+                    font-size: 0.7rem;
+                }
+
             }
-           
+            
         }
+        
+        .profile {
+            display: flex;
+            padding: 50px 0;
+            p {
+                margin: 0 20px;
+                &:first-child {
+                    font-weight: 700;
+                    text-align: right;
+                }
+               
+            }
+            
+        }
+       
     }
     a {
         margin: 0 auto;

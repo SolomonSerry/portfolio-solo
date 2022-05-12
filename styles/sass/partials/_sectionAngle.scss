@@ -47,3 +47,23 @@ section {
 .angle2 .shape-fill {
     fill: $secondary;
 }
+
+.angle3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.angle3 svg {
+    position: relative;
+    display: block;
+    width: calc(128% + 1.3px);
+    height: 99px;
+}
+
+.angle3 .shape-fill {
+    fill: #a2d2ff;
+}

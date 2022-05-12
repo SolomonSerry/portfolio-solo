@@ -2,7 +2,7 @@
 .skillsSection {
     height: 900px;
     padding-top: 100px;
-    background: $primary;
+    background: #a2d2ff;
 }
 
 .skillsContainer {
@@ -30,13 +30,13 @@
             justify-content: space-evenly;
             button {
                 border: none;
-                background: $primary;
+                background: #a2d2ff;
                 margin: 20px 59px;
                 transition: box-shadow 0.25s ease-in-out;
                 transition: transform 0.25s ease-in-out;
 
                 &:hover, :focus {
-                    box-shadow: 0 0.5em 0.5em -0.4em $secondary; 
+                    box-shadow: 0 0.5em 0.5em -0.4em $primary; 
                     transform: translateY(-0.25em);
                 }
                 .fab, .fas, .devicon-firebase-plain, .devicon-jquery-plain {

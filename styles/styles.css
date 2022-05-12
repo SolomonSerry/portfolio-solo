@@ -282,7 +282,7 @@ header nav ul {
   min-height: 100vh;
   display: block;
   z-index: 10;
-  background: #dddddd;
+  background: #83b0e1;
   padding-top: 220px;
   -webkit-transition: right 0.3s ease-in-out;
   transition: right 0.3s ease-in-out;
@@ -295,7 +295,7 @@ header nav ul a {
   margin: 0 auto 16px;
   text-align: center;
   padding: 12px 16px;
-  background-color: #9fb3e0;
+  background-color: #aecbeb;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
@@ -473,7 +473,7 @@ section {
 }
 
 .angle1 .shape-fill {
-  fill: #dddddd;
+  fill: #83b0e1;
 }
 
 .angle2 {
@@ -495,12 +495,32 @@ section {
 }
 
 .angle2 .shape-fill {
-  fill: #9fb3e0;
+  fill: #aecbeb;
+}
+
+.angle3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.angle3 svg {
+  position: relative;
+  display: block;
+  width: calc(128% + 1.3px);
+  height: 99px;
+}
+
+.angle3 .shape-fill {
+  fill: #a2d2ff;
 }
 
 .aboutMeSection {
-  height: 800px;
-  background: #dddddd;
+  height: 1000px;
+  background: #83b0e1;
 }
 
 .aboutMeContainer {
@@ -521,18 +541,74 @@ section {
   border-bottom: 2px solid #000;
 }
 .aboutMeContainer .aboutMeContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 50px 0;
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }
-.aboutMeContainer .aboutMeContent p {
+.aboutMeContainer .aboutMeContent .softSkills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 50px 0;
+}
+.aboutMeContainer .aboutMeContent .softSkills div {
+  text-align: center;
+}
+.aboutMeContainer .aboutMeContent .softSkills div .fas, .aboutMeContainer .aboutMeContent .softSkills div .far {
+  font-size: 1.3rem;
+}
+.aboutMeContainer .aboutMeContent .softSkills div .fa-users {
+  border-radius: 50%;
+  background-color: #f9d976;
+  width: 50px;
+  height: 50px;
+  padding-top: 12px;
+}
+.aboutMeContainer .aboutMeContent .softSkills div .fa-puzzle-piece {
+  border-radius: 50%;
+  background-color: #f39f86;
+  width: 50px;
+  height: 50px;
+  padding: 10px 0 0 4px;
+}
+.aboutMeContainer .aboutMeContent .softSkills div .fa-lightbulb {
+  border-radius: 50%;
+  background-color: #FFBF00;
+  width: 50px;
+  height: 50px;
+  padding-top: 12px;
+}
+.aboutMeContainer .aboutMeContent .softSkills div .fa-desktop {
+  border-radius: 50%;
+  background-color: tomato;
+  width: 50px;
+  height: 50px;
+  padding: 12px 0 0 1px;
+}
+.aboutMeContainer .aboutMeContent .softSkills div .fa-user {
+  border-radius: 50%;
+  background-color: grey;
+  width: 50px;
+  height: 50px;
+  padding-top: 11px;
+}
+.aboutMeContainer .aboutMeContent .softSkills div p {
+  font-size: 0.7rem;
+}
+.aboutMeContainer .aboutMeContent .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 0;
+}
+.aboutMeContainer .aboutMeContent .profile p {
   margin: 0 20px;
 }
-.aboutMeContainer .aboutMeContent p:first-child {
+.aboutMeContainer .aboutMeContent .profile p:first-child {
   font-weight: 700;
   text-align: right;
 }
@@ -558,7 +634,7 @@ section {
 }
 
 .projectSection {
-  background-color: #9fb3e0;
+  background-color: #aecbeb;
   height: 1300px;
   padding-top: 80px;
 }
@@ -663,7 +739,7 @@ section {
 }
 .projectSection .btnContainer button {
   border: none;
-  background: #dddddd;
+  background: #83b0e1;
   border-radius: 5px;
   padding: 10px;
   -webkit-transition: all 0.35s ease-in-out;
@@ -684,7 +760,7 @@ section {
 .skillsSection {
   height: 900px;
   padding-top: 100px;
-  background: #dddddd;
+  background: #a2d2ff;
 }
 
 .skillsContainer h2 {
@@ -719,7 +795,7 @@ section {
 }
 .skillsContainer .skillsContent .skillsBtnContainer button {
   border: none;
-  background: #dddddd;
+  background: #a2d2ff;
   margin: 20px 59px;
   -webkit-transition: -webkit-box-shadow 0.25s ease-in-out;
   transition: -webkit-box-shadow 0.25s ease-in-out;
@@ -731,8 +807,8 @@ section {
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 .skillsContainer .skillsContent .skillsBtnContainer button:hover, .skillsContainer .skillsContent .skillsBtnContainer button :focus {
-  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #9fb3e0;
-          box-shadow: 0 0.5em 0.5em -0.4em #9fb3e0;
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #83b0e1;
+          box-shadow: 0 0.5em 0.5em -0.4em #83b0e1;
   -webkit-transform: translateY(-0.25em);
           transform: translateY(-0.25em);
 }
@@ -757,7 +833,7 @@ section {
 }
 
 .musicSection {
-  background-color: #9fb3e0;
+  background-color: #aecbeb;
   height: 1800px;
   overflow: hidden;
 }
@@ -804,7 +880,7 @@ section {
 .musicSection .musicContainer .musicContent .tracks .musicBtn button {
   padding: 10px 20px;
   margin-right: 10px;
-  background: #dddddd;
+  background: #83b0e1;
   border: 1px solid #8f8f8f;
   border-radius: 5px;
   -webkit-transition: all 0.25s ease-in-out;
@@ -855,7 +931,7 @@ section {
 .playHover::before {
   content: " play ";
   position: absolute;
-  border: 8px solid #dddddd;
+  border: 8px solid #83b0e1;
   border-radius: 5px;
   top: 10px;
   left: 0;
@@ -864,16 +940,16 @@ section {
   height: 148px;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
-  color: #dddddd;
+  color: #83b0e1;
   padding-left: 10px;
 }
 
 .playHover::after {
   content: "▶";
   position: absolute;
-  color: #dddddd;
+  color: #83b0e1;
   font-size: 3rem;
-  border: 8px solid #dddddd;
+  border: 8px solid #83b0e1;
   border-radius: 50%;
   width: 85px;
   height: 85px;
@@ -888,7 +964,7 @@ section {
 .play2::before {
   content: " play ";
   position: absolute;
-  border: 8px solid #dddddd;
+  border: 8px solid #83b0e1;
   border-radius: 5px;
   top: 10px;
   left: 275px;
@@ -897,16 +973,16 @@ section {
   height: 148px;
   -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
-  color: #dddddd;
+  color: #83b0e1;
   padding-left: 10px;
 }
 
 .play2::after {
   content: "▶";
   position: absolute;
-  color: #dddddd;
+  color: #83b0e1;
   font-size: 3rem;
-  border: 8px solid #dddddd;
+  border: 8px solid #83b0e1;
   border-radius: 50%;
   width: 85px;
   height: 85px;
@@ -932,12 +1008,12 @@ section {
 .stopHover::before {
   content: " stop ";
   position: absolute;
-  border: 8px solid #dddddd;
+  border: 8px solid #83b0e1;
   border-radius: 5px;
   top: 10px;
   left: 0;
   padding-left: 10px;
-  color: #dddddd;
+  color: #83b0e1;
   opacity: 0;
   width: 300px;
   height: 148px;
@@ -948,7 +1024,7 @@ section {
 .stopHover::after {
   content: "■";
   position: absolute;
-  color: #dddddd;
+  color: #83b0e1;
   font-size: 7.7rem;
   top: -25px;
   left: 110px;
@@ -995,7 +1071,7 @@ section {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   border-radius: 12px;
-  background-color: #dddddd;
+  background-color: #83b0e1;
   width: 60%;
   opacity: 0;
   -webkit-transition: opacity 0.25s ease-in-out;
@@ -1009,7 +1085,7 @@ section {
 }
 
 .contactSection {
-  background: #dddddd;
+  background: #83b0e1;
   height: 800px;
 }
 .contactSection .contactContainer {
@@ -1051,7 +1127,7 @@ section {
   padding: 15px 15px;
   margin-bottom: 25px;
   width: 85%;
-  background: #9fb3e0;
+  background: #aecbeb;
 }
 .contactSection .formContainer form textarea {
   resize: none;
@@ -1059,14 +1135,14 @@ section {
   border-radius: 10px;
   padding: 20px 15px;
   width: 85%;
-  background: #9fb3e0;
+  background: #aecbeb;
 }
 .contactSection .formContainer form button {
   margin: 30px auto;
   padding: 20px 60px;
   border-radius: 10px;
   border: none;
-  background: #9fb3e0;
+  background: #aecbeb;
   color: #000;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1084,7 +1160,7 @@ section {
 }
 
 footer {
-  background: #9fb3e0;
+  background: #aecbeb;
 }
 footer .footerIcons {
   display: -webkit-box;
@@ -1105,11 +1181,12 @@ footer .footerIcons .fab:hover, footer .footerIcons .fab :focus, footer .footerI
   color: #f9d976;
 }
 footer .footerTag {
-  background-color: #dddddd;
+  background-color: #071214;
 }
 footer .footerTag p {
   padding: 10px 0;
   text-align: center;
+  color: aliceblue;
 }
 
 @media (max-width: 1200px) {
@@ -1136,7 +1213,7 @@ footer .footerTag p {
   }
 
   .aboutMeSection {
-    height: 1000px;
+    height: 1200px;
   }
 }
 @media (max-width: 950px) {
@@ -1192,9 +1269,9 @@ footer .footerTag p {
   }
 
   .aboutMeSection {
-    height: 1400px;
+    height: 1600px;
   }
-  .aboutMeSection .aboutMeContent {
+  .aboutMeSection .aboutMeContent .profile {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1202,7 +1279,7 @@ footer .footerTag p {
     width: 75%;
     margin: 0 auto;
   }
-  .aboutMeSection .aboutMeContent p {
+  .aboutMeSection .aboutMeContent .profile p {
     padding: 30px 0;
   }
 
@@ -1287,13 +1364,25 @@ footer .footerTag p {
   header .headerFlex img {
     width: 85%;
   }
+
+  .aboutMeSection .aboutMeContent .softSkills {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .aboutMeSection .aboutMeContent .softSkills div {
+    margin: 10px;
+  }
+  .aboutMeSection .aboutMeContent .profile {
+    width: 100%;
+  }
 }
 @media (max-width: 600px) {
   .aboutMeSection {
-    height: 1300px;
+    height: 1600px;
   }
-  .aboutMeSection .aboutMeContent {
-    width: 95%;
+  .aboutMeSection .aboutMeContainer .aboutMeContent .profile {
+    padding: 0;
   }
 
   .skillsSection {
@@ -1410,7 +1499,7 @@ footer .footerTag p {
   }
 
   .aboutMeSection {
-    height: 800px;
+    height: 1100px;
   }
   .aboutMeSection .aboutMeContainer {
     padding-top: 20px;
