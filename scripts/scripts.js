@@ -44,28 +44,28 @@ portfolio.skillsInfo = [
     },
 ]
 
-portfolio.imageArray = [
-    {
-        name: "image1",
-        pics: ["./assets/text1.png", "./assets/text2.png", "./assets/text3.png", "./assets/text4.png", "./assets/text5.png"]
-    },
-    {
-        name: "image2",
-        pics: ["./assets/pokemon1.png", "./assets/pokemon2.png", "./assets/pokemon3.png", "./assets/pokemon4.png", "./assets/pokemon5.png"]
-    },
-    {
-        name: "image3",
-        pics: ["./assets/movie1.png", "./assets/movie2.png", "./assets/movie3.png", "./assets/movie4.png", "./assets/movie5.png"]
-    },
-    {
-        name: "image4",
-        pics: ["./assets/nutriNav1.png", "./assets/nutriNav2.png", "./assets/nutriNav3.png", "./assets/nutriNav4.png", "./assets/nutriNav5.png"]
-    }
-]
+// portfolio.imageArray = [
+//     {
+//         name: "image1",
+//         pics: ["./assets/text1.png", "./assets/text2.png", "./assets/text3.png", "./assets/text4.png", "./assets/text5.png"]
+//     },
+//     {
+//         name: "image2",
+//         pics: ["./assets/pokemon1.png", "./assets/pokemon2.png", "./assets/pokemon3.png", "./assets/pokemon4.png", "./assets/pokemon5.png"]
+//     },
+//     {
+//         name: "image3",
+//         pics: ["./assets/movie1.png", "./assets/movie2.png", "./assets/movie3.png", "./assets/movie4.png", "./assets/movie5.png"]
+//     },
+//     {
+//         name: "image4",
+//         pics: ["./assets/nutriNav1.png", "./assets/nutriNav2.png", "./assets/nutriNav3.png", "./assets/nutriNav4.png", "./assets/nutriNav5.png"]
+//     }
+// ]
 
-portfolio.slides = document.querySelectorAll('.slides')
-portfolio.nextBtn = document.querySelector('.nextBtn')
-portfolio.prevBtn = document.querySelector('.prevBtn')
+// portfolio.slides = document.querySelectorAll('.slides')
+// portfolio.nextBtn = document.querySelector('.nextBtn')
+// portfolio.prevBtn = document.querySelector('.prevBtn')
 portfolio.skillsBtn = document.querySelectorAll('.skillsBtn')
 
 
@@ -113,41 +113,41 @@ portfolio.aboutMeContent = document.querySelector('.aboutMeContent')
 portfolio.formContent = document.querySelector('.formContainer')
 
 
-// setting position on images
-portfolio.slides.forEach( (slide, index) => {
-    slide.style.left = `${index * 100}%`;
-})
+// // setting position on images
+// portfolio.slides.forEach( (slide, index) => {
+//     slide.style.left = `${index * 100}%`;
+// })
 
-// adding eventlister for buttons
-let counter = 0;
+// // adding eventlister for buttons
+// let counter = 0;
 
-portfolio.nextBtn.addEventListener('click', () => {
-    counter++;
-    portfolio.carousel();
-})
+// portfolio.nextBtn.addEventListener('click', () => {
+//     counter++;
+//     portfolio.carousel();
+// })
 
-portfolio.prevBtn.addEventListener('click', () => {
-    counter--;
-    portfolio.carousel();
-})
+// portfolio.prevBtn.addEventListener('click', () => {
+//     counter--;
+//     portfolio.carousel();
+// })
 
-// carosel function
-portfolio.carousel = () => {
+// // carosel function
+// portfolio.carousel = () => {
 
-    if (counter === portfolio.slides.length) {
-        counter = 0;
-    }
+//     if (counter === portfolio.slides.length) {
+//         counter = 0;
+//     }
 
-    if ( counter < 0) {
-        counter = portfolio.slides.length - 1;
-    }
+//     if ( counter < 0) {
+//         counter = portfolio.slides.length - 1;
+//     }
 
-    portfolio.slides.forEach( (slide) => {
-        slide.style.transform = `translateX(-${counter * 100}%)`
-        console.log(slide)
+//     portfolio.slides.forEach( (slide) => {
+//         slide.style.transform = `translateX(-${counter * 100}%)`
+//         console.log(slide)
 
-    })
-};
+//     })
+// };
 
 // skills area creating user click function
 
@@ -349,19 +349,19 @@ window.addEventListener('scroll', ()=> {
 })
 
 
-portfolio.projectImg.forEach( (project) => {
-    portfolio.imageArray.forEach( (imageArray) => {
-        if (project.classList.contains(imageArray.name)) {
-            setInterval( () => {
-                let random = Math.floor(Math.random() * imageArray.pics.length);
-               project.src = imageArray.pics[random];
+// portfolio.projectImg.forEach( (project) => {
+//     portfolio.imageArray.forEach( (imageArray) => {
+//         if (project.classList.contains(imageArray.name)) {
+//             setInterval( () => {
+//                 let random = Math.floor(Math.random() * imageArray.pics.length);
+//                project.src = imageArray.pics[random];
 
-            }, 2000);
+//             }, 2000);
 
-        }
-    })
+//         }
+//     })
     
-})
+// })
 
 
 

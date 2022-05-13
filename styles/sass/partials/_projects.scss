@@ -1,7 +1,7 @@
 
 .projectSection {
     background-color: $secondary;
-    height: 1300px;
+    height: 3600px;
     padding-top: 80px;
     // color: $text2;
     h2 {
@@ -19,58 +19,82 @@
            
         }
     }
-    .projectContent {
-        width: 800px;
-        height: 1075px;
+    .projectWrapper {
+        width: 100%;
+        // height: 1075px;
         text-align: center;
-        position: relative;
-        overflow: hidden;
-        .slides {
-            position: absolute;
+        // position: relative;
+        // overflow: hidden;
+        .projects {
+            // position: absolute;
+            // display: flex;
             width: 100%;
-            height: 100%;
-            transition: all 0.25s ease-in-out;
-            img {
+            margin-top: 175px;
+            // height: 100%;
+            // transition: all 0.25s ease-in-out;
+            .projectContent {
                 width: 100%;
-                margin: 30px 0;
-                border-top: 10px solid $accentColor3;
-                border-bottom: 10px solid $accentColor3;
-                border-radius: 15px;
-            }
-            p {
-                padding: 20px 0;
-            }
-            .fab, .devicon-firebase-plain {
-                font-size: 2.8rem;
-                padding: 0 5px;
-            }
-            .siteLinks {
                 display: flex;
-                width: 100%;
-                margin: 0 auto;
-                padding-top: 30px;
-                justify-content: center;
-                a {
-                    display: block;
-                    margin: 0 20px;
-                    padding-top: 10px;
-                    font-weight: 700;
+                img {
+                    width: 50%;
+                    // margin: 0 50px 0 0;
+                    // border-top: 10px solid $accentColor3;
+                    // border-bottom: 10px solid $accentColor3;
+                    border-radius: 15px;
+                    margin: 50px;
+                    filter: drop-shadow(8px 8px 5px black);
                     transition: all 0.25s ease-in-out;
+                    
                     &:hover, :focus {
-                    box-shadow: 0 0.5em 0.5em -0.4em $accentColor; 
-                    transform: translateY(-0.25em);
-                    color: $accentColor;
-
+                        transform: scale(1.1);
+                        filter: drop-shadow(10px 10px 8px grey);
                     }
                 }
-
-                p {
-                    padding: 0;
-                    font-size: 1.2rem;
+                .projectInfo {
+                    width: 50%;
+                    padding: 20px;
+                    p {
+                        padding: 20px 0;
+                    }
+                    .fab, .devicon-firebase-plain {
+                        font-size: 2.8rem;
+                        padding: 0 5px;
+                    }
+                    .siteLinks {
+                        display: flex;
+                        width: 100%;
+                        margin: 0 auto;
+                        padding-top: 30px;
+                        justify-content: center;
+                        a {
+                            display: block;
+                            margin: 0 20px;
+                            padding-top: 10px;
+                            font-weight: 700;
+                            transition: all 0.25s ease-in-out;
+                            &:hover, :focus {
+                            box-shadow: 0 0.5em 0.5em -0.4em $accentColor; 
+                            transform: translateY(-0.25em);
+                            color: $accentColor;
+        
+                            }
+                        }
+        
+                        p {
+                            padding: 0;
+                            font-size: 1.2rem;
+                        }
+                    }
                 }
+                
             }
+            
             .collabContainer {
-                padding-top: 30px;
+                display: flex;
+                width: 100%;
+                justify-content: center;
+                margin-top: 9px;
+        
                 h4 {
                     padding-bottom: 10px;
                 }
@@ -78,37 +102,40 @@
                     padding: 0 5px;
                     transition: all 0.25s ease-in-out;
                     &:hover, :focus {
-                    box-shadow: 0 0.5em 0.5em -0.4em $accentColor; 
-                    transform: translateY(-0.25em);
-                    color: $accentColor;
+                        box-shadow: 0 0.5em 0.5em -0.4em $accentColor; 
+                        transform: translateY(-0.25em);
+                        color: $accentColor;
                     }
                 }
+
+                
+                
             }
         
         }
     }
-    .btnContainer {
-        text-align: center;
-        display: flex;
-        justify-content: space-between;
-        button {
-            border: none;
-            background: $primary;
-            border-radius: 5px;
-            padding: 10px;
-            transition: all 0.35s ease-in-out;
-            height: 100px;
-            margin: auto 25px;
-            &:hover, :focus {
-                box-shadow: inset 0 0 0 3em $accentColor2;
-            }
-            .fas {
-                font-size: 4rem;
-                margin: 0 30px;
-                color: $text;
-            }
-        }
-    }
+    // .btnContainer {
+    //     text-align: center;
+    //     display: flex;
+    //     justify-content: space-between;
+    //     button {
+    //         border: none;
+    //         background: $primary;
+    //         border-radius: 5px;
+    //         padding: 10px;
+    //         transition: all 0.35s ease-in-out;
+    //         height: 100px;
+    //         margin: auto 25px;
+    //         &:hover, :focus {
+    //             box-shadow: inset 0 0 0 3em $accentColor2;
+    //         }
+    //         .fas {
+    //             font-size: 4rem;
+    //             margin: 0 30px;
+    //             color: $text;
+    //         }
+    //     }
+    // }
 
     
 }

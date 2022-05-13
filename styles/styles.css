@@ -635,7 +635,7 @@ section {
 
 .projectSection {
   background-color: #aecbeb;
-  height: 1300px;
+  height: 3600px;
   padding-top: 80px;
 }
 .projectSection h2 {
@@ -652,35 +652,47 @@ section {
   left: 0;
   border-bottom: 2px solid #000;
 }
-.projectSection .projectContent {
-  width: 800px;
-  height: 1075px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.projectSection .projectContent .slides {
-  position: absolute;
+.projectSection .projectWrapper {
   width: 100%;
-  height: 100%;
+  text-align: center;
+}
+.projectSection .projectWrapper .projects {
+  width: 100%;
+  margin-top: 175px;
+}
+.projectSection .projectWrapper .projects .projectContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.projectSection .projectWrapper .projects .projectContent img {
+  width: 50%;
+  border-radius: 15px;
+  margin: 50px;
+  -webkit-filter: drop-shadow(8px 8px 5px black);
+          filter: drop-shadow(8px 8px 5px black);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-.projectSection .projectContent .slides img {
-  width: 100%;
-  margin: 30px 0;
-  border-top: 10px solid #FFBF00;
-  border-bottom: 10px solid #FFBF00;
-  border-radius: 15px;
+.projectSection .projectWrapper .projects .projectContent img:hover, .projectSection .projectWrapper .projects .projectContent img :focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: drop-shadow(10px 10px 8px grey);
+          filter: drop-shadow(10px 10px 8px grey);
 }
-.projectSection .projectContent .slides p {
+.projectSection .projectWrapper .projects .projectContent .projectInfo {
+  width: 50%;
+  padding: 20px;
+}
+.projectSection .projectWrapper .projects .projectContent .projectInfo p {
   padding: 20px 0;
 }
-.projectSection .projectContent .slides .fab, .projectSection .projectContent .slides .devicon-firebase-plain {
+.projectSection .projectWrapper .projects .projectContent .projectInfo .fab, .projectSection .projectWrapper .projects .projectContent .projectInfo .devicon-firebase-plain {
   font-size: 2.8rem;
   padding: 0 5px;
 }
-.projectSection .projectContent .slides .siteLinks {
+.projectSection .projectWrapper .projects .projectContent .projectInfo .siteLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -691,7 +703,7 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.projectSection .projectContent .slides .siteLinks a {
+.projectSection .projectWrapper .projects .projectContent .projectInfo .siteLinks a {
   display: block;
   margin: 0 20px;
   padding-top: 10px;
@@ -699,62 +711,41 @@ section {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-.projectSection .projectContent .slides .siteLinks a:hover, .projectSection .projectContent .slides .siteLinks a :focus {
+.projectSection .projectWrapper .projects .projectContent .projectInfo .siteLinks a:hover, .projectSection .projectWrapper .projects .projectContent .projectInfo .siteLinks a :focus {
   -webkit-box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
           box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
   -webkit-transform: translateY(-0.25em);
           transform: translateY(-0.25em);
   color: #f9d976;
 }
-.projectSection .projectContent .slides .siteLinks p {
+.projectSection .projectWrapper .projects .projectContent .projectInfo .siteLinks p {
   padding: 0;
   font-size: 1.2rem;
 }
-.projectSection .projectContent .slides .collabContainer {
-  padding-top: 30px;
+.projectSection .projectWrapper .projects .collabContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 9px;
 }
-.projectSection .projectContent .slides .collabContainer h4 {
+.projectSection .projectWrapper .projects .collabContainer h4 {
   padding-bottom: 10px;
 }
-.projectSection .projectContent .slides .collabContainer a {
+.projectSection .projectWrapper .projects .collabContainer a {
   padding: 0 5px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-.projectSection .projectContent .slides .collabContainer a:hover, .projectSection .projectContent .slides .collabContainer a :focus {
+.projectSection .projectWrapper .projects .collabContainer a:hover, .projectSection .projectWrapper .projects .collabContainer a :focus {
   -webkit-box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
           box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
   -webkit-transform: translateY(-0.25em);
           transform: translateY(-0.25em);
   color: #f9d976;
-}
-.projectSection .btnContainer {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.projectSection .btnContainer button {
-  border: none;
-  background: #83b0e1;
-  border-radius: 5px;
-  padding: 10px;
-  -webkit-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
-  height: 100px;
-  margin: auto 25px;
-}
-.projectSection .btnContainer button:hover, .projectSection .btnContainer button :focus {
-  -webkit-box-shadow: inset 0 0 0 3em #f39f86;
-          box-shadow: inset 0 0 0 3em #f39f86;
-}
-.projectSection .btnContainer button .fas {
-  font-size: 4rem;
-  margin: 0 30px;
-  color: #000;
 }
 
 .skillsSection {
@@ -1190,6 +1181,29 @@ footer .footerTag p {
 }
 
 @media (max-width: 1200px) {
+  .projectSection {
+    height: 5600px;
+  }
+  .projectSection .projectWrapper .projects .projectContent {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projectSection .projectWrapper .projects .projectContentFlip {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
   .skillsContainer .skillsContent {
     padding-top: 100px;
   }
@@ -1221,13 +1235,17 @@ footer .footerTag p {
     margin: 20px 15px;
   }
 
-  .projectSection .btnContainer button {
-    width: 10px;
-    margin: auto 20px;
+  .projectSection {
+    height: 4400px;
   }
-  .projectSection .btnContainer button .fas {
-    font-size: 1rem;
-    margin: 0 0 0 -6px;
+  .projectSection .projectWrapper .projects {
+    margin-top: 50px;
+  }
+  .projectSection .projectWrapper .projects .projectContent {
+    width: 100%;
+  }
+  .projectSection .projectWrapper .projects .projectContent .projectInfo {
+    width: 85%;
   }
 
   header {
@@ -1262,6 +1280,22 @@ footer .footerTag p {
 @media (max-width: 850px) {
   .slideMenu.isActive {
     width: 50%;
+  }
+
+  .projectSection {
+    height: 4800px;
+  }
+  .projectSection .projectWrapper .projects {
+    margin-top: 50px;
+  }
+  .projectSection .projectWrapper .projects .projectContent {
+    width: 100%;
+  }
+  .projectSection .projectWrapper .projects .projectContent img {
+    width: 75%;
+  }
+  .projectSection .projectWrapper .projects .projectContent .projectInfo {
+    width: 85%;
   }
 
   header nav ul {
@@ -1346,11 +1380,6 @@ footer .footerTag p {
     padding-top: 35px;
   }
 
-  .projectSection .projectContent {
-    width: 90%;
-    height: 880px;
-  }
-
   .musicTrack2 {
     text-align: right;
     margin: 0 0 0 200px;
@@ -1425,34 +1454,32 @@ footer .footerTag p {
     padding-top: 30px;
   }
 
-  .projectSection {
-    height: 1275px;
-  }
-  .projectSection .projectContent {
-    width: 90%;
-    height: 910px;
-  }
-
   footer .footerTag p {
     padding: 10px;
   }
 }
 @media (max-width: 488px) {
   .projectSection {
-    height: 1020px;
-    padding: 0;
+    height: 4200px;
+    padding: 40px;
   }
-  .projectSection .projectContent {
-    height: 900px;
+  .projectSection .projectWrapper .projects {
+    margin-top: 50px;
   }
-  .projectSection .projectContent .slides img {
-    height: 200px;
+  .projectSection .projectWrapper .projects .projectContent {
+    width: 100%;
   }
-  .projectSection .projectContent .slides p {
-    padding: 20px 35px;
+  .projectSection .projectWrapper .projects .projectContent img {
+    width: 80%;
   }
-  .projectSection .btnContainer button {
-    margin: auto 0;
+  .projectSection .projectWrapper .projects .projectContent .projectInfo {
+    width: 95%;
+  }
+  .projectSection .projectWrapper .projects .collabContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .skillsSection {

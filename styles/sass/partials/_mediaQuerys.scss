@@ -1,5 +1,31 @@
 
 @media (max-width:1200px) {
+
+    .projectSection {
+        height: 5600px;
+        .projectWrapper {
+            .projects {
+                .projectContent {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                        
+    
+                }
+                .projectContentFlip {
+                    flex-direction: column-reverse;
+                }
+    
+                    
+            }
+        }
+
+    
+    
+    }
+
    .skillsContainer {
         .skillsContent {
             padding-top: 100px;
@@ -46,20 +72,31 @@
 
     }
 
-    .projectSection {
-        .btnContainer {
-            button {
-                width:10px;
-                margin: auto 20px;
-                
-                .fas {
-                    font-size: 1rem;
-                    margin: 0 0 0 -6px;
+        .projectSection {
+            height: 4400px;
+
+            .projectWrapper {
+                .projects {
+                    margin-top: 50px;
+                    .projectContent {
+                        width: 100%;
+                        .projectInfo {
+                            width: 85%;
+                        }
+
+                        
+                    }
+
+    
+    
                 }
-                
             }
+    
+    
+    
         }
-    }
+
+    
 
 
     header {
@@ -101,6 +138,34 @@
     .slideMenu.isActive {
         width: 50%;
     }
+
+    .projectSection {
+        height: 4800px;
+
+        .projectWrapper {
+            .projects {
+                margin-top: 50px;
+                .projectContent {
+                    width: 100%;
+                    img {
+                    width: 75%;
+                    }
+                    .projectInfo {
+                         width: 85%;
+                    }
+
+                        
+                }
+
+    
+    
+            }
+        }
+    
+    
+
+    }
+
 
     header {
         nav {
@@ -182,12 +247,7 @@
 
     }
 
-    .projectSection {
-        .projectContent {
-            width: 90%;
-            height: 880px;
-        }
-    }
+
 
     .musicTrack2 {
         text-align: right;
@@ -289,13 +349,6 @@
         padding-top: 30px;
     }
 
-    .projectSection {
-        height: 1275px;
-        .projectContent {
-            width: 90%;
-            height: 910px;
-        }
-    }
 
     footer .footerTag p {
         padding: 10px;
@@ -303,26 +356,41 @@
 }
 
 @media(max-width:488px) {
+
     .projectSection {
-        height: 1020px;
-        padding: 0;
-        .projectContent {
-            height: 900px;
-             .slides {
-                img {
-                    height: 200px;
-                }
-                p {
-                    padding: 20px 35px;
+            height: 4200px;
+            padding: 40px;
+    
+            .projectWrapper {
+                .projects {
+                    margin-top: 50px;
+    
+                    .projectContent {
+                        width: 100%;
+
+                        img {
+                            width: 80%;
+                        }
+    
+                        .projectInfo {
+                            width: 95%;
+                        }
+    
+    
+                    }
+
+                    .collabContainer {
+                        flex-direction: column;
+                    }
+    
+    
+    
                 }
             }
+    
+    
+    
         }
-        .btnContainer {
-            button {
-                margin: auto 0;
-            }
-        }
-    }
 
     .skillsSection {
         height: 850px;
