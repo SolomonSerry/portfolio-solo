@@ -67,6 +67,8 @@ portfolio.skillsInfo = [
 // portfolio.nextBtn = document.querySelector('.nextBtn')
 // portfolio.prevBtn = document.querySelector('.prevBtn')
 portfolio.skillsBtn = document.querySelectorAll('.skillsBtn')
+portfolio.skillsHolder = document.querySelector('.skillsPlaceholder')
+
 
 
 portfolio.menuBtn = document.querySelector('.hamburgerMenu')
@@ -153,11 +155,13 @@ portfolio.formContent = document.querySelector('.formContainer')
 
 portfolio.userSkillsClick = () => {
     const pElement = document.createElement('p');
+    
 
     portfolio.skillsBtn.forEach( function(btn) {
         btn.addEventListener('click', function() {
             portfolio.skillsInfo.forEach( (info) =>  {
                 if (btn.classList.contains(info.name)){
+                    portfolio.skillsHolder.remove()
                     portfolio.skillTitle.innerHTML = `${info.name}`;
 
                     
