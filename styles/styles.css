@@ -301,8 +301,8 @@ header nav ul a {
   border-radius: 10px;
 }
 header nav ul a:hover, header nav ul a :focus {
-  -webkit-box-shadow: inset 0 0 0 3em #f39f86;
-          box-shadow: inset 0 0 0 3em #f39f86;
+  -webkit-box-shadow: inset 0 0 0 3em #FFBF00;
+          box-shadow: inset 0 0 0 3em #FFBF00;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -623,14 +623,14 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-shadow: 0.3em 0.3em 0 0 #f9d976, inset 0.3em 0.3em 0 0 #f9d976;
-          box-shadow: 0.3em 0.3em 0 0 #f9d976, inset 0.3em 0.3em 0 0 #f9d976;
+  -webkit-box-shadow: 0.3em 0.3em 0 0 #FFBF00, inset 0.3em 0.3em 0 0 #FFBF00;
+          box-shadow: 0.3em 0.3em 0 0 #FFBF00, inset 0.3em 0.3em 0 0 #FFBF00;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 .aboutMeContainer a:hover, .aboutMeContainer a:focus {
-  -webkit-box-shadow: 0 0 0 0 #f39f86, inset 6em 3.5em 0 0 #f39f86;
-          box-shadow: 0 0 0 0 #f39f86, inset 6em 3.5em 0 0 #f39f86;
+  -webkit-box-shadow: 0 0 0 0 #f9d976, inset 6em 3.5em 0 0 #f9d976;
+          box-shadow: 0 0 0 0 #f9d976, inset 6em 3.5em 0 0 #f9d976;
 }
 
 .projectSection {
@@ -669,7 +669,7 @@ section {
 .projectSection .projectWrapper .projects .projectContent img {
   width: 50%;
   border-radius: 15px;
-  margin: 50px;
+  margin: 70px;
   -webkit-filter: drop-shadow(8px 8px 5px black);
           filter: drop-shadow(8px 8px 5px black);
   -webkit-transition: all 0.25s ease-in-out;
