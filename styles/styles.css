@@ -867,7 +867,7 @@ section {
 }
 .musicSection .musicContainer .labels {
   display: grid;
-  grid-template-columns: 10fr 40fr 20fr 20fr 10fr;
+  grid-template-columns: 5fr 45fr 20fr 20fr 10fr;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -885,7 +885,7 @@ section {
 }
 .musicSection .musicContainer .tracks {
   display: grid;
-  grid-template-columns: 10fr 40fr 20fr 20fr 10fr;
+  grid-template-columns: 5fr 45fr 20fr 20fr 10fr;
   padding: 30px 0;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1472,5 +1472,13 @@ footer .footerTag p {
 
   h2 {
     font-size: 2.4rem;
+  }
+
+  footer .footerIcons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .footerIcons .fab, footer .footerIcons .fas {
+    margin: 15px 30px 0 0;
   }
 }
