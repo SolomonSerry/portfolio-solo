@@ -1,6 +1,6 @@
 .musicSection {
     background-color: $secondary;
-    height: 1800px;
+    height: 1200px;
     overflow: hidden;
     .musicContainer {
         padding-top: 80px;
@@ -99,15 +99,12 @@
 }
 
 .mainPlayer {
-    position: fixed;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
     border-radius: 12px;
     background-color: $primary;
-    width: 60%;
+    width: 100%;
     opacity: 0;
     transition: opacity 0.25s ease-in-out;
+    margin-top: 60px;
 }
 
 .playerVisible {

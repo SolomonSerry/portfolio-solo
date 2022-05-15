@@ -2,7 +2,7 @@
 @media (max-width:1200px) {
 
     .projectSection {
-        height: 5600px;
+        height: 5900px;
         .projectWrapper {
             .projects {
                 .projectContent {
@@ -38,26 +38,37 @@
         }
 
     }
-    .musicSection {
-        height: 2000px;
-    }
-
-    .musicTrack2 {
-        text-align: right;
-        margin-left: 450px;
-        margin-right: 100px;
-    }
-
-    .musicTrack1, .musicTrack3 {
-        margin-right: 450px;
-        margin-left: 100px;
-    }
     .aboutMeSection {
         height: 1200px;
     }
-    
 
 }
+
+@media (max-width:1080px) {
+    .musicSection {
+        height: 1200px;
+        .musicContainer {
+            .musicContent {
+    
+                .labels {
+                    grid-template-columns: 10fr 50fr 30fr 10fr;
+                    .album {
+                        display: none;
+                    }
+                }
+                
+                .tracks {
+                    grid-template-columns: 10fr 50fr 30fr 10fr;
+                    .album {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
 
 @media (max-width:950px) {
     .skillsContainer {
@@ -73,7 +84,7 @@
     }
 
         .projectSection {
-            height: 4400px;
+            height: 4600px;
 
             .projectWrapper {
                 .projects {
@@ -121,17 +132,6 @@
             }
     }
 
-    .musicTrack2 {
-        text-align: right;
-        margin-left: 400px;
-        margin-right: 50px;
-    }
-
-    .musicTrack1, .musicTrack3 {
-        margin-right: 400px;
-        margin-left: 50px;
-    }
-
 }
 
 @media (max-width:850px) {
@@ -140,7 +140,7 @@
     }
 
     .projectSection {
-        height: 4800px;
+        height: 5000px;
 
         .projectWrapper {
             .projects {
@@ -188,24 +188,26 @@
             }
         }
     }
-    
 
     .musicSection {
-        height: 1900px;
-    }
-     
-   .musicTrack2 {
-        text-align: right;
-        margin: 0 0 0 300px;
-        
-    }
-
-    .musicTrack1, .musicTrack3 {
-       margin: 0 300px 0 0;
-    }
-
-    .musicTrack1 {
-        padding-top: 25px;
+        .musicContainer {
+            .musicContent {
+    
+                .labels {
+                    grid-template-columns: 10fr 80fr 10fr;
+                    .genre {
+                        display: none;
+                    }
+                }
+                
+                .tracks {
+                    grid-template-columns: 10fr 80fr 10fr;
+                    .genre {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 
 
@@ -247,19 +249,6 @@
 
     }
 
-
-
-    .musicTrack2 {
-        text-align: right;
-        margin: 0 0 0 200px;
-        padding-top: 15px;
-        
-    }
-
-    .musicTrack1, .musicTrack3 {
-       margin: 0 200px 0 0;
-    }
-
     header {
         // height: 1200px;
         .headerFlex {
@@ -283,6 +272,21 @@
            }
         }
     }
+
+    .musicSection {
+        .musicContainer {
+            .musicContent {
+                .playerHeader {
+                    h3 {
+                        font-size: 1.3rem;
+                    }
+                    p {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media(max-width:600px) {
@@ -299,10 +303,6 @@
 
     .skillsSection {
         height: 1100px;
-    }
-    
-    .musicSection {
-        height: 2000px;
     }
 
     .contactSection {
@@ -337,19 +337,6 @@
         }
     }
 
-    .musicTrack2 {
-        text-align: right;
-        margin: 0 0 0 50px;
-        padding-top: 30px;
-        
-    }
-    
-    .musicTrack1, .musicTrack3 {
-        margin: 0 50px 0 0;
-        padding-top: 30px;
-    }
-
-
     footer .footerTag p {
         padding: 10px;
     }
@@ -358,7 +345,7 @@
 @media(max-width:488px) {
 
     .projectSection {
-            height: 4200px;
+            height: 4700px;
             padding: 40px;
     
             .projectWrapper {
@@ -469,30 +456,6 @@
         }
     }
 
-    .musicSection {
-        height: 1400px;
-        .musicContainer {
-            padding-top: 20px;
-            
-            .musicTrack1, .musicTrack2, .musicTrack3 {
-                margin: 0 auto;
-            }
-            
-            .musicTrack1, .musicTrack3  {
-                display: flex; 
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-            
-            .tracks:nth-child(2) {
-                align-items: center;
-                text-align: center;
-            }
-        }
-    }
-
     .contactSection {
         height: 1090px;
         .contactContainer {
@@ -523,4 +486,40 @@
         }
     }
 
+    .musicSection {
+        .musicContainer {
+            .musicContent {
+                .playerHeader {
+                    .playerInfo {
+                        img {
+                            width: 125px;
+                            height: 125px;
+                        }
+
+                    }
+                }
+                .labels {
+                    grid-template-columns: 10fr 90fr;
+                    .time {
+                        display: none;
+                    }
+
+                }
+                .tracks {
+                    grid-template-columns: 10fr 90fr;
+                    .time {
+                        display: none;
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width:350px) {
+    .projectSection {
+        height: 4800px;
+    }
 }
