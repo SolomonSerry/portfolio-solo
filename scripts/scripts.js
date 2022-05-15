@@ -63,9 +63,7 @@ portfolio.skillsInfo = [
 //     }
 // ]
 
-// portfolio.slides = document.querySelectorAll('.slides')
-// portfolio.nextBtn = document.querySelector('.nextBtn')
-// portfolio.prevBtn = document.querySelector('.prevBtn')
+
 portfolio.skillsBtn = document.querySelectorAll('.skillsBtn')
 portfolio.skillsHolder = document.querySelector('.skillsPlaceholder')
 
@@ -85,27 +83,11 @@ portfolio.mainPlayer = document.querySelector('.mainPlayer')
 
 portfolio.musicArea = document.querySelector('.musicContainer')
 
-portfolio.track1 = document.querySelector('.track1')
-portfolio.track2 = document.querySelector('.track2')
-portfolio.track3 = document.querySelector('.track3')
 
 portfolio.tracks = document.querySelectorAll('.tracks')
+portfolio.playIcon = document.querySelectorAll('.fa-play')
+portfolio.audio = document.querySelectorAll('#audio')
 
-portfolio.audio1 = document.querySelector('#audio1')
-portfolio.audio2 = document.querySelector('#audio2')
-portfolio.audio3 = document.querySelector('#audio3')
-
-portfolio.playHover1 = document.querySelector('.playHover1')
-portfolio.playHover2 = document.querySelector('.playHover2')
-portfolio.playHover3 = document.querySelector('.playHover3')
-
-portfolio.stopHover1 = document.querySelector('.stopHover1')
-portfolio.stopHover2 = document.querySelector('.stopHover2')
-portfolio.stopHover3 = document.querySelector('.stopHover3')
-
-portfolio.playing1 = document.querySelector('.playing1')
-portfolio.playing2 = document.querySelector('.playing2')
-portfolio.playing3 = document.querySelector('.playing3')
 
 portfolio.contactArea = document.querySelector('.contactSection')
 portfolio.aboutMeArea = document.querySelector('.aboutMeSection')
@@ -190,132 +172,43 @@ portfolio.navBtn.forEach( function(btn) {
     })
 })
 
+let count = 0;
+
 // playing my music 
-
-
-let count1 = 0;
-let count2 = 0;
-let count3 = 0;
-
-portfolio.userListen = () => {
-    portfolio.track1.addEventListener('click', (event) => {
-       
-       
-        if (count1 === 0) {
-            portfolio.mainPlayer.src = portfolio.audio1.src;
-            portfolio.mainPlayer.play();
-            count1 = 1;
-            
-            portfolio.playHover1.style.display = 'none'
-            portfolio.stopHover1.style.display = 'block'
-
-            portfolio.playHover2.style.display = 'block'
-            portfolio.stopHover2.style.display = 'none'
-            portfolio.playHover3.style.display = 'block'
-            portfolio.stopHover3.style.display = 'none'
-
-            portfolio.playing1.innerHTML = `<em>Playing...</em>`
-            portfolio.playing2.innerHTML = `<em>Click Image To Play</em>`
-            portfolio.playing3.innerHTML = `<em>Click Image To Play</em>`
-
-            count2 = 0
-            count3 = 0 
-
-            
-            
-        } else if (count1 === 1) {
-           
-            portfolio.mainPlayer.pause();
-            portfolio.mainPlayer.currentTime = 0;
-            count1 = 0;
-
-            portfolio.playHover1.style.display = 'block'
-            portfolio.stopHover1.style.display = 'none'
-            
-            portfolio.playing1.innerHTML = `<em>Click Image To Play</em>`
-            
-        } 
-    })
-
-    portfolio.track2.addEventListener('click', () => {
-        if (count2 === 0) {
-            portfolio.mainPlayer.src = portfolio.audio2.src;
-            portfolio.mainPlayer.play();
-            count2 = 1;
-
-            portfolio.playHover2.style.display = 'none'
-            portfolio.stopHover2.style.display = 'block'
-
-            portfolio.playHover1.style.display = 'block'
-            portfolio.stopHover1.style.display = 'none'
-            portfolio.playHover3.style.display = 'block'
-            portfolio.stopHover3.style.display = 'none'
-
-            portfolio.playing2.innerHTML = `<em>Playing...</em>`
-            portfolio.playing1.innerHTML = `<em>Click Image To Play</em>`
-            portfolio.playing3.innerHTML = `<em>Click Image To Play</em>`
-
-            count1 = 0
-            count3 = 0 
-
-            
-            
-
-
-
-        } else if (count2 === 1) {
-
-            portfolio.mainPlayer.pause();
-            portfolio.mainPlayer.currentTime = 0;
-            count2 = 0;
-
-            portfolio.playHover2.style.display = 'block'
-            portfolio.stopHover2.style.display = 'none'
-
-            portfolio.playing2.innerHTML = `<em>Click Image To Play</em>`
-
-        } 
+portfolio.tracks.forEach( (track) => {
+    track.addEventListener('click', () => {
+        portfolio.tracks[0].children[0].style.opacity = '0'
+        portfolio.tracks[1].children[0].style.opacity = '0'
+        portfolio.tracks[2].children[0].style.opacity = '0'
+        // console.log(portfolio.tracks[0].children[0])
+        
     
-    })
+        portfolio.audio.forEach( (audio) => {
+            if (track.classList.contains(audio.title) && portfolio.mainPlayer.src === audio.src && count === 1) {
+                portfolio.mainPlayer.pause();
+                count = 0;
+                track.children[0].style.opacity = '0'
 
-    portfolio.track3.addEventListener('click', () => {
-        if (count3 === 0) {
-            portfolio.mainPlayer.src = portfolio.audio3.src;
-            portfolio.mainPlayer.play();
-            count3 = 1;
+            } else if (track.classList.contains(audio.title) && portfolio.mainPlayer.src !== audio.src && count === 1) {
+                portfolio.mainPlayer.src = audio.src;
+                portfolio.mainPlayer.play();
+                count = 1;
+                track.children[0].style.opacity = '1'
 
-            portfolio.playHover3.style.display = 'none'
-            portfolio.stopHover3.style.display = 'block'
+            } else if (track.classList.contains(audio.title) && count === 0) {
+                portfolio.mainPlayer.src = audio.src ;
+                portfolio.mainPlayer.play();
+                count = 1;
+                track.children[0].style.opacity = '1'
+            } 
+        });
+    });
 
-            portfolio.playHover2.style.display = 'block'
-            portfolio.stopHover2.style.display = 'none'
-            portfolio.playHover1.style.display = 'block'
-            portfolio.stopHover1.style.display = 'none'
-
-            portfolio.playing3.innerHTML = `<em>Playing...</em>`
-            portfolio.playing2.innerHTML = `<em>Click Image To Play</em>`
-            portfolio.playing1.innerHTML = `<em>Click Image To Play</em>`
-
-            count2 = 0
-            count1 = 0 
+});
 
 
 
-        } else if (count3 === 1) {
 
-            portfolio.mainPlayer.pause();
-            portfolio.mainPlayer.currentTime = 0;
-            count3 = 0;
-
-            portfolio.playHover3.style.display = 'block'
-            portfolio.stopHover3.style.display = 'none'
-
-            portfolio.playing3.innerHTML = `<em>Click Image To Play</em>`
-
-        } 
-    })
-
-}   
 
 window.addEventListener('scroll', () => {
     if (portfolio.musicArea.getBoundingClientRect().top < window.innerHeight) {
@@ -352,28 +245,10 @@ window.addEventListener('scroll', ()=> {
     })
 })
 
-
-// portfolio.projectImg.forEach( (project) => {
-//     portfolio.imageArray.forEach( (imageArray) => {
-//         if (project.classList.contains(imageArray.name)) {
-//             setInterval( () => {
-//                 let random = Math.floor(Math.random() * imageArray.pics.length);
-//                project.src = imageArray.pics[random];
-
-//             }, 2000);
-
-//         }
-//     })
-    
-// })
-
-
-
-
 // Init function
 portfolio.init = () => {
     portfolio.userSkillsClick();
-    portfolio.userListen();
+    // portfolio.userListen();
 };
 
 // Calling init 
