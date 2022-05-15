@@ -1,4 +1,3 @@
-@charset "UTF-8";
 html {
   line-height: 1.15;
   -ms-text-size-adjust: 100%;
@@ -241,7 +240,6 @@ header {
   background-size: cover;
   position: relative;
   width: 100%;
-  height: 900px;
   color: aliceblue;
   background-position: right;
 }
@@ -283,7 +281,7 @@ header nav ul {
   min-height: 100vh;
   display: block;
   z-index: 10;
-  background: #dddddd;
+  background: #83b0e1;
   padding-top: 220px;
   -webkit-transition: right 0.3s ease-in-out;
   transition: right 0.3s ease-in-out;
@@ -296,14 +294,14 @@ header nav ul a {
   margin: 0 auto 16px;
   text-align: center;
   padding: 12px 16px;
-  background-color: #9fb3e0;
+  background-color: #aecbeb;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   border-radius: 10px;
 }
 header nav ul a:hover, header nav ul a :focus {
-  -webkit-box-shadow: inset 0 0 0 3em #f39f86;
-          box-shadow: inset 0 0 0 3em #f39f86;
+  -webkit-box-shadow: inset 0 0 0 3em #FFBF00;
+          box-shadow: inset 0 0 0 3em #FFBF00;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -358,13 +356,14 @@ header .headerFlex img {
 }
 .nameTag h1 {
   color: aliceblue;
-  padding: 25px 0 25px 46px;
+}
+.nameTag h1 span {
+  display: block;
 }
 .nameTag h4 {
   position: relative;
   width: 200px;
-  text-align: center;
-  margin-top: 20px;
+  margin: 20px 0;
 }
 .nameTag h4::after {
   content: " ";
@@ -473,7 +472,7 @@ section {
 }
 
 .angle1 .shape-fill {
-  fill: #dddddd;
+  fill: #83b0e1;
 }
 
 .angle2 {
@@ -495,12 +494,32 @@ section {
 }
 
 .angle2 .shape-fill {
-  fill: #9fb3e0;
+  fill: #aecbeb;
+}
+
+.angle3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.angle3 svg {
+  position: relative;
+  display: block;
+  width: calc(128% + 1.3px);
+  height: 99px;
+}
+
+.angle3 .shape-fill {
+  fill: #a2d2ff;
 }
 
 .aboutMeSection {
-  height: 800px;
-  background: #dddddd;
+  height: 1000px;
+  background: #83b0e1;
 }
 
 .aboutMeContainer {
@@ -521,18 +540,74 @@ section {
   border-bottom: 2px solid #000;
 }
 .aboutMeContainer .aboutMeContent {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   padding: 50px 0;
   opacity: 0;
   -webkit-transition: opacity 1s ease-in-out;
   transition: opacity 1s ease-in-out;
 }
-.aboutMeContainer .aboutMeContent p {
+.aboutMeContainer .aboutMeContent .softSkills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 50px 0;
+}
+.aboutMeContainer .aboutMeContent .softSkills div {
+  text-align: center;
+}
+.aboutMeContainer .aboutMeContent .softSkills div .fas, .aboutMeContainer .aboutMeContent .softSkills div .far {
+  font-size: 1.3rem;
+}
+.aboutMeContainer .aboutMeContent .softSkills div .fa-users {
+  border-radius: 50%;
+  background-color: #f9d976;
+  width: 50px;
+  height: 50px;
+  padding-top: 12px;
+}
+.aboutMeContainer .aboutMeContent .softSkills div .fa-puzzle-piece {
+  border-radius: 50%;
+  background-color: #f39f86;
+  width: 50px;
+  height: 50px;
+  padding: 10px 0 0 4px;
+}
+.aboutMeContainer .aboutMeContent .softSkills div .fa-lightbulb {
+  border-radius: 50%;
+  background-color: #FFBF00;
+  width: 50px;
+  height: 50px;
+  padding-top: 12px;
+}
+.aboutMeContainer .aboutMeContent .softSkills div .fa-desktop {
+  border-radius: 50%;
+  background-color: tomato;
+  width: 50px;
+  height: 50px;
+  padding: 12px 0 0 1px;
+}
+.aboutMeContainer .aboutMeContent .softSkills div .fa-user {
+  border-radius: 50%;
+  background-color: grey;
+  width: 50px;
+  height: 50px;
+  padding-top: 11px;
+}
+.aboutMeContainer .aboutMeContent .softSkills div p {
+  font-size: 0.7rem;
+}
+.aboutMeContainer .aboutMeContent .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 50px 0;
+}
+.aboutMeContainer .aboutMeContent .profile p {
   margin: 0 20px;
 }
-.aboutMeContainer .aboutMeContent p:first-child {
+.aboutMeContainer .aboutMeContent .profile p:first-child {
   font-weight: 700;
   text-align: right;
 }
@@ -547,19 +622,19 @@ section {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-shadow: 0.3em 0.3em 0 0 #f9d976, inset 0.3em 0.3em 0 0 #f9d976;
-          box-shadow: 0.3em 0.3em 0 0 #f9d976, inset 0.3em 0.3em 0 0 #f9d976;
+  -webkit-box-shadow: 0.3em 0.3em 0 0 #FFBF00, inset 0.3em 0.3em 0 0 #FFBF00;
+          box-shadow: 0.3em 0.3em 0 0 #FFBF00, inset 0.3em 0.3em 0 0 #FFBF00;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
 .aboutMeContainer a:hover, .aboutMeContainer a:focus {
-  -webkit-box-shadow: 0 0 0 0 #f39f86, inset 6em 3.5em 0 0 #f39f86;
-          box-shadow: 0 0 0 0 #f39f86, inset 6em 3.5em 0 0 #f39f86;
+  -webkit-box-shadow: 0 0 0 0 #f9d976, inset 6em 3.5em 0 0 #f9d976;
+          box-shadow: 0 0 0 0 #f9d976, inset 6em 3.5em 0 0 #f9d976;
 }
 
 .projectSection {
-  background-color: #9fb3e0;
-  height: 1300px;
+  background-color: #aecbeb;
+  height: 3600px;
   padding-top: 80px;
 }
 .projectSection h2 {
@@ -576,35 +651,47 @@ section {
   left: 0;
   border-bottom: 2px solid #000;
 }
-.projectSection .projectContent {
-  width: 800px;
-  height: 1075px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.projectSection .projectContent .slides {
-  position: absolute;
+.projectSection .projectWrapper {
   width: 100%;
-  height: 100%;
+  text-align: center;
+}
+.projectSection .projectWrapper .projects {
+  width: 100%;
+  margin-top: 175px;
+}
+.projectSection .projectWrapper .projects .projectContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.projectSection .projectWrapper .projects .projectContent img {
+  width: 50%;
+  border-radius: 15px;
+  margin: 70px;
+  -webkit-filter: drop-shadow(8px 8px 5px black);
+          filter: drop-shadow(8px 8px 5px black);
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-.projectSection .projectContent .slides img {
-  width: 100%;
-  margin: 30px 0;
-  border-top: 10px solid #FFBF00;
-  border-bottom: 10px solid #FFBF00;
-  border-radius: 15px;
+.projectSection .projectWrapper .projects .projectContent img:hover, .projectSection .projectWrapper .projects .projectContent img :focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-filter: drop-shadow(10px 10px 8px grey);
+          filter: drop-shadow(10px 10px 8px grey);
 }
-.projectSection .projectContent .slides p {
+.projectSection .projectWrapper .projects .projectContent .projectInfo {
+  width: 50%;
+  padding: 20px;
+}
+.projectSection .projectWrapper .projects .projectContent .projectInfo p {
   padding: 20px 0;
 }
-.projectSection .projectContent .slides .fab, .projectSection .projectContent .slides .devicon-firebase-plain {
+.projectSection .projectWrapper .projects .projectContent .projectInfo .fab, .projectSection .projectWrapper .projects .projectContent .projectInfo .devicon-firebase-plain {
   font-size: 2.8rem;
   padding: 0 5px;
 }
-.projectSection .projectContent .slides .siteLinks {
+.projectSection .projectWrapper .projects .projectContent .projectInfo .siteLinks {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -615,7 +702,7 @@ section {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.projectSection .projectContent .slides .siteLinks a {
+.projectSection .projectWrapper .projects .projectContent .projectInfo .siteLinks a {
   display: block;
   margin: 0 20px;
   padding-top: 10px;
@@ -623,68 +710,47 @@ section {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-.projectSection .projectContent .slides .siteLinks a:hover, .projectSection .projectContent .slides .siteLinks a :focus {
+.projectSection .projectWrapper .projects .projectContent .projectInfo .siteLinks a:hover, .projectSection .projectWrapper .projects .projectContent .projectInfo .siteLinks a :focus {
   -webkit-box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
           box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
   -webkit-transform: translateY(-0.25em);
           transform: translateY(-0.25em);
   color: #f9d976;
 }
-.projectSection .projectContent .slides .siteLinks p {
+.projectSection .projectWrapper .projects .projectContent .projectInfo .siteLinks p {
   padding: 0;
   font-size: 1.2rem;
 }
-.projectSection .projectContent .slides .collabContainer {
-  padding-top: 30px;
+.projectSection .projectWrapper .projects .collabContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 9px;
 }
-.projectSection .projectContent .slides .collabContainer h4 {
+.projectSection .projectWrapper .projects .collabContainer h4 {
   padding-bottom: 10px;
 }
-.projectSection .projectContent .slides .collabContainer a {
+.projectSection .projectWrapper .projects .collabContainer a {
   padding: 0 5px;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
 }
-.projectSection .projectContent .slides .collabContainer a:hover, .projectSection .projectContent .slides .collabContainer a :focus {
+.projectSection .projectWrapper .projects .collabContainer a:hover, .projectSection .projectWrapper .projects .collabContainer a :focus {
   -webkit-box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
           box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
   -webkit-transform: translateY(-0.25em);
           transform: translateY(-0.25em);
   color: #f9d976;
-}
-.projectSection .btnContainer {
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-.projectSection .btnContainer button {
-  border: none;
-  background: #dddddd;
-  border-radius: 5px;
-  padding: 10px;
-  -webkit-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
-  height: 100px;
-  margin: auto 25px;
-}
-.projectSection .btnContainer button:hover, .projectSection .btnContainer button :focus {
-  -webkit-box-shadow: inset 0 0 0 3em #f39f86;
-          box-shadow: inset 0 0 0 3em #f39f86;
-}
-.projectSection .btnContainer button .fas {
-  font-size: 4rem;
-  margin: 0 30px;
-  color: #000;
 }
 
 .skillsSection {
   height: 900px;
   padding-top: 100px;
-  background: #dddddd;
+  background: #a2d2ff;
 }
 
 .skillsContainer h2 {
@@ -719,7 +785,7 @@ section {
 }
 .skillsContainer .skillsContent .skillsBtnContainer button {
   border: none;
-  background: #dddddd;
+  background: #a2d2ff;
   margin: 20px 59px;
   -webkit-transition: -webkit-box-shadow 0.25s ease-in-out;
   transition: -webkit-box-shadow 0.25s ease-in-out;
@@ -731,8 +797,8 @@ section {
   transition: transform 0.25s ease-in-out, -webkit-transform 0.25s ease-in-out;
 }
 .skillsContainer .skillsContent .skillsBtnContainer button:hover, .skillsContainer .skillsContent .skillsBtnContainer button :focus {
-  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #9fb3e0;
-          box-shadow: 0 0.5em 0.5em -0.4em #9fb3e0;
+  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #83b0e1;
+          box-shadow: 0 0.5em 0.5em -0.4em #83b0e1;
   -webkit-transform: translateY(-0.25em);
           transform: translateY(-0.25em);
 }
@@ -757,8 +823,8 @@ section {
 }
 
 .musicSection {
-  background-color: #9fb3e0;
-  height: 1800px;
+  background-color: #aecbeb;
+  height: 1200px;
   overflow: hidden;
 }
 .musicSection .musicContainer {
@@ -779,227 +845,102 @@ section {
   border-bottom: 2px solid #000;
 }
 .musicSection .musicContainer .musicContent {
+  margin-top: 150px;
+}
+.musicSection .musicContainer .musicContent .playerHeader img {
+  width: 100px;
+  height: 100px;
+}
+.musicSection .musicContainer .musicContent .playerHeader .playerInfo {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.musicSection .musicContainer .musicContent .tracks {
+.musicSection .musicContainer .musicContent .playerHeader .playerInfo img {
+  width: 175px;
+  height: 175px;
+  border-radius: 5px;
+  margin-right: 20px;
+}
+.musicSection .musicContainer .labels {
+  display: grid;
+  grid-template-columns: 5fr 45fr 20fr 20fr 10fr;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 50px 0 20px 0;
+  opacity: 0.4;
+  position: relative;
+}
+.musicSection .musicContainer .labels::after {
+  content: " ";
+  border-bottom: 1px solid black;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+}
+.musicSection .musicContainer .tracks {
+  display: grid;
+  grid-template-columns: 5fr 45fr 20fr 20fr 10fr;
+  padding: 30px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.musicSection .musicContainer .tracks:hover .fa-play {
+  opacity: 1;
+}
+.musicSection .musicContainer .tracks .fa-play {
   opacity: 0;
-  -webkit-transition: opacity 1s ease-in-out;
-  transition: opacity 1s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
-.musicSection .musicContainer .musicContent .tracks h4 {
-  padding: 20px 0;
+.musicSection .musicContainer .tracks div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-.musicSection .musicContainer .musicContent .tracks .playing p {
-  padding-bottom: 15px;
-}
-.musicSection .musicContainer .musicContent .tracks .musicBtn {
-  padding: 15px 0;
-}
-.musicSection .musicContainer .musicContent .tracks .musicBtn button {
-  padding: 10px 20px;
+.musicSection .musicContainer .tracks div .fa-music {
+  background: #071214;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-right: 10px;
-  background: #dddddd;
-  border: 1px solid #8f8f8f;
-  border-radius: 5px;
-  -webkit-transition: all 0.25s ease-in-out;
-  transition: all 0.25s ease-in-out;
-  color: #000;
+  font-size: 1.2rem;
+  color: aliceblue;
 }
-.musicSection .musicContainer .musicContent .tracks .musicBtn button:hover, .musicSection .musicContainer .musicContent .tracks .musicBtn button :focus {
-  -webkit-box-shadow: inset -2em 0 1.5em 0 #f9d976, inset 3.5em 0 0 0 #FFBF00;
-          box-shadow: inset -2em 0 1.5em 0 #f9d976, inset 3.5em 0 0 0 #FFBF00;
-}
-
-.tracks img {
-  width: 300px;
-  height: 168px;
-  border-top: 10px solid #FFBF00;
-  border-bottom: 10px solid #FFBF00;
-  border-radius: 15px;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  position: relative;
-}
-.tracks img:hover {
-  -webkit-filter: drop-shadow(0 10px 0.6rem black);
-          filter: drop-shadow(0 10px 0.6rem black);
-}
-
-.trackArt {
-  position: relative;
-  width: 300px;
-  height: 168px;
-}
-.trackArt:hover .playHover::before, .trackArt :hover.playHover::after, .trackArt :hover.stopHover::before, .trackArt :hover.stopHover:after {
-  opacity: 50%;
-  z-index: 10;
-}
-
-.playHover {
-  position: absolute;
-  top: 0;
-  left: 0;
+.musicSection .musicContainer .tracks div span {
   display: block;
+  opacity: 0.7;
 }
-
-.play2 {
-  left: -275px;
-}
-
-.playHover::before {
-  content: " play ";
-  position: absolute;
-  border: 8px solid #dddddd;
-  border-radius: 5px;
-  top: 10px;
-  left: 0;
-  opacity: 0;
-  width: 300px;
-  height: 148px;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-  color: #dddddd;
-  padding-left: 10px;
-}
-
-.playHover::after {
-  content: "▶";
-  position: absolute;
-  color: #dddddd;
-  font-size: 3rem;
-  border: 8px solid #dddddd;
-  border-radius: 50%;
-  width: 85px;
-  height: 85px;
-  padding: 2px 0 0 12px;
-  top: 40px;
-  left: 105px;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.play2::before {
-  content: " play ";
-  position: absolute;
-  border: 8px solid #dddddd;
-  border-radius: 5px;
-  top: 10px;
-  left: 275px;
-  opacity: 0;
-  width: 300px;
-  height: 148px;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-  color: #dddddd;
-  padding-left: 10px;
-}
-
-.play2::after {
-  content: "▶";
-  position: absolute;
-  color: #dddddd;
-  font-size: 3rem;
-  border: 8px solid #dddddd;
-  border-radius: 50%;
-  width: 85px;
-  height: 85px;
-  padding: 2px 0 0 12px;
-  top: 40px;
-  left: 385px;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.stopHover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: none;
-}
-
-.stop2 {
-  left: -275px;
-}
-
-.stopHover::before {
-  content: " stop ";
-  position: absolute;
-  border: 8px solid #dddddd;
-  border-radius: 5px;
-  top: 10px;
-  left: 0;
-  padding-left: 10px;
-  color: #dddddd;
-  opacity: 0;
-  width: 300px;
-  height: 148px;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.stopHover::after {
-  content: "■";
-  position: absolute;
-  color: #dddddd;
-  font-size: 7.7rem;
-  top: -25px;
-  left: 110px;
-  opacity: 0;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.tracks:nth-child(2) {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-}
-
-.musicTrack2 {
-  text-align: right;
-  margin-left: 500px;
-  margin-right: 125px;
-}
-
-.musicTrack1, .musicTrack3 {
-  margin-right: 500px;
-  margin-left: 125px;
-}
-
-.musicTrack1 {
-  margin-top: 40px;
+.musicSection .musicContainer .tracks h5 {
+  opacity: 0.7;
 }
 
 .mainPlayer {
-  position: fixed;
-  bottom: 10px;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
   border-radius: 12px;
-  background-color: #dddddd;
-  width: 60%;
+  background-color: #83b0e1;
+  width: 100%;
   opacity: 0;
   -webkit-transition: opacity 0.25s ease-in-out;
   transition: opacity 0.25s ease-in-out;
+  margin-top: 60px;
 }
 
 .playerVisible {
@@ -1009,7 +950,7 @@ section {
 }
 
 .contactSection {
-  background: #dddddd;
+  background: #83b0e1;
   height: 800px;
 }
 .contactSection .contactContainer {
@@ -1051,7 +992,7 @@ section {
   padding: 15px 15px;
   margin-bottom: 25px;
   width: 85%;
-  background: #9fb3e0;
+  background: #aecbeb;
 }
 .contactSection .formContainer form textarea {
   resize: none;
@@ -1059,14 +1000,14 @@ section {
   border-radius: 10px;
   padding: 20px 15px;
   width: 85%;
-  background: #9fb3e0;
+  background: #aecbeb;
 }
 .contactSection .formContainer form button {
   margin: 30px auto;
   padding: 20px 60px;
   border-radius: 10px;
   border: none;
-  background: #9fb3e0;
+  background: #aecbeb;
   color: #000;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -1084,7 +1025,7 @@ section {
 }
 
 footer {
-  background: #9fb3e0;
+  background: #aecbeb;
 }
 footer .footerIcons {
   display: -webkit-box;
@@ -1105,14 +1046,38 @@ footer .footerIcons .fab:hover, footer .footerIcons .fab :focus, footer .footerI
   color: #f9d976;
 }
 footer .footerTag {
-  background-color: #dddddd;
+  background-color: #071214;
 }
 footer .footerTag p {
   padding: 10px 0;
   text-align: center;
+  color: aliceblue;
 }
 
 @media (max-width: 1200px) {
+  .projectSection {
+    height: 5900px;
+  }
+  .projectSection .projectWrapper .projects .projectContent {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .projectSection .projectWrapper .projects .projectContentFlip {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+
   .skillsContainer .skillsContent {
     padding-top: 100px;
   }
@@ -1120,23 +1085,25 @@ footer .footerTag p {
     margin: 20px 30px;
   }
 
-  .musicSection {
-    height: 2000px;
-  }
-
-  .musicTrack2 {
-    text-align: right;
-    margin-left: 450px;
-    margin-right: 100px;
-  }
-
-  .musicTrack1, .musicTrack3 {
-    margin-right: 450px;
-    margin-left: 100px;
-  }
-
   .aboutMeSection {
-    height: 1000px;
+    height: 1200px;
+  }
+}
+@media (max-width: 1080px) {
+  .musicSection {
+    height: 1200px;
+  }
+  .musicSection .musicContainer .musicContent .labels {
+    grid-template-columns: 10fr 50fr 30fr 10fr;
+  }
+  .musicSection .musicContainer .musicContent .labels .album {
+    display: none;
+  }
+  .musicSection .musicContainer .musicContent .tracks {
+    grid-template-columns: 10fr 50fr 30fr 10fr;
+  }
+  .musicSection .musicContainer .musicContent .tracks .album {
+    display: none;
   }
 }
 @media (max-width: 950px) {
@@ -1144,28 +1111,35 @@ footer .footerTag p {
     margin: 20px 15px;
   }
 
-  .projectSection .btnContainer button {
-    width: 10px;
-    margin: auto 20px;
+  .projectSection {
+    height: 4600px;
   }
-  .projectSection .btnContainer button .fas {
-    font-size: 1rem;
-    margin: 0 0 0 -6px;
+  .projectSection .projectWrapper .projects {
+    margin-top: 50px;
+  }
+  .projectSection .projectWrapper .projects .projectContent {
+    width: 100%;
+  }
+  .projectSection .projectWrapper .projects .projectContent .projectInfo {
+    width: 85%;
   }
 
   header {
-    background-image: linear-gradient(200deg, #9fb3e0 0%, #a4bfef 74%);
+    background: #071214;
   }
-
-  .musicTrack2 {
-    text-align: right;
-    margin-left: 400px;
-    margin-right: 50px;
+  header .headerFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-
-  .musicTrack1, .musicTrack3 {
-    margin-right: 400px;
-    margin-left: 50px;
+  header .headerFlex img {
+    width: 65%;
+    border-radius: 25%;
+    margin: 0 auto;
+  }
+  header .headerFlex .nameTag {
+    margin: 0;
   }
 }
 @media (max-width: 850px) {
@@ -1173,14 +1147,30 @@ footer .footerTag p {
     width: 50%;
   }
 
+  .projectSection {
+    height: 5000px;
+  }
+  .projectSection .projectWrapper .projects {
+    margin-top: 50px;
+  }
+  .projectSection .projectWrapper .projects .projectContent {
+    width: 100%;
+  }
+  .projectSection .projectWrapper .projects .projectContent img {
+    width: 75%;
+  }
+  .projectSection .projectWrapper .projects .projectContent .projectInfo {
+    width: 85%;
+  }
+
   header nav ul {
     width: 50%;
   }
 
   .aboutMeSection {
-    height: 1400px;
+    height: 1600px;
   }
-  .aboutMeSection .aboutMeContent {
+  .aboutMeSection .aboutMeContent .profile {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -1188,25 +1178,21 @@ footer .footerTag p {
     width: 75%;
     margin: 0 auto;
   }
-  .aboutMeSection .aboutMeContent p {
+  .aboutMeSection .aboutMeContent .profile p {
     padding: 30px 0;
   }
 
-  .musicSection {
-    height: 1900px;
+  .musicSection .musicContainer .musicContent .labels {
+    grid-template-columns: 10fr 80fr 10fr;
   }
-
-  .musicTrack2 {
-    text-align: right;
-    margin: 0 0 0 300px;
+  .musicSection .musicContainer .musicContent .labels .genre {
+    display: none;
   }
-
-  .musicTrack1, .musicTrack3 {
-    margin: 0 300px 0 0;
+  .musicSection .musicContainer .musicContent .tracks {
+    grid-template-columns: 10fr 80fr 10fr;
   }
-
-  .musicTrack1 {
-    padding-top: 25px;
+  .musicSection .musicContainer .musicContent .tracks .genre {
+    display: none;
   }
 }
 @media (max-width: 750px) {
@@ -1255,35 +1241,39 @@ footer .footerTag p {
     padding-top: 35px;
   }
 
-  .projectSection .projectContent {
-    width: 90%;
-    height: 880px;
+  header .headerFlex img {
+    width: 85%;
   }
 
-  .musicTrack2 {
-    text-align: right;
-    margin: 0 0 0 200px;
-    padding-top: 15px;
+  .aboutMeSection .aboutMeContent .softSkills {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+  .aboutMeSection .aboutMeContent .softSkills div {
+    margin: 10px;
+  }
+  .aboutMeSection .aboutMeContent .profile {
+    width: 100%;
   }
 
-  .musicTrack1, .musicTrack3 {
-    margin: 0 200px 0 0;
+  .musicSection .musicContainer .musicContent .playerHeader h3 {
+    font-size: 1.3rem;
+  }
+  .musicSection .musicContainer .musicContent .playerHeader p {
+    font-size: 0.7rem;
   }
 }
 @media (max-width: 600px) {
   .aboutMeSection {
-    height: 1300px;
+    height: 1600px;
   }
-  .aboutMeSection .aboutMeContent {
-    width: 95%;
+  .aboutMeSection .aboutMeContainer .aboutMeContent .profile {
+    padding: 0;
   }
 
   .skillsSection {
     height: 1100px;
-  }
-
-  .musicSection {
-    height: 2000px;
   }
 
   .contactSection {
@@ -1303,24 +1293,8 @@ footer .footerTag p {
   header nav ul {
     width: 100%;
   }
-
-  .musicTrack2 {
-    text-align: right;
-    margin: 0 0 0 50px;
-    padding-top: 30px;
-  }
-
-  .musicTrack1, .musicTrack3 {
-    margin: 0 50px 0 0;
-    padding-top: 30px;
-  }
-
-  .projectSection {
-    height: 1275px;
-  }
-  .projectSection .projectContent {
-    width: 90%;
-    height: 910px;
+  header .headerFlex img {
+    width: 100%;
   }
 
   footer .footerTag p {
@@ -1329,20 +1303,26 @@ footer .footerTag p {
 }
 @media (max-width: 488px) {
   .projectSection {
-    height: 1020px;
-    padding: 0;
+    height: 4700px;
+    padding: 40px;
   }
-  .projectSection .projectContent {
-    height: 900px;
+  .projectSection .projectWrapper .projects {
+    margin-top: 50px;
   }
-  .projectSection .projectContent .slides img {
-    height: 200px;
+  .projectSection .projectWrapper .projects .projectContent {
+    width: 100%;
   }
-  .projectSection .projectContent .slides p {
-    padding: 20px 35px;
+  .projectSection .projectWrapper .projects .projectContent img {
+    width: 80%;
   }
-  .projectSection .btnContainer button {
-    margin: auto 0;
+  .projectSection .projectWrapper .projects .projectContent .projectInfo {
+    width: 95%;
+  }
+  .projectSection .projectWrapper .projects .collabContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 
   .skillsSection {
@@ -1372,15 +1352,24 @@ footer .footerTag p {
     right: 120%;
   }
 
-  .nameTag {
-    width: 330px;
+  header nav {
+    padding: 50px 0;
   }
+  header nav h3 {
+    font-size: 2.5rem;
+  }
+  header .headerFlex img {
+    width: 100%;
+    height: 100%;
+  }
+
   .nameTag h1 {
-    padding: 20px 0 20px 28px;
+    font-size: 2.8rem;
+    line-height: 50px;
   }
 
   .aboutMeSection {
-    height: 800px;
+    height: 1100px;
   }
   .aboutMeSection .aboutMeContainer {
     padding-top: 20px;
@@ -1395,38 +1384,6 @@ footer .footerTag p {
   }
   .aboutMeSection .aboutMeContainer .aboutMeContent p {
     padding: 10px 0;
-  }
-
-  .musicSection {
-    height: 1400px;
-  }
-  .musicSection .musicContainer {
-    padding-top: 20px;
-  }
-  .musicSection .musicContainer .musicTrack1, .musicSection .musicContainer .musicTrack2, .musicSection .musicContainer .musicTrack3 {
-    margin: 0 auto;
-  }
-  .musicSection .musicContainer .musicTrack1, .musicSection .musicContainer .musicTrack3 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
-  }
-  .musicSection .musicContainer .tracks:nth-child(2) {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    text-align: center;
   }
 
   .contactSection {
@@ -1448,5 +1405,35 @@ footer .footerTag p {
 
   h2 {
     font-size: 2.4rem;
+  }
+
+  footer .footerIcons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  footer .footerIcons .fab, footer .footerIcons .fas {
+    margin: 15px 30px 0 0;
+  }
+
+  .musicSection .musicContainer .musicContent .playerHeader .playerInfo img {
+    width: 125px;
+    height: 125px;
+  }
+  .musicSection .musicContainer .musicContent .labels {
+    grid-template-columns: 10fr 90fr;
+  }
+  .musicSection .musicContainer .musicContent .labels .time {
+    display: none;
+  }
+  .musicSection .musicContainer .musicContent .tracks {
+    grid-template-columns: 10fr 90fr;
+  }
+  .musicSection .musicContainer .musicContent .tracks .time {
+    display: none;
+  }
+}
+@media (max-width: 350px) {
+  .projectSection {
+    height: 4800px;
   }
 }

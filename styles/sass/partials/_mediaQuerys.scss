@@ -1,5 +1,31 @@
 
 @media (max-width:1200px) {
+
+    .projectSection {
+        height: 5900px;
+        .projectWrapper {
+            .projects {
+                .projectContent {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+    
+                        
+    
+                }
+                .projectContentFlip {
+                    flex-direction: column-reverse;
+                }
+    
+                    
+            }
+        }
+
+    
+    
+    }
+
    .skillsContainer {
         .skillsContent {
             padding-top: 100px;
@@ -12,26 +38,37 @@
         }
 
     }
-    .musicSection {
-        height: 2000px;
-    }
-
-    .musicTrack2 {
-        text-align: right;
-        margin-left: 450px;
-        margin-right: 100px;
-    }
-
-    .musicTrack1, .musicTrack3 {
-        margin-right: 450px;
-        margin-left: 100px;
-    }
     .aboutMeSection {
-        height: 1000px;
+        height: 1200px;
     }
-    
 
 }
+
+@media (max-width:1080px) {
+    .musicSection {
+        height: 1200px;
+        .musicContainer {
+            .musicContent {
+    
+                .labels {
+                    grid-template-columns: 10fr 50fr 30fr 10fr;
+                    .album {
+                        display: none;
+                    }
+                }
+                
+                .tracks {
+                    grid-template-columns: 10fr 50fr 30fr 10fr;
+                    .album {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
 
 @media (max-width:950px) {
     .skillsContainer {
@@ -46,35 +83,53 @@
 
     }
 
-    .projectSection {
-        .btnContainer {
-            button {
-                width:10px;
-                margin: auto 20px;
-                
-                .fas {
-                    font-size: 1rem;
-                    margin: 0 0 0 -6px;
+        .projectSection {
+            height: 4600px;
+
+            .projectWrapper {
+                .projects {
+                    margin-top: 50px;
+                    .projectContent {
+                        width: 100%;
+                        .projectInfo {
+                            width: 85%;
+                        }
+
+                        
+                    }
+
+    
+    
                 }
-                
             }
+    
+    
+    
         }
-    }
+
+    
 
 
     header {
-        background-image: linear-gradient(200deg, $secondary 0%, #a4bfef 74%);
-    }
+        // background-image: linear-gradient(200deg, $secondary 0%, #a4bfef 74%);
+        background: #071214;
+        // height: 1100px;
 
-    .musicTrack2 {
-        text-align: right;
-        margin-left: 400px;
-        margin-right: 50px;
-    }
+        .headerFlex {
+               flex-direction: column;
+        
+                img {
+                    width: 65%;
+                    border-radius: 25%;
+                    margin: 0 auto;
+        
+                }
 
-    .musicTrack1, .musicTrack3 {
-        margin-right: 400px;
-        margin-left: 50px;
+                .nameTag {
+                    margin: 0;
+                }
+        
+            }
     }
 
 }
@@ -83,6 +138,34 @@
     .slideMenu.isActive {
         width: 50%;
     }
+
+    .projectSection {
+        height: 5000px;
+
+        .projectWrapper {
+            .projects {
+                margin-top: 50px;
+                .projectContent {
+                    width: 100%;
+                    img {
+                    width: 75%;
+                    }
+                    .projectInfo {
+                         width: 85%;
+                    }
+
+                        
+                }
+
+    
+    
+            }
+        }
+    
+    
+
+    }
+
 
     header {
         nav {
@@ -93,34 +176,38 @@
     }
 
     .aboutMeSection {
-        height: 1400px;
+        height: 1600px;
         .aboutMeContent {
-            flex-direction: column;
-            width: 75%;
-            margin: 0 auto;
-            p {
-                padding: 30px 0;
+            .profile {
+                flex-direction: column;
+                width: 75%;
+                margin: 0 auto;
+                p {
+                    padding: 30px 0;
+                }
             }
         }
     }
-    
 
     .musicSection {
-        height: 1900px;
-    }
-     
-   .musicTrack2 {
-        text-align: right;
-        margin: 0 0 0 300px;
-        
-    }
-
-    .musicTrack1, .musicTrack3 {
-       margin: 0 300px 0 0;
-    }
-
-    .musicTrack1 {
-        padding-top: 25px;
+        .musicContainer {
+            .musicContent {
+    
+                .labels {
+                    grid-template-columns: 10fr 80fr 10fr;
+                    .genre {
+                        display: none;
+                    }
+                }
+                
+                .tracks {
+                    grid-template-columns: 10fr 80fr 10fr;
+                    .genre {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 
 
@@ -162,39 +249,60 @@
 
     }
 
-    .projectSection {
-        .projectContent {
-            width: 90%;
-            height: 880px;
+    header {
+        // height: 1200px;
+        .headerFlex {
+            img {
+                width: 85%;
+            }
+        }    
+    }
+
+    .aboutMeSection {
+        .aboutMeContent {
+           .softSkills {
+               flex-wrap: wrap;
+               width: 100%;
+               div {
+                   margin: 10px;
+               }
+           }
+           .profile {
+               width: 100%;
+           }
         }
     }
 
-    .musicTrack2 {
-        text-align: right;
-        margin: 0 0 0 200px;
-        padding-top: 15px;
-        
-    }
-
-    .musicTrack1, .musicTrack3 {
-       margin: 0 200px 0 0;
+    .musicSection {
+        .musicContainer {
+            .musicContent {
+                .playerHeader {
+                    h3 {
+                        font-size: 1.3rem;
+                    }
+                    p {
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media(max-width:600px) {
     .aboutMeSection {
-        height: 1300px;
-        .aboutMeContent {
-            width: 95%;
+        height: 1600px;
+        .aboutMeContainer{
+            .aboutMeContent {
+                .profile {
+                    padding: 0;
+                }
+            }
         }
     }
 
     .skillsSection {
         height: 1100px;
-    }
-    
-    .musicSection {
-        height: 2000px;
     }
 
     .contactSection {
@@ -222,25 +330,10 @@
                 width: 100%;
             }
         }
-    }
-
-    .musicTrack2 {
-        text-align: right;
-        margin: 0 0 0 50px;
-        padding-top: 30px;
-        
-    }
-    
-    .musicTrack1, .musicTrack3 {
-        margin: 0 50px 0 0;
-        padding-top: 30px;
-    }
-
-    .projectSection {
-        height: 1275px;
-        .projectContent {
-            width: 90%;
-            height: 910px;
+        .headerFlex {
+            img {
+                width: 100%;
+            }
         }
     }
 
@@ -250,26 +343,41 @@
 }
 
 @media(max-width:488px) {
+
     .projectSection {
-        height: 1020px;
-        padding: 0;
-        .projectContent {
-            height: 900px;
-             .slides {
-                img {
-                    height: 200px;
-                }
-                p {
-                    padding: 20px 35px;
+            height: 4700px;
+            padding: 40px;
+    
+            .projectWrapper {
+                .projects {
+                    margin-top: 50px;
+    
+                    .projectContent {
+                        width: 100%;
+
+                        img {
+                            width: 80%;
+                        }
+    
+                        .projectInfo {
+                            width: 95%;
+                        }
+    
+    
+                    }
+
+                    .collabContainer {
+                        flex-direction: column;
+                    }
+    
+    
+    
                 }
             }
+    
+    
+    
         }
-        .btnContainer {
-            button {
-                margin: auto 0;
-            }
-        }
-    }
 
     .skillsSection {
         height: 850px;
@@ -306,15 +414,32 @@
         right: 120%;
     }
 
+    header {
+        // height: 900px;
+        nav {
+            padding: 50px 0;
+            h3 {
+                font-size: 2.5rem;
+            }
+        }
+        .headerFlex {
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
     .nameTag {
-        width: 330px;
         h1 {
-            padding: 20px 0 20px 28px;
+            // padding: 20px 0 20px 28px;
+            font-size: 2.8rem;
+            line-height: 50px;
         }
     }
 
     .aboutMeSection {
-        height: 800px;
+        height: 1100px;
         .aboutMeContainer {
             padding-top: 20px;
             h2 {
@@ -327,30 +452,6 @@
                p {
                    padding: 10px 0;
                }
-            }
-        }
-    }
-
-    .musicSection {
-        height: 1400px;
-        .musicContainer {
-            padding-top: 20px;
-            
-            .musicTrack1, .musicTrack2, .musicTrack3 {
-                margin: 0 auto;
-            }
-            
-            .musicTrack1, .musicTrack3  {
-                display: flex; 
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                text-align: center;
-            }
-            
-            .tracks:nth-child(2) {
-                align-items: center;
-                text-align: center;
             }
         }
     }
@@ -376,5 +477,49 @@
         font-size: 2.4rem;
     }
 
+    footer {
+        .footerIcons {
+            flex-wrap: wrap;
+            .fab, .fas {
+                margin: 15px 30px 0 0;
+            }
+        }
+    }
 
+    .musicSection {
+        .musicContainer {
+            .musicContent {
+                .playerHeader {
+                    .playerInfo {
+                        img {
+                            width: 125px;
+                            height: 125px;
+                        }
+
+                    }
+                }
+                .labels {
+                    grid-template-columns: 10fr 90fr;
+                    .time {
+                        display: none;
+                    }
+
+                }
+                .tracks {
+                    grid-template-columns: 10fr 90fr;
+                    .time {
+                        display: none;
+                    }
+
+                }
+            }
+        }
+    }
+
+}
+
+@media(max-width:350px) {
+    .projectSection {
+        height: 4800px;
+    }
 }
