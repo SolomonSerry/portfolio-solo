@@ -711,8 +711,6 @@ section {
   transition: all 0.25s ease-in-out;
 }
 .projectSection .projectWrapper .projects .projectContent .projectInfo .siteLinks a:hover, .projectSection .projectWrapper .projects .projectContent .projectInfo .siteLinks a :focus {
-  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
-          box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
   -webkit-transform: translateY(-0.25em);
           transform: translateY(-0.25em);
   color: #f9d976;
@@ -740,8 +738,6 @@ section {
   transition: all 0.25s ease-in-out;
 }
 .projectSection .projectWrapper .projects .collabContainer a:hover, .projectSection .projectWrapper .projects .collabContainer a :focus {
-  -webkit-box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
-          box-shadow: 0 0.5em 0.5em -0.4em #f9d976;
   -webkit-transform: translateY(-0.25em);
           transform: translateY(-0.25em);
   color: #f9d976;
@@ -824,11 +820,11 @@ section {
 
 .musicSection {
   background-color: #aecbeb;
-  height: 1200px;
+  height: 1000px;
   overflow: hidden;
 }
 .musicSection .musicContainer {
-  padding-top: 80px;
+  padding-top: 40px;
 }
 .musicSection .musicContainer h2 {
   text-align: center;
@@ -845,7 +841,7 @@ section {
   border-bottom: 2px solid #000;
 }
 .musicSection .musicContainer .musicContent {
-  margin-top: 150px;
+  margin-top: 40px;
 }
 .musicSection .musicContainer .musicContent .playerHeader img {
   width: 100px;
@@ -1013,8 +1009,8 @@ section {
   transition: all 0.2s ease-in-out;
 }
 .contactSection .formContainer form button:hover, .contactSection .formContainer form button :focus {
-  -webkit-box-shadow: inset 0 0 0 3em #f39f86;
-          box-shadow: inset 0 0 0 3em #f39f86;
+  -webkit-box-shadow: inset 0 0 0 3em #FFBF00;
+          box-shadow: inset 0 0 0 3em #FFBF00;
 }
 .contactSection .formContainer .contactInfo {
   width: 50%;
@@ -1090,9 +1086,6 @@ footer .footerTag p {
   }
 }
 @media (max-width: 1080px) {
-  .musicSection {
-    height: 1200px;
-  }
   .musicSection .musicContainer .musicContent .labels {
     grid-template-columns: 10fr 50fr 30fr 10fr;
   }
@@ -1303,8 +1296,14 @@ footer .footerTag p {
 }
 @media (max-width: 488px) {
   .projectSection {
-    height: 4700px;
-    padding: 40px;
+    height: 4200px;
+    padding: 30px;
+  }
+  .projectSection h2 {
+    width: 300px;
+  }
+  .projectSection h2::before {
+    left: 5px;
   }
   .projectSection .projectWrapper .projects {
     margin-top: 50px;
@@ -1313,7 +1312,8 @@ footer .footerTag p {
     width: 100%;
   }
   .projectSection .projectWrapper .projects .projectContent img {
-    width: 80%;
+    width: 100%;
+    margin: 0 0 20px 0;
   }
   .projectSection .projectWrapper .projects .projectContent .projectInfo {
     width: 95%;
@@ -1412,7 +1412,7 @@ footer .footerTag p {
         flex-wrap: wrap;
   }
   footer .footerIcons .fab, footer .footerIcons .fas {
-    margin: 15px 30px 0 0;
+    margin: 30px 30px 0 0;
   }
 
   .musicSection .musicContainer .musicContent .playerHeader .playerInfo img {

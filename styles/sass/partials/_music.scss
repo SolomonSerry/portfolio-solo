@@ -1,9 +1,9 @@
 .musicSection {
     background-color: $secondary;
-    height: 1200px;
+    height: 1000px;
     overflow: hidden;
     .musicContainer {
-        padding-top: 80px;
+        padding-top: 40px;
         h2 {
             text-align: center;
             position: relative;
@@ -21,7 +21,7 @@
         }
 
         .musicContent {
-            margin-top: 150px;
+            margin-top: 40px;
            .playerHeader {
                img {
                    width: 100px;
