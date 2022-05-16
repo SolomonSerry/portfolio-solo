@@ -46,7 +46,7 @@
 
 @media (max-width:1080px) {
     .musicSection {
-        height: 1200px;
+        
         .musicContainer {
             .musicContent {
     
@@ -345,18 +345,27 @@
 @media(max-width:488px) {
 
     .projectSection {
-            height: 4700px;
-            padding: 40px;
+            height: 4200px;
+            padding: 30px;
+            h2 {
+                width: 300px;
+            
+                &::before {
+                    left: 5px;
+                }
+            }
     
             .projectWrapper {
                 .projects {
                     margin-top: 50px;
+                   
     
                     .projectContent {
                         width: 100%;
 
                         img {
-                            width: 80%;
+                            width: 100%;
+                            margin: 0 0 20px 0;
                         }
     
                         .projectInfo {
@@ -481,12 +490,13 @@
         .footerIcons {
             flex-wrap: wrap;
             .fab, .fas {
-                margin: 15px 30px 0 0;
+                margin: 30px 30px 0 0;
             }
         }
     }
 
     .musicSection {
+
         .musicContainer {
             .musicContent {
                 .playerHeader {
